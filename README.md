@@ -7,7 +7,7 @@ Cristina Vera
 Lucas Ayala
 Rubén Lopez Galeano
 
-Paginas en las que nos inspitamos:
+Paginas en las que nos inspiramos:
 
 https://music.youtube.com/
 https://animalsrecords.com.ar/
