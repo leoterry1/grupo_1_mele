@@ -31,6 +31,12 @@ Estas son algunas capturas:
 
 ![Animal Records](/referencias/animals_carrito.jpg?raw=true "Animals Records")
 
+- Letras.com
+
+Letras.com es una página donde buscas las letras de una canción, lo que nos gustó de esta página es el reproductor de YouTube que tiene para cada canción, pensamos en "tal vez" implementarlo en alguna sección de la página. 
+
+![Letras.com](/referencias/letras.jpg?raw=true "Letras.com")
+
 - Youtube Music
 
 Si bien es un reproductor de contenido multimedia, nos pareció interesante la manera en la que la página está organizada, sus secciones y los estilos diferentes para cada tipo de contenido, artistas, canciones, álbumes, etc. Y eso es lo que sacamos de aquí.
@@ -50,6 +56,7 @@ Link: https://play.google.com/store?hl=es_419&gl=
 Captura:
 
 ![Google Play Store](/referencias/playstore.jpg?raw=true "Google Play Store")
+
 
 - Spotify 
 
