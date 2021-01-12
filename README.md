@@ -1,6 +1,6 @@
 # Mele
 
-Elegimos el nombre Mele porque en hawaiano significa música y nos parece que la palabra es corta, fácil de decir y memorizar.
+Elegimos el nombre Mele porque en hawaiano significa alegre, canción o música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
 En Mele ofrecemos música en presentación digital y física, merchandising e instrumentos musicales .
 Nuestro contenido está orientado a todo tipo de público, de diferente edad, sexo, religión, etc. 
