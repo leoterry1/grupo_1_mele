@@ -29,7 +29,7 @@ Estas son algunas capturas:
 
 ![Animal Records](/referencias/animal_detalles.jpg?raw=true "Animals Records")
 
-![Animal Records](/referencias/animal_carrito.jpg?raw=true "Animals Records")
+![Animal Records](/referencias/animals_carrito.jpg?raw=true "Animals Records")
 
 - Youtube Music
 
