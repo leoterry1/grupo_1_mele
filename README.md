@@ -66,9 +66,9 @@ Link: https://www.apple.com/la/music/
 
 Inicio de iTunes:
 
-![iTunes](/referencias/iTunes_1.jpg?raw=true "Animals Records")
+![iTunes](/referencias/iTunes_1.jpg?raw=true "iTunes")
 
-![iTunes](/referencias/iTunes_2.jpg?raw=true "Animals Records")
+![iTunes](/referencias/iTunes_2.jpg?raw=true "iTunes")
 
 
 En fin, esta es nuestra idea de proyecto y vamos a trabajar para que salga como deseamos. 
