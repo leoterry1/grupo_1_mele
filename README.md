@@ -18,7 +18,7 @@ Elegimos como referencia las siguientes páginas:
 
 - Animals Records
 
-Es un ecommerce de discos y merchandising. Nos gustó su estilo simple y los colores que usaron. 
+Es un ecommerce de discos y merchandising. Nos gustó su estilo simple y los colores que usaron.  Tiene un carrito de compras y detalles muy sencillo y conciso.
 Su link es https://animalsrecords.com.ar.
 
 Estas son algunas capturas:
@@ -26,6 +26,10 @@ Estas son algunas capturas:
 ![Animal Records](/referencias/animals_1.jpg?raw=true "Animals Records")
 
 ![Animal Records](/referencias/animals_2.jpg?raw=true "Animals Records")
+
+![Animal Records](/referencias/animal_detalles.jpg?raw=true "Animals Records")
+
+![Animal Records](/referencias/animal_carrito.jpg?raw=true "Animals Records")
 
 - Youtube Music
 
