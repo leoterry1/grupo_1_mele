@@ -1,16 +1,25 @@
-# grupo_1_nombre
+# Mele
 
-Nombre de los Integrantes:
+En Mele ofrecemos música en presentación digital y física, merchandising e instrumentos musicales .
+Nuestro contenido está orientado a todo tipo de público, de diferente edad, sexo, religión, etc. 
 
-Leonel Enriquez
-Cristina Vera
-Lucas Ayala
-Rubén Lopez Galeano
+## Grupo 1 - Integrantes:
 
-Paginas en las que nos inspiramos:
+- Ayala Lucas Martín
+- Enríquez Lucas Leonel
+- López Galeano Ruben
+- Vera López Cristina Rocío 
 
-https://music.youtube.com/
-https://animalsrecords.com.ar/
-https://open.spotify.com/
-https://www.letras.com/
-https://www.apple.com/la/music/
+## Referencias:
+
+Elegimos como referencia las siguientes páginas:
+
+### Animals Records
+
+Es un ecommerce de discos y merchandising. Nos gustó su estilo simple y los colores que usaron. 
+Su link es https://animalsrecords.com.ar.
+
+Estas son algunas capturas
+
+![Animal Records](/referencias/animals_1.jpg?raw=true "Animals Records")
+
