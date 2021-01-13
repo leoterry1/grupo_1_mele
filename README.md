@@ -1,4 +1,4 @@
-# Mele
+![Mele](/Estilo/mele.jpg?raw=true "mele")
 
 Elegimos el nombre Mele porque en hawaiano significa alegre, canción o música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
@@ -11,6 +11,10 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 - Enríquez Lucas Leonel
 - López Galeano Ruben
 - Vera López Cristina Rocío 
+
+## Tipografía:
+
+[Montserrat](https://fonts.google.com/specimen/Montserrat?query=mon)
 
 ## Referencias:
 
