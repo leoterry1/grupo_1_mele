@@ -33,7 +33,7 @@ Estas son algunas capturas:
 
 - Letras.com
 
-Letras.com es una página donde buscas las letras de una canción, lo que nos gustó de esta página es el reproductor de YouTube que tiene para cada canción, pensamos en "tal vez" implementarlo en alguna sección de la página. 
+Letras.com es una página donde buscas las letras de una canción, lo que nos gustó de esta página es el reproductor de YouTube que tiene para cada canción, pensamos en implementarlo en una sección de la página. 
 
 ![Letras.com](/referencias/letras_1.jpg?raw=true "Letras.com")
 
