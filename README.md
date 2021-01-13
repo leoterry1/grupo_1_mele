@@ -1,4 +1,4 @@
-![Mele](/Estilo/mele.jpg?raw=true "mele")
+![Mele](/Estilo/mele.png?raw=true "mele")
 
 Elegimos el nombre Mele porque en hawaiano significa alegre, canción o música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
