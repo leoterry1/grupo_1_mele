@@ -1,28 +1,66 @@
-![Mele](/Estilo/mele.png?raw=true "mele")
+# Mele
 
-Elegimos el nombre Mele porque en hawaiano significa alegre, canción o música y nos parece que la palabra es corta, fácil de decir y memorizar.
+Elegimos el nombre Mele porque en hawaiano significa música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
 En Mele ofrecemos música en presentación digital y física, merchandising e instrumentos musicales .
 Nuestro contenido está orientado a todo tipo de público, de diferente edad, sexo, religión, etc. 
 
 ## Grupo 1 - Integrantes:
 
-- Ayala Lucas Martín
-- Enríquez Lucas Leonel
-- López Galeano Ruben
-- Vera López Cristina Rocío 
+### Ayala Lucas Martín:
+   - Estudiante de Programación Web.
+### Enríquez Lucas Leonel:
+   - 23 años.
+   - Estudiante de programación web e ingeniería en sistemas.
+   - Melómano y Lolero.
+### López Galeano Ruben:
+   - 31 años.
+   - Estudiante de Programación Web.
+   - Carpintero.
+   - Adicto a las series.
+### Vera López Cristina Rocío:
+   - 27 años.
+   - Estudiante de Programación Web.
+   - Cinéfila.
+
+## Wireframes:
+
+- Home:
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile.jpg)
+
+- Detalles: 
+[Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/Detalles.png)
+
+- Registro:
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile.jpg)
+
+- Carrito de compras:
+[Carrito](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/carrito-de-compras.png)
+
+- Formulario de carga:
+[Formulario](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/formulario_de_carga.png)
 
 ## Tipografía:
 
 [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mon)
 
+##Colores:
+Elegimos combinar negro con violeta:
+![Violeta](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/Violeta.jpeg?raw=true "Violeta")
+
+## Boocetos: 
+Hicomos algunos bocetos para Mobile:
+
+![Home-Blanco](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/buscador.png?raw=true "Home Blanco")     ![Home-Dark](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/iPhone%208%20Plus%20-%201black.jpg?raw=true "Home Dark")![Menú](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/nav-menu.png?raw=true "Menú")
 ## Referencias:
 
 Elegimos como referencia las siguientes páginas:
 
 - Animals Records
 
-Es un ecommerce de discos y merchandising. Nos gustó su estilo simple y los colores que usaron.  Tiene un carrito de compras y detalles muy sencillo y conciso.
+Es un ecommerce de discos y merchandising. Nos gustó su estilo simple y los colores que usaron. 
 Su link es https://animalsrecords.com.ar.
 
 Estas son algunas capturas:
@@ -30,16 +68,6 @@ Estas son algunas capturas:
 ![Animal Records](/referencias/animals_1.jpg?raw=true "Animals Records")
 
 ![Animal Records](/referencias/animals_2.jpg?raw=true "Animals Records")
-
-![Animal Records](/referencias/animal_detalles.jpg?raw=true "Animals Records")
-
-![Animal Records](/referencias/animals_carrito.jpg?raw=true "Animals Records")
-
-- Letras.com
-
-Letras.com es una página donde buscas las letras de una canción, lo que nos gustó de esta página es el reproductor de YouTube que tiene para cada canción, pensamos en implementarlo en una sección de la página. 
-
-![Letras.com](/referencias/letras_1.jpg?raw=true "Letras.com")
 
 - Youtube Music
 
@@ -61,7 +89,6 @@ Captura:
 
 ![Google Play Store](/referencias/playstore.jpg?raw=true "Google Play Store")
 
-
 - Spotify 
 
 Nuevamente un reproductor, aunque este tiene más propaganda y un estilo de colores y diseño un tanto diferente al de YM.
@@ -81,15 +108,9 @@ Link: https://www.apple.com/la/music/
 
 Inicio de iTunes:
 
-![iTunes](/referencias/iTunes_1.jpg?raw=true "iTunes")
+![iTunes](/referencias/iTunes_1.jpg?raw=true "Animals Records")
 
-![iTunes](/referencias/iTunes_2.jpg?raw=true "iTunes")
+![iTunes](/referencias/iTunes_2.jpg?raw=true "Animals Records")
 
 
 En fin, esta es nuestra idea de proyecto y vamos a trabajar para que salga como deseamos. 
-
-
-
-
-
-
