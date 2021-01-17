@@ -1,4 +1,4 @@
-# Mele
+![Mele](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/mele.png?raw=true "Logo Mele")
 
 Elegimos el nombre Mele porque en hawaiano significa música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
@@ -68,6 +68,15 @@ Estas son algunas capturas:
 ![Animal Records](/referencias/animals_1.jpg?raw=true "Animals Records")
 
 ![Animal Records](/referencias/animals_2.jpg?raw=true "Animals Records")
+
+- Letras.com
+
+Es una página donde buscas la letra de una canción y tiene un reproductor de Youtube que queremos implementar en nuestro sitio.
+Link: https://www.letras.com
+
+Capturas:
+
+![Letras.com](https://github.com/leoterry1/grupo_1_mele/blob/main/referencias/letras_1.jpg?raw=true "Letras.com")
 
 - Youtube Music
 
