@@ -30,17 +30,17 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 [Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile.jpg)
 
 - Detalles: 
-[Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/Detalles.png)
+[Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/Detalles1.png)
 
 - Registro:
-[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro.jpg)
-[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile.jpg)
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro1.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile1.jpg)
 
 - Carrito de compras:
 [Carrito](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/carrito-de-compras.png)
 
 - Formulario de carga:
-[Formulario](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/formulario_de_carga.png)
+[Formulario](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/formulario_de_carga1.png)
 
 ## Tipografía:
 
