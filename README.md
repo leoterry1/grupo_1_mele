@@ -34,7 +34,7 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 
 - Registro:
 [Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro1.jpg)
-[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile1.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile1.jpeg)
 
 - Carrito de compras:
 [Carrito](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/carrito-de-compras.png)
