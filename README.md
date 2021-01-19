@@ -46,7 +46,7 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 
 [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mon)
 
-##Colores:
+## Colores:
 Elegimos combinar negro con violeta:
 ![Violeta](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/Violeta.jpeg?raw=true "Violeta")
 
