@@ -27,13 +27,13 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 
 - Home:
 [Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop.jpg)
-[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile1.jpg)
 
 - Detalles: 
 [Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/Detalles1.png)
 
 - Registro:
-[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro1.jpg)
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop1.jpg)
 [Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile1.jpg)
 
 - Carrito de compras:
