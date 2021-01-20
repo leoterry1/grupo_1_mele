@@ -26,7 +26,7 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 ## Wireframes:
 
 - Home:
-[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop.jpg)
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop1.jpg)
 [Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile1.jpg)
 
 - Detalles: 
