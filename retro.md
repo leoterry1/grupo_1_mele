@@ -1,9 +1,9 @@
 # Sprint 1: Retro
-
 **Empezar a hacer: ** 
 
-- Estar al día con las tareas, y agregar funcionalidades extras a medida que las vamos aprendiendo.
-
+- Interactuar con el equipo
+- Avisar ante ausencias o problemas particulares. 
+- Dividir tareas. 
 
 **Hacer mas:**
 
