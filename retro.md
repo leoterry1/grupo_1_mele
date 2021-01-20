@@ -1,5 +1,6 @@
 # Sprint 1: Retro
-**Empezar a hacer: ** 
+
+**Empezar a hacer:**
 
 - Interactuar con el equipo
 - Avisar ante ausencias o problemas particulares. 
