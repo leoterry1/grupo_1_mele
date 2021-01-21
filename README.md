@@ -24,7 +24,7 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
    - Cinéfila.
    
    ### Trello: 
-   * [Trello](https://trello.com/b/Xsn1jOMu/grupo1mele) 
+   * [ Tablero ](https://trello.com/b/Xsn1jOMu/grupo1mele) 
 
 ## Wireframes:
 
