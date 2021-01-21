@@ -8,6 +8,8 @@
 
 **Hacer mas:**
 
+- Seguimiento a Trello, para trabajar la comunicación. 
+
 - Comunicación diaria de los avances o problemas que surgen.
 
 **Seguir haciendo:**
