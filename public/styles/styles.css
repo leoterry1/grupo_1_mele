@@ -4,11 +4,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
 body{
     background-color: #181818;
     font-family: "Montserrat";
-    padding: 10px;
+    padding: 0;
 }
+/* HEADER */
+
+header{
+    background-color: #000;
+}
+header .mobile{
+    color: #fff;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+header .mobile a{
+    width: 30%;
+}
+header .mobile a img{
+    width: 100%;
+}
+
+/*FORMS */
 .logo a{
     margin: auto;
 }
@@ -115,6 +143,7 @@ button, .ingresar, .registrarse{
 /* FORMULARIO DE CARGA */ 
 .form-carga{
     text-align: center;
+
 }
 
 .form-carga form > div{
@@ -122,15 +151,16 @@ button, .ingresar, .registrarse{
     flex-direction: column;
     text-align: left;
     margin: 30px auto;
-    font-size: 20px;
+    font-size: 15px;
 }
 .form-carga h1{
+    font-size: 1.5rem;
     text-align: left;
     border-bottom: 4px solid #744BFF;
 }
 .form-carga form select{
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 15px;
     outline: none;
 }
 .form-carga form .select-category select option{
@@ -140,7 +170,90 @@ button, .ingresar, .registrarse{
 .form-carga form .cargar-imagen input {
     border: none;
     cursor: pointer;
+    font-size: 15px;
     }
 .form-carga form button{
-    font-size: 20px;
+    font-size: 15px;
+}
+/*FOOTER*/
+
+.pre-footer{
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pre-footer i{
+    font-size: 40px;
+}
+.pre-footer h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.pre-footer .medios-de-pago{
+    flex-wrap: nowrap;
+    margin-top: 30px;
+}
+.pre-footer img{
+    width: 80px;
+}
+.footer{
+    background-color: #000;
+    margin: 0;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    padding-top: 10px;
+}
+.footer h4{
+    font-size: 15px;
+}
+.footer p{
+    font-size: 10px;
+}
+.footer, .footer a{
+    color: #fff;
+}
+.footer div{
+    width: 30%;
+    padding: 0;
+}
+.footer .logo-footer img{
+    width: 100%;
+}
+.footer ul{
+    padding: 0;
+}
+.footer ul li{
+    font-size: 12px;
+    margin: 10px 0;
+}
+footer .copyright{
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12px;
+    
+}
+footer .copyright p{
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 1000px){
+    .footer {
+        flex-direction: column;
+        text-align: center
+    }
+    .footer .logo-footer{
+        width: 100px ;
+    }
+    .footer ul{
+        display: flex;
+        justify-content: space-between;
+    }
 }

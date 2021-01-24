@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo producto | Mele</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-</head>
+<%-include("partials/head")%>
 
 <body>
+    <%-include("partials/header")%>
     <div class="form form-carga">
             <h1>Nuevo producto</h1>
         <form action="/products/create?_method=POST" method="POST">
@@ -43,6 +39,7 @@
             <button type="submit"> Cargar producto </button>
         </form>
     </div>
+    <%-include("partials/footer")%>
 </body>
 
 </html>
