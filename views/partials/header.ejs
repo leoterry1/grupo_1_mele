@@ -1,0 +1,89 @@
+<header class="container-fluid">
+    <div class="mobile row">
+        <div class="top">
+            <i class="fas fa-bars"></i>
+            <a href="#"><img src="/images/mele.png" alt="mele"></a>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+
+        <div class="buscador">
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más"
+                    class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <nav class="col-12 hidden-menu">
+            <a href="/user/perfil"><img src="/images/perfil.jpg" alt="Usuario"></a>
+            <p class="user-name">Usuario</p>
+            <h4>Acceder</h4>
+            <ul>
+                <a href="/">
+                    <li>Inicio</li>
+                </a>
+                <a href="">
+                    <li>Categorías</li>
+                </a>
+                <a href="">
+                    <li>Biblioteca</li>
+                </a>
+                </a>
+                <a href="">
+                    <li>Historial</li>
+                </a>
+                <a href="/admin/create/producto">
+                    <li>Vender</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <div class="desktop">
+        <header class="container">
+            <div class="top">
+                <div class="logo">
+                    <a href="#"><img src="/images/mele.png" alt="mele"></a>
+                </div>
+                <div class="buscador-desktop">
+                    <form action="/search" method="GET" class="search-form">
+                        <input type="text" name="keywords" placeholder="Buscar productos, marcas y más"
+                            class="search-form_input">
+                        <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="botones">
+                    <i class="fas fa-shopping-cart carrito-desktop"></i>
+                    <a href="/user">
+                        <h4 class="usuario">Acceder</h4>
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+
+    <nav class="nav-desktop">
+        <ul>
+            <a href="/">
+                <li>Inicio</li>
+            </a>
+            <a href="">
+                <li>Categorías</li>
+            </a>
+            <a href="">
+                <li>Biblioteca</li>
+            </a>
+            </a>
+            <a href="">
+                <li>Historial</li>
+            </a>
+            <a href="/admin/create/producto">
+                <li>Vender</li>
+            </a>
+        </ul>
+    </nav>
+
+</header>
+</div>
+<script src="/javascript/nav-menu.js"></script>
+
+</header>

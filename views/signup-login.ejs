@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mele | Identificarse</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>>
+
+<body>
+    <div class="logo"><a href="/"><img src="/images/mele.png" alt="mele"></a></div>
+
+    <div class="form">
+        <div class="titulos">
+            <div class="ingresar">
+                <h1>INGRESAR</h1>
+            </div>
+            <div class="registrarse">
+                <h1>REGISTRARSE</h1>
+            </div>
+        </div>
+        <form class="signup" action="link/?_method=POST" method="POST">
+            <div class="nombre-apellido">
+                <div class="name">
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+
+                </div>
+                <div class="last-name">
+                    <input type="text" name="last-name" id="last-name" placeholder="Apellido">
+                </div>
+
+            </div>
+            <p class="error">El correo electrónico ya se encuentra registrado</p>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+            <p class="error">Las contraseñas no coinciden</p>
+            <input type="password" name="email" id="password" placeholder="Contraseña">
+            <input type="password" name="email" id="password-repeat" placeholder="Repetir Contraseña">
+            <p class="error">Por favor, complete todos los campos</p>
+            <button type="submit"> Registrarse </button>
+        </form>
+
+        <form class="login" action="/" method="GET">
+            <p class="error">El correo electrónico no corresponde a ningun usuario</p>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+
+            <input type="password" name="email" id="email" placeholder="Contraseña">
+            <p class="error">Contraseña incorrecta</p>
+
+            <button type="submit"> Ingresar </button>
+        </form>
+    </div>
+
+    <script src="/javascript/login.js"></script>
+
+</body>
+
+</html>

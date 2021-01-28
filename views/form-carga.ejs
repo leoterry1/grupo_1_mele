@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include("partials/head")%>
+
+<body>
+    <%-include("partials/header")%>
+    <%-include("./partials/carrito")%>
+    <div class="form form-carga">
+            <h1>Nuevo producto</h1>
+        <form action="/products/create?_method=POST" method="POST">
+            <div class="titulo-producto">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" placeholder="Ej: Funko Pop">
+            </div>
+            <div class="select-category">
+                <label for="category">Categoría</label>
+                <select name="category" id="category">
+                    <option value="null">Seleccionar categoría</option>
+                    <option value="albumes">Albumes</option>
+                    <option value="instrumentos">Instrumentos</option>
+                    <option value="coleccion">Colección</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="select-category">
+                <label for="sub-category">Sub-categoría</label>
+                <select name="sub-category" id="sub-category">
+                    <option value="null">Seleccionar categoría</option>
+                    <option value="oferta">Ofertas</option>
+                    <option value="nuevo">Nuevos</option>
+                    <option value="promo">Promo</option>
+                </select>
+            </div>
+            <div class="cargar-imagen">
+                <label for="archivosubido">Imagen</label>
+                <input type="file" name="archivosubido">
+            </div>
+            <button type="submit"> Cargar producto </button>
+        </form>
+    </div>
+    <%-include("partials/footer")%>
+</body>
+
+</html>

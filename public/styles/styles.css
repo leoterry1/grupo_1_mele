@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color:#fff
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    background-color: #181818;
+    font-family: "Montserrat";
+    padding: 0;
+}
+
+/* HEADER MOBILE */
+
+header {
+    background-color: #000;
+}
+
+header .mobile {
+    color: #fff;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+header .mobile .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .mobile .top a {
+    width: 30%;
+}
+
+header .mobile .top a img {
+    width: 100%;
+}
+
+.mobile .buscador {
+    margin: 10px auto;
+    width: 80%;
+    background-color: #000;
+
+}
+
+.buscador-desktop form,
+.mobile .buscador form {
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.buscador-desktop input,
+.mobile .buscador input {
+    border-radius: 20px 0 0 20px;
+    margin: 0;
+    font-size: 20px;
+    padding: 5px;
+    outline: none;
+    width: 80%;
+}
+
+.buscador-desktop form button,
+.mobile .buscador form button {
+    background-color: #A387FE;
+    color: #fff;
+    padding: 1px 10px;
+    outline: none;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    width: 20%;
+}
+
+header .mobile nav {
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+
+header .mobile nav h4 {
+    border: 2px solid #A387FE;
+    border-radius: 25px;
+    width: 50%;
+    margin: auto;
+    padding: 10px 10px;
+}
+
+header .mobile nav img {
+    border-radius: 50%;
+    border: 2px solid #A387FE;
+    width: 30%;
+}
+
+header .mobile nav ul {
+    margin: auto;
+    padding: 0;
+    width: 50%;
+}
+
+header .mobile nav ul a {
+    color: #fff;
+}
+
+header .mobile nav ul a {
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+header .mobile nav ul a li {
+    margin: 15px auto;
+    padding: 5px 20px;
+}
+
+header .mobile nav ul a li:active {
+    border: 2px solid #A387FE;
+    border-radius: 25px;
+
+}
+
+/* DESKTOP HEADER */
+.desktop {
+    max-width: 1140px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.desktop header .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.desktop header .top .logo {
+    width: 10%;
+    padding: 0;
+}
+
+.desktop header .top .logo img {
+    width: 100%;
+    margin: 0;
+}
+
+.buscador-desktop {
+    width: 50%;
+    margin: auto;
+}
+
+.buscador-desktop input {
+    font-size: 15px;
+}
+
+.desktop .botones {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+.desktop .botones i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.desktop .botones a h4 {
+    font-size: 15px;
+    border: 2px solid #A387FE;
+    border-radius: 25px;
+    margin: 0;
+    padding: 10px 10px;
+    background-image: radial-gradient(#A387FE, #744BFF);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .2s;
+}
+
+.desktop .botones a h4:hover {
+    background-size: 100% 100%;
+    color: #000;
+    border: none;
+}
+
+.nav-desktop {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 0;
+}
+
+.nav-desktop ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+}
+
+.nav-desktop ul a {
+    width: 100%;
+}
+
+.nav-desktop ul li,
+.nav-desktop ul li .active {
+    background-image: radial-gradient(#A387FE, #744BFF);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .2s;
+    padding: 2px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 10px auto;
+}
+
+.nav-desktop ul li:hover {
+    background-size: 100% 100%;
+    color: #000;
+    border: none;
+}
+
+/* CARRITO */
+.carrito {
+    background-color: #fff;
+    border-radius: 25px;
+    max-width: 450px;
+    padding: 30px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 15px;
+    display: none;
+}
+
+.carrito .producto {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.carrito .producto img {
+    width: 20%;
+}
+
+.carrito .producto .cantidad {
+    margin: auto 20px;
+}
+
+.carrito .producto .botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.carrito .producto:hover .botones{
+    opacity: 1;
+}
+
+.carrito .producto .cantidad,
+.carrito .producto .mas,
+.carrito .producto .menos {
+    background-color: #A387FE;
+    border-radius: 50%;
+    padding: 5px 10px;
+    border:solid 1px #744BFF;
+}
+
+.carrito .producto .mas,
+.carrito .producto .menos {
+    margin: auto 5px;
+    cursor: pointer;
+}
+
+.carrito .total {
+    border-top: 1px solid rgb(189, 189, 189);
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.carrito .precio-total {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.carrito .comprar {
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #A387FE;
+    display: inline;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+/*FORM LOGIN */
+.logo a {
+    margin: auto;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
+.logo img {
+    width: 150px;
+    margin: 50px auto;
+}
+
+div.form {
+    background-color: #fff;
+    margin: auto;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+div.titulos {
+    display: flex;
+    font-weight: 400;
+    font-size: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.titulos h1 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.signup {
+    display: none;
+}
+
+.ingresar {
+    border-bottom: 2px solid #744BFF;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.registrarse {
+    border-bottom: 2px solid#A387FE;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+form.login {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+form input,
+.form-carga form select {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #BBBBBB;
+    margin: 30px 0;
+}
+
+form input:focus,
+form select:focus {
+    border-bottom: 2px solid #744BFF;
+}
+
+form.signup button,
+form.login button,
+.form-carga form button {
+    width: 40%;
+    margin: 40px auto;
+    padding: 10px 30px;
+    text-align: center;
+    border: none;
+    background-color: #A387FE;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.nombre-apellido {
+    justify-content: space-between;
+}
+
+.name input,
+.last-name input {
+    width: 98%;
+}
+
+.registrarse,
+.ingresar {
+    background-image: linear-gradient(#744BFF, #744BFF);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+button,
+.ingresar,
+.registrarse {
+    cursor: pointer;
+}
+
+.form {
+    max-width: 600px;
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+}
+
+
+/* FORMULARIO DE CARGA */
+.form-carga {
+    text-align: center;
+
+}
+
+.form-carga form>div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 30px auto;
+    font-size: 15px;
+}
+
+.form-carga h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    border-bottom: 4px solid #744BFF;
+}
+
+.form-carga form select {
+    margin: 20px 0;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-carga form .select-category select option {
+    background-color: #a387fe81;
+}
+
+.form-carga form .cargar-imagen input {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-carga form button {
+    font-size: 15px;
+}
+/* BANNER */
+
+.banner{
+    width: 100%;
+    margin: 50px auto;
+    margin-top: 0;
+    height: 30vh;
+    background-image: url("/images/banner.jpg");
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/*HOME*/
+.categoria{
+    margin: 50px auto;
+    
+}
+.categoria h2{
+    color: #fff;
+    margin-left: 20px;
+}
+.categoria .productos-category{
+    padding: 0 10px;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.categoria .productos-category .producto {
+    border-radius: 25px;
+    padding: 0;
+    margin: 20px 20px;   
+    position: relative;
+}
+.categoria .productos-category img{
+    width: 100%;
+    border-radius: 25px;
+}
+.categoria .productos-category .detalles{
+    background-color: rgba(7, 7, 7, 0.493);
+    color:#fff;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    display: none;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+}
+.categoria .productos-category .producto:hover .detalles{
+    display: block
+}
+.all-category .productos-category .categoria{
+    cursor: pointer;
+}
+.all-category .productos-category .categoria:hover{
+    background-image:linear-gradient(#754bffab,#a387febb);
+}
+.all-category .productos-category .categoria:hover a{
+    color: #fff;
+}
+.productos-category .artistas{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/artist.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+.productos-category .albumes{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/positions.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+.productos-category .artistas{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/artist.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+.productos-category .coleccionables{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/aerosmith.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+.productos-category .instrumentos{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/guitarra.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+.productos-category .electronica{
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(#754bff25,#A387FE),url("/images/microfono.jpg");
+  height: 500px;
+  max-width: 100%;
+  background-size: cover;
+    height: 150px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    
+}
+
+.productos-category a{
+    text-align: center;
+    margin: auto;
+    color: #000;
+    
+}
+
+
+/*FOOTER*/
+
+.pre-footer {
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pre-footer i {
+    font-size: 40px;
+}
+
+.pre-footer h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.pre-footer .medios-de-pago {
+    flex-wrap: nowrap;
+    margin-top: 30px;
+}
+
+.pre-footer img {
+    width: 80px;
+}
+
+.footer {
+    background-color: #000;
+    margin: 0;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.footer h4 {
+    font-size: 15px;
+}
+
+.footer p {
+    font-size: 10px;
+}
+
+.footer,
+.footer a {
+    color: #fff;
+}
+
+.footer div {
+    width: 30%;
+    padding: 0;
+}
+
+.footer .logo-footer img {
+    width: 100%;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+footer .copyright {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12px;
+
+}
+
+footer .copyright p {
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1000px) {
+    .footer {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .footer .logo-footer {
+        width: 100px;
+    }
+
+    .footer ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile {
+        display: none;
+    }
+    .categoria .productos-category{
+        padding: 0 10px;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1000px) {
+    .desktop {
+        display: none
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+    .carrito{
+        right: 0;
+    }
+    .carrito .producto .botones {
+        position: relative;
+        opacity: 1;
+    }
+    .categoria .productos-category img{
+        border-radius: 25px 25px 0 0;
+    }
+    .categoria .productos-category .detalles{
+        position: relative;
+        display: block;
+        background-color: #fff;
+        color: #000;
+        
+    }
+    .categoria .productos-category .detalles h5, .categoria .productos-category .detalles h5, .categoria .productos-category .detalles p{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    .productos-caegory{
+        flex-wrap: nowrap;
+    }
+    .all-category .productos-category .categoria{
+        margin: auto 20px;
+        width: 50%;
+    }
+    .banner{
+        display: none;
+    }
+}
