@@ -247,6 +247,7 @@ header .mobile nav ul a li:active {
     right: 20px;
     font-size: 15px;
     display: none;
+    z-index: 100;
 }
 
 .carrito .producto {
@@ -500,6 +501,7 @@ button,
 /*HOME*/
 .categoria{
     margin: 50px auto;
+    z-index: 10;
     
 }
 .categoria h2{
