@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include("partials/head")%>
+
+<body>
+    <%-include("partials/header")%>
+    <%-include("./partials/carrito")%>
+    <script type="text/javascript">
+        document.querySelector(".productos-li").classList.add("active")
+    </script>
+    <h2 class="titulo-detalles">Detalles del producto: Smile</h2>
+    <div class="detalle-producto row">
+        <div class="image col-12 col-md-6">
+            <img src="/images/smile.jpg" alt="Smile Katy Perry">
+        </div>
+        <div class="all-details col-12 col-md-6">
+            <div class="detalles">
+                <h3>Smile - Katy Perry</h3>
+                <p>Smile es el quinto álbum de estudio de la cantante estadounidense Katy Perry, fue lanzado el 28 de agosto de 2020 a través de Capitol Records.</p>
+            <p>Tracklist</p>
+            <ol>
+                <li>Never Really Over</li>
+                <li>Cry About It Later</li>
+                <li>Tear Eyes</li>
+                <li>Daisies</li>
+                <li>Resilent</li>
+                <li>Not The end Of The World</li>
+                <li>Smile</li>
+                <li>Champagne Problems</li>
+                <li>Tucked</li>
+                <li>Harleys in Hawaii</li>
+                <li>Only Love</li>
+                <li>What Makes a Woman</li>
+            </ol>
+            </div>
+            <div class="comprar">
+                <h4>$950</h4>
+                <div class="cantidad">
+                    <span class="menos">-</span>
+               
+                <span class="total">1</span>
+                <span class="mas">+</span>
+                
+            </div>
+                <i class="fas fa-shopping-cart carrito-desktop"></i>
+            </div>
+            
+        </div>
+    </div>
+    <%-include("partials/footer")%>
+</body>
+</html>

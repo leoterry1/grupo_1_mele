@@ -22,6 +22,7 @@ body {
     background-color: #181818;
     font-family: "Montserrat";
     padding: 0;
+    width: 100%;
 }
 
 /* HEADER MOBILE */
@@ -219,21 +220,23 @@ header .mobile nav ul a li:active {
 }
 
 .nav-desktop ul li,
-.nav-desktop ul li .active {
+.nav-desktop ul a.active li{
     background-image: radial-gradient(#A387FE, #744BFF);
     background-repeat: no-repeat;
+    background-position: bottom;
     background-size: 0% 2px;
     transition: background-size .2s;
     padding: 2px;
     text-align: center;
-    border-radius: 25px;
     margin: 10px auto;
 }
 
-.nav-desktop ul li:hover {
-    background-size: 100% 100%;
-    color: #000;
+.nav-desktop ul li:hover{
+    background-size: 100% 2px;
     border: none;
+}
+.nav-desktop ul a.active li{
+    background-size: 100% 2px;
 }
 
 /* CARRITO */
@@ -502,21 +505,25 @@ button,
 .categoria{
     margin: 50px auto;
     z-index: 10;
-    
+    overflow: hidden;
 }
 .categoria h2{
     color: #fff;
     margin-left: 20px;
 }
 .categoria .productos-category{
-    padding: 0 10px;
+    padding: 0 20px;
     flex-wrap: nowrap;
     overflow: scroll;
+    margin: auto;
+    margin-right: 20px;
+    padding-right: 0;
 }
 .categoria .productos-category .producto {
     border-radius: 25px;
     padding: 0;
-    margin: 20px 20px;   
+    margin: 20px auto;
+    margin-right: 20px;   
     position: relative;
 }
 .categoria .productos-category img{
@@ -627,6 +634,55 @@ button,
     margin: auto;
     color: #000;
     
+}
+/* DETALLES */
+.titulo-detalles{
+    color: #fff;
+    margin: 20px 20px;
+    text-align: left;
+}
+.detalle-producto{
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    margin: auto 20px;
+}
+.detalle-producto .image img{
+    width: 100%;
+    border-radius: 25px;
+}
+.detalle-producto .comprar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+.detalle-producto .comprar h4{
+    font-size: 40px;
+}
+.detalle-producto .comprar .cantidad{
+    width: 50%;
+    font-size: 30px;
+    background-color: #181818;
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+.detalle-producto .comprar .cantidad .mas, .detalle-producto .comprar .cantidad .menos{
+    background-color: #A387FE;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 50%
+}
+.detalle-producto .comprar i{
+    background-color: #A387FE;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 35px;
+    cursor: pointer;
+}
+.detalle-producto .comprar .cantidad .total{
+    color: #fff;
 }
 
 
@@ -781,5 +837,20 @@ footer .copyright p {
     }
     .banner{
         display: none;
+    }
+    .detalle-producto{
+        padding: 5px 0;
+    }
+    .comprar{
+        justify-content: space-between;
+    }
+    .detalle-producto .comprar .cantidad{
+        font-size: 20px;
+    }
+    .detalle-producto .comprar h4{
+        font-size: 25px
+    }
+    .detalle-producto .comprar i{
+        font-size: 20px;
     }
 }
