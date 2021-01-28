@@ -1,3 +1,6 @@
+
+/*LOGIN */
+
 let registrarse = document.querySelector(".registrarse")
 let ingresar = document.querySelector(".ingresar")
 let login = document.querySelector(".login")
@@ -24,3 +27,4 @@ ingresar.addEventListener("click", ()=>{
     ingresar.style.backgroundSize ="100% 2px"
     registrarse.style.backgroundSize ="0% 2px"
 })
+
