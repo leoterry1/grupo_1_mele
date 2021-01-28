@@ -6,6 +6,9 @@
 <body>
     <%-include("partials/header")%>
     <%-include("./partials/carrito")%>
+    <script type="text/javascript">
+        document.querySelector(".vender-li").classList.add("active")
+    </script>
     <div class="form form-carga">
             <h1>Nuevo producto</h1>
         <form action="/products/create?_method=POST" method="POST">
