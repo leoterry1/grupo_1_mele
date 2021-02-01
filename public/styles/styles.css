@@ -22,7 +22,8 @@ body {
     background-color: #181818;
     font-family: "Montserrat";
     padding: 0;
-    width: 100%;
+    margin: 0 auto;
+    
 }
 
 /* HEADER MOBILE */
@@ -491,9 +492,34 @@ button,
 .banner{
     width: 100%;
     margin: 50px auto;
+    height: 200px;
     margin-top: 0;
-    height: 30vh;
-    background-image: url("/images/banner.jpg");
+    background-repeat: no-repeat;    
+    background-size: cover;
+    animation: banner 10s infinite;
+}
+@keyframes banner{
+    0%, 33%{
+        background-image: url("/images/banner-1.jpg");
+        opacity: 1;
+    }
+    /* 30%, 33%{
+        opacity: 0.1;
+    } */
+    34%, 67%{
+        background-image: url("/images/banner-2.jpg");
+        opacity: 1;
+    }
+    /* 64%, 67%{
+        opacity: 0.1;
+    } */
+    68%, 100%{
+        background-image: url("/images/banner-3.jpg");
+        opacity: 1;
+    }
+    /* 98%, 100%{
+        opacity: 0.1;
+    } */
 }
 .banner img{
     width: 100%;
@@ -509,10 +535,8 @@ button,
 }
 .categoria h2{
     color: #fff;
-    margin-left: 20px;
 }
 .categoria .productos-category{
-    padding: 0 20px;
     flex-wrap: nowrap;
     overflow: scroll;
     margin: auto;
@@ -637,15 +661,14 @@ button,
 }
 /* DETALLES */
 .titulo-detalles{
-    color: #fff;
-    margin: 20px 20px;
+    color: rgb(161, 161, 161);
     text-align: left;
+    padding: 0;
 }
 .detalle-producto{
     background-color: #fff;
-    border-radius: 25px;
     padding: 30px;
-    margin: auto 20px;
+    margin: auto;
 }
 .detalle-producto .image img{
     width: 100%;
@@ -687,11 +710,13 @@ button,
 
 
 /*FOOTER*/
-
+footer{
+    /* margin: auto; */
+}
 .pre-footer {
     background-color: #fff;
     text-align: center;
-    margin: 0;
+    margin: auto;
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -718,7 +743,7 @@ button,
 
 .footer {
     background-color: #000;
-    margin: 0;
+    margin: auto;
     justify-content: space-between;
     font-size: 15px;
     align-items: center;
