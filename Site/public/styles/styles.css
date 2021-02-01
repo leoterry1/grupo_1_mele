@@ -30,6 +30,7 @@ body {
 
 header {
     background-color: #000;
+    position: relative;
 }
 
 header .mobile {
@@ -39,7 +40,6 @@ header .mobile {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
 }
 
 header .mobile .top {
@@ -91,13 +91,20 @@ header .mobile .top a img {
     width: 20%;
 }
 
-header .mobile nav {
+header .hidden-menu {
     text-align: center;
-    transition: 0.5s ease-in-out;
-    display: none;
+    transform: translate(-110%, 0%);
+    transition: 0.5s all;
+    position: fixed;
+    background-color: #000;
+    margin-top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100%;
 }
 
-header .mobile nav h4 {
+header .hidden-menu h4 {
     border: 2px solid #A387FE;
     border-radius: 25px;
     width: 50%;
@@ -105,34 +112,34 @@ header .mobile nav h4 {
     padding: 10px 10px;
 }
 
-header .mobile nav img {
+header .hidden-menu img {
     border-radius: 50%;
     border: 2px solid #A387FE;
     width: 30%;
 }
 
-header .mobile nav ul {
+header .hidden-menu ul {
     margin: auto;
     padding: 0;
     width: 50%;
 }
 
-header .mobile nav ul a {
+header .hidden-menu ul a {
     color: #fff;
 }
 
-header .mobile nav ul a {
+header .hidden-menu ul a {
     margin: 0 auto;
     padding: 0;
 
 }
 
-header .mobile nav ul a li {
+header .hidden-menu ul a li {
     margin: 15px auto;
     padding: 5px 20px;
 }
 
-header .mobile nav ul a li:active {
+header .hidden-menu ul a li:active {
     border: 2px solid #A387FE;
     border-radius: 25px;
 
@@ -821,6 +828,9 @@ footer .copyright p {
         flex-wrap: wrap;
         overflow: hidden;
     }
+    .hidden-menu{
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -838,6 +848,9 @@ footer .copyright p {
         position: relative;
         opacity: 1;
     }
+    .productos-category{
+        margin: 0;
+    }
     .categoria .productos-category img{
         border-radius: 25px 25px 0 0;
     }
@@ -853,11 +866,12 @@ footer .copyright p {
         padding: 0;
         font-size: 15px;
     }
-    .productos-caegory{
+    .categoria .productos-category{
         flex-wrap: nowrap;
+        margin: 0;
     }
     .all-category .productos-category .categoria{
-        margin: auto 20px;
+        margin: 0 20px;
         width: 50%;
     }
     .banner{

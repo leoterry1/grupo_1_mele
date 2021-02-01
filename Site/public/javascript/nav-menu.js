@@ -6,10 +6,13 @@ let show = false
 
 menuIcon.addEventListener("click", () =>{
     if (show == false){
-        menu.style.display = "inline-block";
+        menu.style.transform = "translate(0%,0%)";
+        
         show = true
     } else if (show){
-        menu.style.display = "none";
+        
+        menu.style.transform = "translate(-110%,0%)"
+        
         show = false
     }
    
