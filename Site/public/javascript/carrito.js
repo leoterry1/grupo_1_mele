@@ -5,10 +5,12 @@ let showCarrito = false
 
 let mostrarCarrito = ()=>{
     if (showCarrito == false){
-        carrito.style.display = "inline-block"
+        /* carrito.style.display = "inline-block" */
+        carrito.style.left = "0"
         showCarrito = true
     } else{
-        carrito.style.display = "none"
+        /* carrito.style.display = "none" */
+        carrito.style.left = "-150%"
         showCarrito = false
     }
 }

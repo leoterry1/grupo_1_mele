@@ -6,12 +6,12 @@ let show = false
 
 menuIcon.addEventListener("click", () =>{
     if (show == false){
-        menu.style.transform = "translate(0%,0%)";
+        menu.style.left = "0";
         
         show = true
     } else if (show){
         
-        menu.style.transform = "translate(-110%,0%)"
+        menu.style.left = "-150%"
         
         show = false
     }
