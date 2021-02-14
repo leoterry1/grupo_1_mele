@@ -20,7 +20,7 @@
                 <h1>REGISTRARSE</h1>
             </div>
         </div>
-        <form class="signup" action="link/?_method=POST" method="POST">
+        <form class="signup" action="/user/signup" method="POST">
             <div class="nombre-apellido">
                 <div class="name">
                     <input type="text" name="name" id="name" placeholder="Nombre">
@@ -36,8 +36,11 @@
             <input type="email" name="email" id="email" placeholder="Correo Electrónico">
 <!--             <p class="error">Las contraseñas no coinciden</p>
  -->            <input type="password" name="email" id="password" placeholder="Contraseña">
-            <input type="password" name="email" id="password-repeat" placeholder="Repetir Contraseña">
-            <input type="file">
+           <!--  <input type="password" name="email" id="password-repeat" placeholder="Repetir Contraseña"> -->
+
+            <!-- <label for="archivosubido">Foto de Perfil</label>
+            <input type="file" name="profile"> -->
+
 <!--             <p class="error">Por favor, complete todos los campos</p>
  -->            <button type="submit"> Registrarse </button>
         </form>

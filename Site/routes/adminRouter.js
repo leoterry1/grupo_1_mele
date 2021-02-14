@@ -3,6 +3,7 @@ const path = require("path")
 const router = express.Router() 
 const {create, subir} = require("../controllers/adminController")
 const multer = require("multer");
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'public/images/products')
