@@ -35,7 +35,7 @@
             <!-- <p class="error">El correo electrónico ya se encuentra registrado</p> -->
             <input type="email" name="email" id="email" placeholder="Correo Electrónico">
 <!--             <p class="error">Las contraseñas no coinciden</p>
- -->            <input type="password" name="email" id="password" placeholder="Contraseña">
+ -->            <input type="password" name="password" id="password" placeholder="Contraseña">
            <!--  <input type="password" name="email" id="password-repeat" placeholder="Repetir Contraseña"> -->
 
             <!-- <label for="archivosubido">Foto de Perfil</label>
@@ -45,11 +45,11 @@
  -->            <button type="submit"> Registrarse </button>
         </form>
 
-        <form class="login" action="/" method="GET">
+        <form class="login" action="/user/login" method="POST">
 <!--             <p class="error">El correo electrónico no corresponde a ningun usuario</p>
  -->            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
 
-            <input type="password" name="email" id="email" placeholder="Contraseña">
+            <input type="password" name="password" id="password" placeholder="Contraseña">
 <!--             <p class="error">Contraseña incorrecta</p>
  -->
             <button type="submit"> Ingresar </button>
