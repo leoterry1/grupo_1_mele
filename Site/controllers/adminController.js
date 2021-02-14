@@ -1,9 +1,31 @@
 const fs = require("fs");
+let productos = JSON.parse(fs.readFileSync("./data/products.json", "utf-8"));
+let subida = (array)=> fs.writeFileSync("./data/products.json", (JSON.stringify(array)))
 module.exports = {
     create: (req,res)=>{
-        res.render("form-carga")
+        res.render("form-carga", {title : "Nuevo producto"})
     },
-    upload: (req,res)=>{
-
+    subir: (req,res)=>{
+        let lastID = 1;
+        productos.forEach(producto => {
+            if (producto.id > lastID) {
+                lastID = producto.id
+            }
+        });
+        let {name ,category , subCategory, description, marca, price} = req.body;
+        let img = req.files[0].filename;
+        let producto = {
+            id : lastID + 1,
+            title: name,
+            category,
+            marca,
+            price,
+            subCategory,
+            description,
+            img
+        }
+        productos.push(producto)
+        subida(productos)
+        res.redirect(`/`)
     }
 }
