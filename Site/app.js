@@ -5,6 +5,8 @@ const adminRouter = require("./routes/adminRouter")
 const indexRouter = require("./routes/indexRouter")
 const productosRouter = require("./routes/productosRouter")
 const userRouter = require("./routes/userRouter")
+const methodOverride = require('method-override');
+
 
 
 app.set('view engine', 'ejs');
@@ -13,6 +15,8 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+app.use(methodOverride('_method'));
+
 
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);

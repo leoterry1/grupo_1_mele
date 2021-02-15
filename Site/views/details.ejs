@@ -19,7 +19,7 @@
         </div>
         <div class="all-details col-12 col-md-6">
             <div class="detalles">
-                <h3><%=producto.title%> <%=producto.marca%></h3>
+                <h3><%=producto.title%> <%=producto.marca%> <span><a href="/admin/editar/<%=producto.id%>"><i class="fas fa-edit"></i></a></span> </h3>
                 <% const descriptions = producto.description.split("\r\n") %>
                 <% descriptions.forEach(e => { %>
                     <p><%=e%></p>
@@ -28,14 +28,20 @@
             </div>
             <div class="comprar">
                 <h4>$<%=producto.price%></h4>
-                <div class="cantidad">
-                    <span class="menos">-</span>
-               
-                <span class="total">1</span>
-                <span class="mas">+</span>
+                <form action="">
+                    <div class="cantidad">
+                    <span class="menos"><button><i class="fas fa-minus-circle"></i></button></span>
+                   
+                    <span class="total"><input type="number" value="0"></span>
+                    <span class="mas"><button><i class="fas fa-plus-circle"></i></button></span>
+                    <button type="submit"><i class="fas fa-shopping-cart carrito-desktop"></i></button>
+                    </div>
+
+                </form>
+                
                 
             </div>
-                <i class="fas fa-shopping-cart carrito-desktop"></i>
+                
             </div>
             
         </div>

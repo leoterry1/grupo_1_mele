@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include("partials/head")%>
+
+<body>
+    <%-include("partials/header")%>
+    <%-include("./partials/carrito")%>
+    <script type="text/javascript">
+        document.querySelector(".vender-li").classList.add("active")
+    </script>
+    <div class="banner container">
+        <img src="/images/banner.jpg" alt="">
+    </div>
+    <div class="form form-carga">
+            <h1><%=title%></h1>
+        <form action="/admin/editar/producto/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="titulo-producto">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" value="<%=producto.title%>"placeholder="Ej: Funko Pop">
+            </div>
+            <div class="titulo-producto">
+                <label for="marca">Marca/Artista</label>
+                <input type="text" id="marca" name="marca"  value="<%=producto.marca%>" placeholder="Ej: Aerosmith">
+            </div>
+            <div class="titulo-producto">
+                <label for="price">Precio</label>
+                <input type="number" id="price" name="price"  value="<%=producto.price%>">
+            </div>
+            <div class="select-category">
+                <label for="category">Categoría</label>
+                <select name="category" id="category"  value="<%=producto.category%>">
+                    <option value="null">Seleccionar categoría</option>
+                    <option value="albumes">Albumes</option>
+                    <option value="instrumentos">Instrumentos</option>
+                    <option value="coleccion">Colección</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="select-category">
+                <label for="subCategory">Sub-categoría</label>
+                <select name="subCategory" id="sub-category">
+                    <option value="null">Seleccionar categoría</option>
+                    <option value="oferta">Ofertas</option>
+                    <option value="nuevo">Nuevos</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="titulo-producto">
+                <label for="description">Descripción</label>
+                <textarea name="description" cols="30" rows="10" ><%=producto.description%></textarea>
+            </div>
+            <div class="cargar-imagen">
+                <label for="archivosubido">Imagen</label>
+                <input type="file" name="file-product"  value="<%=producto.img%>">
+            </div>
+            <button type="submit"> Guardar Cambios </button> <button type="reset">Resetar</button>
+        </form>
+    </div>
+    <%-include("partials/footer")%>
+</body>
+
+</html>
