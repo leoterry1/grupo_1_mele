@@ -470,11 +470,12 @@
      margin: auto;
      margin-right: 20px;
      padding-right: 0;
+     justify-content: space-between;
 }
  .categoria .productos-category .producto {
      border-radius: 5px;
      padding: 0;
-     margin: 20px auto;
+     margin: 20px 0;
      margin-right: 20px;
      position: relative;
      

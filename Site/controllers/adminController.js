@@ -1,6 +1,6 @@
 const fs = require("fs");
 let productos = JSON.parse(fs.readFileSync("./data/products.json", "utf-8"));
-let subida = (array)=> fs.writeFileSync("./data/products.json", (JSON.stringify(array)))
+let subida = (array)=> fs.writeFileSync("./data/products.json", (JSON.stringify(array,null, 2)))
 module.exports = {
     create: (req,res)=>{
         res.render("form-carga", {title : "Nuevo producto"})

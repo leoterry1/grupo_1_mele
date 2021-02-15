@@ -20,7 +20,10 @@
         <div class="all-details col-12 col-md-6">
             <div class="detalles">
                 <h3><%=producto.title%> <%=producto.marca%></h3>
-                <p><%=producto.description%></p>
+                <% const descriptions = producto.description.split("\r\n") %>
+                <% descriptions.forEach(e => { %>
+                    <p><%=e%></p>
+                <% }) %>
             
             </div>
             <div class="comprar">

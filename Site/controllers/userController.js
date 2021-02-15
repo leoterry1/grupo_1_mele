@@ -25,7 +25,7 @@ module.exports = {
             if (existe === undefined) {
                 let usuario = {id:lastID + 1, name, email, password}
                 usuarios.push(usuario)
-                fs.writeFileSync("./data/users.json", (JSON.stringify(usuarios)))
+                fs.writeFileSync("./data/users.json", (JSON.stringify(usuarios, null , 2)))
                 res.redirect('/')
             } else {
                 res.render('signup-login')

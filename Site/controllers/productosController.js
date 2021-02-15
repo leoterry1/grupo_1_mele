@@ -7,5 +7,8 @@ module.exports = {
         });
 
         res.render("details", {title: producto.title ,producto})
+    },
+    all :(req,res)=>{
+        res.render("products", {productos, title:"Productos", buscar: false})
     }
 }
