@@ -26,11 +26,33 @@ module.exports = {
                 let usuario = {id:lastID + 1, name, email, password}
                 usuarios.push(usuario)
                 fs.writeFileSync("./data/users.json", (JSON.stringify(usuarios)))
-                res.render('index', usuario)
+                res.redirect('/')
             } else {
                 res.render('signup-login')
             }
         } 
+    },
+    login: (req, res) =>{
+        let {email, password} = req.body
+
+        let usuario = usuarios.find(user => {
+            return user.email === email
+        })
+        
+        if (req.body == undefined || password == "" || email == "") {
+            res.render("signup-login")
+        } else {
+            if (usuario == undefined) {
+                res.render("signup-login")
+            } else if (password === usuario.password) {
+                res.redirect("/")
+            } else {
+                res.render("signup-login")
+            }
+        }
+
+
+
     }
      
 }
