@@ -53,5 +53,17 @@ module.exports = {
         subida(productos)
 
         res.redirect('/productos');
+    },
+    borrar:(req,res)=>{
+        productos.forEach(producto => {
+            if (producto.id === +req.params.id) {
+                let eliminar = productos.indexOf(producto)
+                productos.splice(eliminar, 1)
+            }
+
+        });
+        subida(productos)
+        res.redirect("/productos")    
+        
     }
 }

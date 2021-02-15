@@ -1,15 +1,5 @@
 [
   {
-    "id": 2,
-    "title": "Pop",
-    "category": "coleccion",
-    "marca": "Aero",
-    "price": "2000",
-    "subCategory": "nuevo",
-    "description": "Funko Pop Aerosmith\r\nTamaño: 12cm x 6cm\r\nbla bla",
-    "img": "file-product-1613420193433.jpg"
-  },
-  {
     "id": 3,
     "title": "Smile",
     "category": "albumes",
