@@ -83,7 +83,7 @@
                 <h2>Ofertas</h2>
                 <div class="productos-category row">
                     <% productos.forEach(producto => { %>
-                     <% if (producto.subCategory == "ofertas") { %>
+                     <% if (producto.subCategory == "oferta") { %>
                         <div class="col-4 col-lg-2 producto">
                             <a href="/productos/details/<%=producto.id%>">
                                 <img src="/images/products/<%=producto.img%>" alt="">
@@ -102,7 +102,7 @@
                 <h2>Más...</h2>
                 <div class="productos-category row">
                     <% productos.forEach(producto => { %>
-                     <% if (producto.id > 15) { %>
+                     <% if (producto.subCategory == "otros") { %>
                         <div class="col-4 col-lg-2 producto">
                             <a href="/productos/details/<%=producto.id%>">
                                 <img src="/images/products/<%=producto.img%>" alt="">

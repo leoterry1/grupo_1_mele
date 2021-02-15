@@ -26,6 +26,6 @@ module.exports = {
         }
         productos.push(producto)
         subida(productos)
-        res.redirect(`/`)
+        res.render("details", {title: producto.title + "| Mele", producto})
     }
 }
