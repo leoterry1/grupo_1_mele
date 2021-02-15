@@ -597,35 +597,47 @@
      width: 100%;
      border-radius: 25px;
 }
+.detalle-producto .all-details .detalles h3 span a i{
+     color: #000;
+}
  .detalle-producto .comprar {
      display: flex;
      align-items: center;
      text-align: center;
      justify-content: space-around;
+     width: 100%;
 }
  .detalle-producto .comprar h4 {
      font-size: 40px;
+     width: 30%;
 }
  .detalle-producto .comprar .cantidad {
-     width: 50%;
      font-size: 30px;
-     background-color: #181818;
-     border-radius: 22px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     justify-content: space-between;
+     width: 70%;
+}
+.detalle-producto .comprar form{
      display: flex;
      justify-content: space-between;
 }
- .detalle-producto .comprar .cantidad .mas, .detalle-producto .comprar .cantidad .menos {
-     background-color: #A387FE;
-     padding: 0 10px;
-     cursor: pointer;
-     border-radius: 50% 
+.detalle-producto .comprar form input{
+     width: 50%;
 }
+
+/*  */
  .detalle-producto .comprar i {
      background-color: #A387FE;
      padding: 10px;
      border-radius: 50%;
      font-size: 35px;
      cursor: pointer;
+}
+.detalle-producto .comprar button{
+     outline: 0;
+     border: 0;
 }
  .detalle-producto .comprar .cantidad .total {
      color: #fff;

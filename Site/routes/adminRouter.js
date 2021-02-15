@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require("path")
 const router = express.Router() 
-const {create, subir} = require("../controllers/adminController")
+const {create, subir, edit, save} = require("../controllers/adminController")
 const multer = require("multer");
 
 var storage = multer.diskStorage({
@@ -15,9 +15,10 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-/* router.get('/', adminController);
-router.get('/editar/:id', adminController);
-router.get('/delete/:id', adminController); */
+/* router.get('/', adminController); */
+router.get('/editar/:id', edit);
+router.put("/editar/producto/:id", upload.any(), save)
+/* router.get('/delete/:id', adminController);  */
 router.get('/create', create);
 router.post('/create/producto', upload.any(), subir);
 

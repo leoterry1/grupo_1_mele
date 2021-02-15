@@ -1,52 +1,52 @@
 [
-    {
-        "id": 2,
-        "title": "Funko Pop ",
-        "category": "coleccion",
-        "marca": "Aerosmith",
-        "price": "3000",
-        "subCategory": "nuevo",
-        "description": "Funko Pop Aerosmith\r\nTamaño: 12cm x 6cm",
-        "img": "file-product-1613330305187.jpg"
-    },
-    {
-        "id": 3,
-        "title": "Smile",
-        "category": "albumes",
-        "marca": "Katy Perry",
-        "price": "950",
-        "subCategory": "nuevo",
-        "description": "Smile es el quinto álbum de estudio de la cantante estadounidense Katy Perry, fue lanzado el 28 de agosto de 2020 a través de Capitol Records.\r\nTracklist:\r\n1. Never Really Over\r\n2. Cry About It Later\r\n3. Teary Eyes\r\n4. Daisies\r\n5. Resilient\r\n6. Not the End of the World\r\n7. Smile\r\n8. Champagne Problems\r\n9. Tucked\r\n10. Harleys In Hawaii\r\n11. Only Love\r\n12. What Makes A Woman",
-        "img": "file-product-1613392186658.jpg"
-    },
-    {
-        "id": 4,
-        "title": "Afinador",
-        "category": "instrumentos",
-        "marca": "JOYO",
-        "price": "500",
-        "subCategory": "oferta",
-        "description": "Afinador digital JOYO para instrumentos de cuerdas. ",
-        "img": "file-product-1613392484795.jpg"
-    },
-    {
-        "id": 5,
-        "title": "Funko Pop",
-        "category": "coleccion",
-        "marca": "Billie Eilish ",
-        "price": "3500",
-        "subCategory": "nuevo",
-        "description": "Funko Pop Billie Eilish.\r\n\r\nTamaño: 12 x 6 cm",
-        "img": "file-product-1613392609570.jpg"
-    },
-    {
-        "id": 6,
-        "title": "Guitarra Clásica",
-        "category": "instrumentos",
-        "marca": "Oditty",
-        "price": "50000",
-        "subCategory": "nuevo",
-        "description": "Manuel Rodriguez - Modelo A España.\r\n\r\nEsta guitarra presenta un color claro en su tapa gracias al resistente cedro canadiense macizo. Sin embargo, el modelo A cuenta con otra gran madera, el robusto Palo Santo de India. Este material conforma su cabeza, puente y aros y fondo. Este clásico, que presenta una colorida cenefa en la boca y clavijero dorado.",
-        "img": "file-product-1613392931336.jpg"
-    }
+  {
+    "id": 2,
+    "title": "Pop",
+    "category": "coleccion",
+    "marca": "Aero",
+    "price": "2000",
+    "subCategory": "nuevo",
+    "description": "Funko Pop Aerosmith\r\nTamaño: 12cm x 6cm\r\nbla bla",
+    "img": "file-product-1613420193433.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Smile",
+    "category": "albumes",
+    "marca": "Katy Perry",
+    "price": "950",
+    "subCategory": "nuevo",
+    "description": "Smile es el quinto álbum de estudio de la cantante estadounidense Katy Perry, fue lanzado el 28 de agosto de 2020 a través de Capitol Records.\r\nTracklist:\r\n1. Never Really Over\r\n2. Cry About It Later\r\n3. Teary Eyes\r\n4. Daisies\r\n5. Resilient\r\n6. Not the End of the World\r\n7. Smile\r\n8. Champagne Problems\r\n9. Tucked\r\n10. Harleys In Hawaii\r\n11. Only Love\r\n12. What Makes A Woman",
+    "img": "file-product-1613392186658.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Afinador",
+    "category": "instrumentos",
+    "marca": "JOYO",
+    "price": "500",
+    "subCategory": "oferta",
+    "description": "Afinador digital JOYO para instrumentos de cuerdas. ",
+    "img": "file-product-1613392484795.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Funko Pop",
+    "category": "coleccion",
+    "marca": "Billie Eilish ",
+    "price": "3500",
+    "subCategory": "nuevo",
+    "description": "Funko Pop Billie Eilish.\r\n\r\nTamaño: 12 x 6 cm",
+    "img": "file-product-1613392609570.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Guitarra Clásica",
+    "category": "instrumentos",
+    "marca": "Oditty",
+    "price": "50000",
+    "subCategory": "nuevo",
+    "description": "Manuel Rodriguez - Modelo A España.\r\n\r\nEsta guitarra presenta un color claro en su tapa gracias al resistente cedro canadiense macizo. Sin embargo, el modelo A cuenta con otra gran madera, el robusto Palo Santo de India. Este material conforma su cabeza, puente y aros y fondo. Este clásico, que presenta una colorida cenefa en la boca y clavijero dorado.",
+    "img": "file-product-1613392931336.jpg"
+  }
 ]
