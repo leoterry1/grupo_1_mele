@@ -23,4 +23,4 @@ app.use('/productos', productosRouter);
 app.use('/admin', adminRouter);
 app.use('/user', userRouter);
 
-app.listen(port,()=> console.log('el servidor esta corriendo en el puerto ' + port)) 
+app.listen(port,()=> console.log('El servidor está corriendo en el puerto ' + port)) 
