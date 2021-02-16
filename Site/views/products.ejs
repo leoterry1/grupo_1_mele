@@ -14,9 +14,12 @@
     </div>
     <% if (buscar) { %>
         <h2 class="titulo-detalles container">Resultados de la busqueda: <%=buscar%></h2>
-    <% } else { %>
+    <% }  else if (productos[0] == undefined ) { %> 
+        <h2 class="titulo-detalles container">No hemos encontrando resultados para <%=buscar%></h2>
+        <% }  else { %>
         <h2 class="titulo-detalles container">Todos los productos:</h2>
         <% } %>
+        
         
     
         <div class="categoria container">
@@ -39,5 +42,6 @@
         </div>
     </div>
     <%-include("partials/footer")%>
+    
 </body>
 </html>

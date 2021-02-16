@@ -11,7 +11,6 @@ module.exports = {
             return producto.title.toLowerCase().includes(buscar.toLowerCase()) 
         })
         
-        
         res.render('products',{
             title:"Resultado de la búsqueda" + buscar,
             productos: resultado,
