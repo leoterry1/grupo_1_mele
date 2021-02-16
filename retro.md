@@ -37,7 +37,10 @@
 
 **Seguir haciendo:**
 
-- Buscar referencias, mini-reuniones, distrubución de tareas, no perder tiempo. 
+- Buscar referencias.
+- Mini-reuniones. 
+- Distrubución de tareas.
+- No perder tiempo. 
 
 
 **Hacer menos: 
