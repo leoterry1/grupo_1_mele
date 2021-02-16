@@ -42,8 +42,7 @@
 - Distrubución de tareas.
 - No perder tiempo. 
 
-
-**Hacer menos: 
+**Hacer menos:** 
 - Perder clases. 
 
 **Dejar de hacer:**
