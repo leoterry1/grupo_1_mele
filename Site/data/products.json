@@ -1,15 +1,5 @@
 [
   {
-    "id": 3,
-    "title": "Smile",
-    "category": "albumes",
-    "marca": "Katy Perry",
-    "price": "950",
-    "subCategory": "nuevo",
-    "description": "Smile es el quinto álbum de estudio de la cantante estadounidense Katy Perry, fue lanzado el 28 de agosto de 2020 a través de Capitol Records.\r\nTracklist:\r\n1. Never Really Over\r\n2. Cry About It Later\r\n3. Teary Eyes\r\n4. Daisies\r\n5. Resilient\r\n6. Not the End of the World\r\n7. Smile\r\n8. Champagne Problems\r\n9. Tucked\r\n10. Harleys In Hawaii\r\n11. Only Love\r\n12. What Makes A Woman",
-    "img": "file-product-1613392186658.jpg"
-  },
-  {
     "id": 4,
     "title": "Afinador",
     "category": "instrumentos",
