@@ -461,6 +461,9 @@
      background-attachment: fixed;
      background-size: 100%;
 }
+.sad img{
+     width: 50%;
+}
  .categoria {
      margin: auto;
      z-index: 10;
