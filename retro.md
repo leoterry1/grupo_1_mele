@@ -48,5 +48,25 @@
 
 **Dejar de hacer:**
 
+# Sprint 3: Retro
 
+**Empezar a hacer:**
 
+- Estar al día con los contenidos de las clases.
+
+**Hacer mas:**
+
+- Incorporar novedades.
+
+**Seguir haciendo:**
+
+- Participación
+- Foco en prioridades
+
+**Dejar de hacer:**
+
+- 
+
+**Hacer menos:**
+
+-
