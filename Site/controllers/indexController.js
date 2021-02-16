@@ -8,8 +8,13 @@ module.exports = {
         const buscar = req.query.search;
 
         const resultado = productos.filter(producto=>{
-            return producto.title.toLowerCase().includes(buscar.toLowerCase()) 
+            return producto.title.toLowerCase().includes(buscar.toLowerCase()) || producto.marca.toLowerCase().includes(buscar.toLowerCase()) || producto.category.toLowerCase().includes(buscar.toLowerCase()) 
         })
+
+
+        
+
+        
         
         res.render('products',{
             title:"Resultado de la búsqueda" + buscar,

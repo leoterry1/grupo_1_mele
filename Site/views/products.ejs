@@ -9,14 +9,15 @@
     <script type="text/javascript">
         document.querySelector(".productos-li").classList.add("active")
     </script>
-    <div class="banner container">
+    <!-- <div class="banner container">
         <img src="/images/banner.jpg" alt="">
-    </div>
-    <% if (buscar) { %>
+    </div> -->
+    <% if (buscar && productos[0] != undefined) { %>
         <h2 class="titulo-detalles container">Resultados de la busqueda: <%=buscar%></h2>
-    <% }  else if (productos[0] == undefined ) { %> 
-        <h2 class="titulo-detalles container">No hemos encontrando resultados para <%=buscar%></h2>
-        <% }  else { %>
+    <% } if (productos[0] == undefined) { %> 
+        <h3 class="titulo-detalles container">No hemos encontrando resultados para: <%=buscar%>. Prueba agregando más detalles a tu búsqueda</h3>
+        <div class="sad"><img src="/images/no-results.png" alt=""></div>
+        <% }  if(buscar == false) { %>
         <h2 class="titulo-detalles container">Todos los productos:</h2>
         <% } %>
         
