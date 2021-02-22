@@ -32,20 +32,20 @@
                 <label for="category">Categoría</label>
                 <select name="category" id="category"  value="<%=producto.category%>">
                     <option value="null">Seleccionar categoría</option>
-                    <option value="albumes">Albumes</option>
-                    <option value="instrumentos">Instrumentos</option>
-                    <option value="coleccion">Colección</option>
-                    <option value="electronica">Electrónica</option>
-                    <option value="otros">Otros</option>
+                    <option <%- producto.category == "albumes" ? "selected" : null%> value="albumes">Albumes</option>
+                    <option <%- producto.category == "instrumentos" ? "selected" : null%> value="instrumentos">Instrumentos</option>
+                    <option <%- producto.category == "coleccion" ? "selected" : null%> value="coleccion">Colección</option>
+                    <option <%- producto.category == "electronica" ? "selected" : null%> value="electronica">Electrónica</option>
+                    <option <%- producto.category == "otros" ? "selected" : null%> value="otros">Otros</option>
                 </select>
             </div>
             <div class="select-category">
                 <label for="subCategory">Sub-categoría</label>
                 <select name="subCategory" id="sub-category">
                     <option value="null">Seleccionar sub-categoría</option>
-                    <option value="oferta">Ofertas</option>
-                    <option value="nuevo">Nuevos</option>
-                    <option value="otros">Otros</option>
+                    <option <%- producto.subCategory == "oferta" ? "selected" : null%> value="oferta">Ofertas</option>
+                    <option <%- producto.subCategory == "nuevo" ? "selected" : null%> value="nuevo">Nuevos</option>
+                    <option <%- producto.subCategory == "otros" ? "selected" : null%> value="otros">Otros</option>
                 </select>
             </div>
             <div class="titulo-producto">
