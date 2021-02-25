@@ -47,3 +47,27 @@
 
 **Dejar de hacer:**
 
+# Sprint 3: Retro
+
+**Empezar a hacer:**
+
+- Aprender a usar Trello.
+- Prestar más atención en detalles. 
+- Ponerse al día con clases y el playground. 
+
+**Hacer mas:**
+
+- Lluvia de ideas, funcionalidades. 
+- A codear más. 
+
+**Seguir haciendo:**
+
+- Buscar referencias.
+- No perder tiempo.
+- Trabajar en equipo.  
+
+**Hacer menos:** 
+-
+
+**Dejar de hacer:**
+-
