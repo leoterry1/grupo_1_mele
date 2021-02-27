@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mele | Acceder</title>
     <link rel="stylesheet" href="/styles/styles.css">
-</head>>
+</head>
 
 <body>
     <div class="logo"><a href="/"><img src="/images/mele.png" alt="mele"></a></div>
@@ -20,40 +20,46 @@
                 <h1>REGISTRARSE</h1>
             </div>
         </div>
-        <form class="signup" action="/user/signup" method="POST">
+<!-- REGISTRARSE -->
+        <form class="signup" action="/user/signup" method="POST" enctype="multipart/form-data"> 
             <div class="nombre-apellido">
                 <div class="name">
                     <input type="text" name="name" id="name" placeholder="Nombre">
-
                 </div>
                 <div class="last-name">
                     <input type="text" name="last-name" id="last-name" placeholder="Apellido">
-                </div>
-                
-
+                </div>  
             </div>
-            <!-- <p class="error">El correo electrónico ya se encuentra registrado</p> -->
             <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-<!--             <p class="error">Las contraseñas no coinciden</p>
- -->            <input type="password" name="password" id="password" placeholder="Contraseña">
-           <!--  <input type="password" name="email" id="password-repeat" placeholder="Repetir Contraseña"> -->
-
-            <!-- <label for="archivosubido">Foto de Perfil</label>
-            <input type="file" name="profile"> -->
-
-<!--             <p class="error">Por favor, complete todos los campos</p>
- -->            <button type="submit"> Registrarse </button>
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input type="password" name="password2" id="password" placeholder="Reingrese su contraseña">
+            <label for="archivosubido">Foto de Perfil</label>
+            <input type="file" name="profile"> 
+            <button type="submit"> Registrarse </button>
+            <% if (typeof errores != 'undefined') { %>
+                <ul>
+                    <% errores.forEach(error => { %>
+                        <li> <%= error.msg %> </li>
+                    <% }) %>
+                </ul>  
+            <% } %>
         </form>
 
         <form class="login" action="/user/login" method="POST">
-<!--             <p class="error">El correo electrónico no corresponde a ningun usuario</p>
- -->            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-
+           <input type="email" name="email" id="email" placeholder="Correo Electrónico">
             <input type="password" name="password" id="password" placeholder="Contraseña">
-<!--             <p class="error">Contraseña incorrecta</p>
- -->
+            <input type="checkbox" name="Recordar" id="recordar">
+           <label for="recordar"> Recordar </label>
             <button type="submit"> Ingresar </button>
+            <% if (typeof errores != 'undefined') { %>
+                <ul>
+                    <% errores.forEach(error => { %>
+                        <li> <%= error.msg %> </li>
+                    <% }) %>
+                </ul>  
+            <% } %>
         </form>
+        
     </div>
 
     <script src="/javascript/login.js"></script>

@@ -6,8 +6,8 @@ const indexRouter = require("./routes/indexRouter")
 const productosRouter = require("./routes/productosRouter")
 const userRouter = require("./routes/userRouter")
 const methodOverride = require('method-override');
-
-
+const session = require('express-session');
+const cookieCheck = require('./middlewares/cookieCheck');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -16,7 +16,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'secret'
+}));
 
+app.use(cookieCheck);
 
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);
