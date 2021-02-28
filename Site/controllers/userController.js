@@ -15,7 +15,7 @@ module.exports = {
                 errores: errores.errors
             })
         } else {
-            const { name, email, password } = req.body;
+            const { name, email, password , lastName} = req.body;
             let lastID = 1;
             usuarios.forEach(usuario => {
                 if (usuario.id > lastID) {
@@ -35,9 +35,11 @@ module.exports = {
                     let usuario = {
                         id: lastID + 1,
                         name,
+                        lastName,
                         email,
                         password: passHash,
-                        profile: req.files[0].filename || 'Sin profile'
+                        profile: typeof req.files[0] != "undefined" ? req.files[0].filename : 'perfil.jpg',
+                        admin: false
                     }
                     usuarios.push(usuario);
                     fs.writeFileSync("./data/users.json",JSON.stringify(usuarios, null, 2), 'utf-8');
@@ -63,7 +65,11 @@ module.exports = {
                 if(bcrypt.compareSync(password.trim(), result.password)){
                     req.session.usuario = {
                         id : result.id,
-                        name : result.name
+                        name : result.name,
+                        profile : result.profile,
+                        lastName: result.lastName,
+                        admin: result.admin
+                        
                     }
 
                     if(typeof recordar != 'undefined'){
@@ -85,10 +91,12 @@ module.exports = {
     },
 
     profile: (req,res) => {
-        res.render('profile')
+        let user = res.locals.user
+        res.render('profile',{title: user.name + " " + user.lastName})
     },
 
     logout : (req,res) => {
+        res.clearCookie('userMele')
         req.session.destroy();
         res.redirect('/')
     }

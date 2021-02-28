@@ -1,29 +1,11 @@
 [
   {
-    "id": 6,
+    "id": 2,
     "name": "Lucas",
-    "email": "asdakls@asjaj",
-    "password": "1234"
-  },
-  {
-    "id": 7,
-    "name": "cristina",
-    "email": "vera@gmail.com",
-    "password": "$2b$12$LpNEnTvz7HRgclPp4REGa.rLFHKellGp6s71jvIt4KX2FxCPjGv1i",
-    "profile": "profile-1614439187392.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Leonel",
-    "email": "ramirez@live.com",
-    "password": "$2b$12$f9/2nD.8D39U3uRFImrvfuSdHAbaohmmrxKFotxRH0Jr/20IAu4BS",
-    "profile": "profile-1614447287039.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Ruben",
-    "email": "lopez@live.com",
-    "password": "$2b$12$GsPdjFrTcKJs6.M1w8x9weZlry8fCJLhDsnegPkbxZ.HB.hmlrUI6",
-    "profile": "profile-1614460319125.jpg"
+    "lastName": "Enriquez",
+    "email": "lucasenriquez1997@gmail.com",
+    "password": "$2b$12$eZRQrnPOsEa9P0qOcKqeJekaD1hnowa2RNik0txj1uef5ZrZju8Mu",
+    "profile": "profile-1614542376159.jpg",
+    "admin": true
   }
 ]

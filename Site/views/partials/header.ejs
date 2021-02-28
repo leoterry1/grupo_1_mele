@@ -15,8 +15,8 @@
         </div>
     </div>
         <nav class="col-12 hidden-menu">
-            <a href="/user/perfil"><img src="/images/perfil.jpg" alt="Usuario"></a>
-            <p class="user-name">Usuario</p>
+            <a href="/user/perfil"><img src=<%- typeof user == "undefined" ?  "/images/perfil.jpg" : "/images/users/"+ user.profile%> alt="Usuario"></a>
+            <p class="user-name"><%= typeof user == "undefined" ? "" : user.name %></p>
             <a href="/user"><h4>Acceder</h4></a>
             <ul>
                 <a href="/">
@@ -32,9 +32,12 @@
                 <a href="/productos">
                     <li>Productos</li>
                 </a>
-                <a href="/admin/create">
-                    <li>Vender</li>
-                </a>
+                <% if (typeof user != "undefined" && user.admin) { %>
+                    <a href="/admin/create">
+                        <li>Vender</li>
+                    </a>
+                <% } %>
+                
             </ul>
         </nav>
     <div class="desktop">
@@ -53,7 +56,7 @@
                 <div class="botones">
                     <i class="fas fa-shopping-cart carrito-desktop"></i>
                     <a href="/user">
-                        <h4 class="usuario">Acceder</h4>
+                        <h4 class="usuario"><%= typeof user == "undefined" ? "Acceder" : user.name %></h4>
                     </a>
                 </div>
 
@@ -76,9 +79,12 @@
             <a class="productos-li"href="/productos">
                 <li>Productos</li>
             </a>
-            <a class="vender-li" href="/admin/create">
-                <li>Vender</li>
-            </a>
+            <% if (typeof user != "undefined" && user.admin) { %>
+                <a class="vender-li" href="/admin/create">
+                    <li>Vender</li>
+                </a>
+            <% } %>
+            
         </ul>
     </nav>
 

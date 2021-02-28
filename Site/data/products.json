@@ -10,16 +10,6 @@
     "img": "file-product-1613392484795.jpg"
   },
   {
-    "id": 5,
-    "title": "Funko Pop",
-    "category": "coleccion",
-    "marca": "Billie Eilish ",
-    "price": "3500",
-    "subCategory": "nuevo",
-    "description": "Funko Pop Billie Eilish.\r\n\r\nTamaño: 12 x 6 cm",
-    "img": "file-product-1613392609570.jpg"
-  },
-  {
     "id": 6,
     "title": "Guitarra Clásica",
     "category": "instrumentos",

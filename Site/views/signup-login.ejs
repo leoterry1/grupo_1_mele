@@ -27,7 +27,7 @@
                     <input type="text" name="name" id="name" placeholder="Nombre">
                 </div>
                 <div class="last-name">
-                    <input type="text" name="last-name" id="last-name" placeholder="Apellido">
+                    <input type="text" name="lastName" id="last-name" placeholder="Apellido">
                 </div>  
             </div>
             <input type="email" name="email" id="email" placeholder="Correo Electrónico">
@@ -48,7 +48,7 @@
         <form class="login" action="/user/login" method="POST">
            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
             <input type="password" name="password" id="password" placeholder="Contraseña">
-            <input type="checkbox" name="Recordar" id="recordar">
+            <input type="checkbox" name="recordar" id="recordar">
            <label for="recordar"> Recordar </label>
             <button type="submit"> Ingresar </button>
             <% if (typeof errores != 'undefined') { %>
