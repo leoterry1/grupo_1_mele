@@ -54,12 +54,10 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 Elegimos combinar negro con violeta:
 ![Violeta](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/estilo/Violeta.jpeg?raw=true "Violeta")
 
-## Boocetos: 
+## Bocetos: 
 Hicomos algunos bocetos para Mobile:
 
-![Home-Blanco](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/buscador.png?raw=true "Home Blanco")     
-![Home-Dark](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/iPhone%208%20Plus%20-%201black.jpg?raw=true "Home Dark")
-![Menú](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/nav-menu.png?raw=true "Menú")
+![Home-Blanco](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/buscador.png?raw=true "Home Blanco")![Home-Dark](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/iPhone%208%20Plus%20-%201black.jpg?raw=true "Home Dark")![Menú](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/nav-menu.png?raw=true "Menú")
 
 ## Referencias:
 
