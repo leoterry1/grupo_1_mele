@@ -71,7 +71,7 @@ Su link es https://animalsrecords.com.ar.
 
 Estas son algunas capturas:
 
-![Animal Records](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/animals_1.jpg")
+![Animal Records](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/animals_1.jpg)
 
 ![Animal Records](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/animals_2.jpg)
 
@@ -92,7 +92,7 @@ Link: https://music.youtube.com/
 
 Una captura de pantalla para ejemplificar:
 
-![Youtube Music](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/youtube.jpg")
+![Youtube Music](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/youtube.jpg)
 
 - Google Play Store
 
