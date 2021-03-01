@@ -2,9 +2,11 @@
   "name": "grupo_1_mele",
   "version": "1.0.0",
   "description": "![Mele](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/mele.png?raw=true \"Logo Mele\")",
-  "main": "app.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+
   },
   "repository": {
     "type": "git",
