@@ -8,8 +8,6 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 
 ## Grupo 1 - Integrantes:
 
-### Ayala Lucas Martín:
-   - Estudiante de Programación Web.
 ### Enríquez Lucas Leonel:
    - 23 años.
    - Estudiante de programación web e ingeniería en sistemas.
@@ -23,6 +21,9 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
    - 27 años.
    - Estudiante de Programación Web.
    - Cinéfila.
+   
+ ### Ayala Lucas Martín:
+   - Estudiante de Programación Web.
    
    ### Trello: 
    * [ El tablero de trabajo ](https://trello.com/b/Xsn1jOMu/grupo1mele) 
