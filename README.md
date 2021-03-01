@@ -1,4 +1,5 @@
-![Mele](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/mele.png?raw=true "Logo Mele")
+
+![Mele](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/estilo/mele.png?raw=true "Logo Mele")
 
 Elegimos el nombre Mele porque en hawaiano significa música y nos parece que la palabra es corta, fácil de decir y memorizar.
 
