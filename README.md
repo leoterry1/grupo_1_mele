@@ -30,21 +30,21 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 ## Wireframes:
 
 - Home:
-[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop1.jpg)
-[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/mobile1.jpg)
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/desktop1.jpg) 
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/mobile1.jpg)
 
 - Detalles: 
-[Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/Detalles1.png)
+[Detalles](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/Detalles1.png)
 
 - Registro:
-[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/desktop1.jpg)
-[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/registro_mobile1.jpg)
+[Desktop](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/registro1.jpg)
+[Mobile](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/registro_mobile1.jpg)
 
 - Carrito de compras:
-[Carrito](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/carrito-de-compras.png)
+[Carrito](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/carrito-de-compras.png)
 
 - Formulario de carga:
-[Formulario](https://github.com/leoterry1/grupo_1_mele/blob/main/wireframes/formulario_de_carga1.png)
+[Formulario](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/formulario_de_carga1.png)
 
 ## Tipografía:
 
@@ -52,12 +52,15 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
 
 ## Colores:
 Elegimos combinar negro con violeta:
-![Violeta](https://github.com/leoterry1/grupo_1_mele/blob/main/Estilo/Violeta.jpeg?raw=true "Violeta")
+![Violeta](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/estilo/Violeta.jpeg?raw=true "Violeta")
 
 ## Boocetos: 
 Hicomos algunos bocetos para Mobile:
 
-![Home-Blanco](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/buscador.png?raw=true "Home Blanco")     ![Home-Dark](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/iPhone%208%20Plus%20-%201black.jpg?raw=true "Home Dark")![Menú](https://github.com/leoterry1/grupo_1_mele/blob/main/Bocetos/nav-menu.png?raw=true "Menú")
+![Home-Blanco](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/buscador.png?raw=true "Home Blanco")     
+![Home-Dark](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/iPhone%208%20Plus%20-%201black.jpg?raw=true "Home Dark")
+![Menú](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/bocetos/nav-menu.png?raw=true "Menú")
+
 ## Referencias:
 
 Elegimos como referencia las siguientes páginas:
@@ -69,9 +72,9 @@ Su link es https://animalsrecords.com.ar.
 
 Estas son algunas capturas:
 
-![Animal Records](/referencias/animals_1.jpg?raw=true "Animals Records")
+![Animal Records](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/animals_1.jpg")
 
-![Animal Records](/referencias/animals_2.jpg?raw=true "Animals Records")
+![Animal Records](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/animals_2.jpg)
 
 - Letras.com
 
@@ -80,7 +83,7 @@ Link: https://www.letras.com
 
 Capturas:
 
-![Letras.com](https://github.com/leoterry1/grupo_1_mele/blob/main/referencias/letras_1.jpg?raw=true "Letras.com")
+![Letras.com](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/letras_1.jpg?raw=true "Letras.com")
 
 - Youtube Music
 
@@ -90,7 +93,7 @@ Link: https://music.youtube.com/
 
 Una captura de pantalla para ejemplificar:
 
-![Youtube Music](/referencias/youtube.jpg?raw=true "Youtube Music")
+![Youtube Music](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/youtube.jpg")
 
 - Google Play Store
 
@@ -100,7 +103,7 @@ Link: https://play.google.com/store?hl=es_419&gl=
 
 Captura:
 
-![Google Play Store](/referencias/playstore.jpg?raw=true "Google Play Store")
+![Google Play Store](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/playstore.jpg?raw=true "Google Play Store")
 
 - Spotify 
 
@@ -111,7 +114,7 @@ Link: https://open.spotify.com/
 
 Página de inicio de Spotify
 
-![Spotify](/referencias/spotify.jpg?raw=true "Spotify")
+![Spotify](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/spotify.jpg?raw=true "Spotify")
 
 - iTunes
 
@@ -121,9 +124,9 @@ Link: https://www.apple.com/la/music/
 
 Inicio de iTunes:
 
-![iTunes](/referencias/iTunes_1.jpg?raw=true "Animals Records")
+![iTunes](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/iTunes_1.jpg?raw=true "Animals Records")
 
-![iTunes](/referencias/iTunes_2.jpg?raw=true "Animals Records")
+![iTunes](https://github.com/leoterry1/grupo_1_mele/blob/main/Site/public/wireframes/referencias/iTunes_2.jpg?raw=true "Animals Records")
 
 
 En fin, esta es nuestra idea de proyecto y vamos a trabajar para que salga como deseamos. 
