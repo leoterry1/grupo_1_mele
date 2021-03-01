@@ -21,43 +21,58 @@
             </div>
         </div>
 <!-- REGISTRARSE -->
-        <form class="signup" action="/user/signup" method="POST" enctype="multipart/form-data"> 
+        <form class="<%= typeof estilo != "undefined" ? "active signup" : "signup"%>" action="/user/signup" method="POST" enctype="multipart/form-data"> 
             <div class="nombre-apellido">
                 <div class="name">
                     <input type="text" name="name" id="name" placeholder="Nombre">
+                    
                 </div>
                 <div class="last-name">
                     <input type="text" name="lastName" id="last-name" placeholder="Apellido">
                 </div>  
+                
             </div>
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.name) { %>
+                <span class="errores"><%=erroresSignUp.name.msg%></span>
+            <% } %>
             <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.email) { %>
+                <span class="errores"><%=erroresSignUp.email.msg%></span>
+            <% } %>
+            
             <input type="password" name="password" id="password" placeholder="Contraseña">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password) { %>
+                <span class="errores"><%=erroresSignUp.password.msg%></span>
+            <% } %>
             <input type="password" name="password2" id="password" placeholder="Reingrese su contraseña">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password2) { %>
+                <span class="errores"><%=erroresSignUp.password2.msg%></span>
+            <% } %>
             <label for="archivosubido">Foto de Perfil</label>
             <input type="file" name="profile"> 
             <button type="submit"> Registrarse </button>
-            <% if (typeof errores != 'undefined') { %>
-                <ul>
-                    <% errores.forEach(error => { %>
-                        <li> <%= error.msg %> </li>
-                    <% }) %>
-                </ul>  
-            <% } %>
+            
         </form>
 
-        <form class="login" action="/user/login" method="POST">
-           <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-            <input type="checkbox" name="recordar" id="recordar">
-           <label for="recordar"> Recordar </label>
-            <button type="submit"> Ingresar </button>
-            <% if (typeof errores != 'undefined') { %>
-                <ul>
-                    <% errores.forEach(error => { %>
-                        <li> <%= error.msg %> </li>
-                    <% }) %>
-                </ul>  
+        <form class="<%= typeof estilo != "undefined" ? "unactive login" : "login"%>" action="/user/login" method="POST">
+           <input type="email" name="email" id="email" value="<%=typeof datos != "undefined" && datos.email ? datos.email : "" %>" placeholder="Correo Electrónico">
+           <% if (typeof errores != 'undefined' && errores.email) { %>
+            <span class="errores"><%=errores.email.msg%></span>
+        <% } %>
+            <input type="password" name="password" value="<%=typeof datos != "undefined" && datos.password ? datos.password : "" %>"id="password" placeholder="Contraseña">
+            <% if (typeof errores != 'undefined' && errores.password) { %>
+                <span class="errores"><%=errores.password.msg%></span>
             <% } %>
+            <div>
+                <input class="recordar" type="checkbox" name="recordar" id="recordar">
+                <label class="recordar" for="recordar">Mantener sesión iniciada</label>
+            </div>
+            
+           
+           <% if (typeof errores != 'undefined' && errores.credenciales) { %>
+            <span class="errores"><%=errores.credenciales.msg%></span>
+        <% } %>
+            <button type="submit"> Ingresar </button>
         </form>
         
     </div>

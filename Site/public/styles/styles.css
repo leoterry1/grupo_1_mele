@@ -278,6 +278,11 @@
      cursor: pointer;
 }
 /*FORM LOGIN */
+
+.errores{
+     color: red;
+}
+
  .logo a {
      margin: auto;
 }
@@ -373,6 +378,16 @@
  .error {
      font-size: 15px;
      color: red;
+}
+.active{
+     display : flex;
+     flex-direction: column;
+}
+.active .nombre-apellido{
+     display : flex;
+}
+.form .unactive{
+     display: none;
 }
 /* FORMULARIO DE CARGA */
  .form-carga {

@@ -58,7 +58,9 @@ module.exports = {
         productos.forEach(producto => {
             if (producto.id === +req.params.id) {
                 let eliminar = productos.indexOf(producto)
+                fs.unlinkSync("public/images/products/"+ producto.img)
                 productos.splice(eliminar, 1)
+                
             }
 
         });

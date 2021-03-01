@@ -7,5 +7,14 @@
     "password": "$2b$12$eZRQrnPOsEa9P0qOcKqeJekaD1hnowa2RNik0txj1uef5ZrZju8Mu",
     "profile": "profile-1614542376159.jpg",
     "admin": true
+  },
+  {
+    "id": 3,
+    "name": "Pepe",
+    "lastName": "pepe",
+    "email": "pepe@gmail.com",
+    "password": "$2b$12$28H5Pf2eAqqRPUcYTP8IterfwUvNnOjrkEPD6SpnLAfTDP5uyw4GO",
+    "profile": "perfil.jpg",
+    "admin": false
   }
 ]

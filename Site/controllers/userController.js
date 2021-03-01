@@ -10,12 +10,14 @@ module.exports = {
 
     signup: (req, res) => {
         let errores = validationResult(req);
+
         if (!errores.isEmpty()) {
+            console.log(errores.mapped())
             return res.render('signup-login', {
-                errores: errores.errors
+                erroresSignUp: errores.mapped(), estilo: "active"
             })
         } else {
-            const { name, email, password , lastName} = req.body;
+            const { name, email, password, lastName} = req.body;
             let lastID = 1;
             usuarios.forEach(usuario => {
                 if (usuario.id > lastID) {
@@ -27,7 +29,7 @@ module.exports = {
             });
 
             if (req.body == undefined || name == "" || email == "" || password == "") {
-                res.render("signup-login")
+                res.render("signup-login", {estilo: "active"})
             }
             else {
                 if (existe === undefined) {
@@ -45,7 +47,7 @@ module.exports = {
                     fs.writeFileSync("./data/users.json",JSON.stringify(usuarios, null, 2), 'utf-8');
                     res.redirect('/')
                 } else {
-                    res.render('signup-login')
+                    res.render('signup-login',{ estilo: "active"})
                 }
             }
         }
@@ -56,7 +58,7 @@ module.exports = {
         const {email, password, recordar} = req.body;
         if (!errores.isEmpty()) {
             return res.render('signup-login', {
-                errores: errores.errors
+                errores: errores.mapped()
             })
         }else{
             let result = usuarios.find(usuario => usuario.email === email);
@@ -77,16 +79,20 @@ module.exports = {
                             maxAge :  1000 * 60 * 60 * 24 * 100000
                         })
                     }
-                    res.redirect('/user/profile')
+                    return res.redirect('/user/profile')
                 }
             }
             res.render('signup-login',{
-                errores: [
+                errores: 
                     {
-                        msg : 'Credenciales inválidas'
-                    }
-                ]
+                        credenciales: {
+                            msg : 'Credenciales inválidas'
+                        } 
+                    },
+                datos : req.body    
+                
             })
+        
         }
     },
 
