@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mele | Acceder</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div class="logo"><a href="/"><img src="/images/mele.png" alt="mele"></a></div>
+
+    <div class="form">
+        <div class="titulos">
+            <div class="ingresar">
+                <h1>INGRESAR</h1>
+            </div>
+            <div class="registrarse">
+                <h1>REGISTRARSE</h1>
+            </div>
+        </div>
+<!-- REGISTRARSE -->
+        <form class="<%= typeof estilo != "undefined" ? "active signup" : "signup"%>" action="/user/signup" method="POST" enctype="multipart/form-data"> 
+            <div class="nombre-apellido">
+                <div class="name">
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+                    
+                </div>
+                <div class="last-name">
+                    <input type="text" name="lastName" id="last-name" placeholder="Apellido">
+                </div>  
+                
+            </div>
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.name) { %>
+                <span class="errores"><%=erroresSignUp.name.msg%></span>
+            <% } %>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.email) { %>
+                <span class="errores"><%=erroresSignUp.email.msg%></span>
+            <% } %>
+            
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password) { %>
+                <span class="errores"><%=erroresSignUp.password.msg%></span>
+            <% } %>
+            <input type="password" name="password2" id="password" placeholder="Reingrese su contraseña">
+            <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password2) { %>
+                <span class="errores"><%=erroresSignUp.password2.msg%></span>
+            <% } %>
+            <label for="archivosubido">Foto de Perfil</label>
+            <input type="file" name="profile"> 
+            <button type="submit"> Registrarse </button>
+            
+        </form>
+
+        <form class="<%= typeof estilo != "undefined" ? "unactive login" : "login"%>" action="/user/login" method="POST">
+           <input type="email" name="email" id="email" value="<%=typeof datos != "undefined" && datos.email ? datos.email : "" %>" placeholder="Correo Electrónico">
+           <% if (typeof errores != 'undefined' && errores.email) { %>
+            <span class="errores"><%=errores.email.msg%></span>
+        <% } %>
+            <input type="password" name="password" value="<%=typeof datos != "undefined" && datos.password ? datos.password : "" %>"id="password" placeholder="Contraseña">
+            <% if (typeof errores != 'undefined' && errores.password) { %>
+                <span class="errores"><%=errores.password.msg%></span>
+            <% } %>
+            <div>
+                <input class="recordar" type="checkbox" name="recordar" id="recordar">
+                <label class="recordar" for="recordar">Mantener sesión iniciada</label>
+            </div>
+            
+           
+           <% if (typeof errores != 'undefined' && errores.credenciales) { %>
+            <span class="errores"><%=errores.credenciales.msg%></span>
+        <% } %>
+            <button type="submit"> Ingresar </button>
+        </form>
+        
+    </div>
+
+    <script src="/javascript/login.js"></script>
+
+</body>
+
+</html>

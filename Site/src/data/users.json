@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "name": "Lucas",
+    "lastName": "Enriquez",
+    "email": "lucasenriquez1997@gmail.com",
+    "password": "$2b$12$eZRQrnPOsEa9P0qOcKqeJekaD1hnowa2RNik0txj1uef5ZrZju8Mu",
+    "profile": "profile-1614542376159.jpg",
+    "admin": true
+  },
+  {
+    "id": 3,
+    "name": "Cristina",
+    "lastName": "Vera",
+    "email": "vcristina@gmail.com",
+    "password": "$2b$12$zeCW57kGhhj0esP5mc4z0eGzWLUYfbMDyKpH6RFY77fbG0NQXs17u",
+    "profile": "profile-1614608662812.jpg",
+    "admin": true
+  }
+]

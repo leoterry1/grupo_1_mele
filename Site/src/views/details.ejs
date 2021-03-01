@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include("partials/head")%>
+
+<body>
+    <%-include("partials/header")%>
+    <%-include("./partials/carrito")%>
+    <script type="text/javascript">
+        document.querySelector(".productos-li").classList.add("active")
+    </script>
+    <div class="banner container">
+        <img src="/images/banner.jpg" alt="">
+    </div>
+    <h2 class="titulo-detalles container">Detalles del producto: <%=producto.title%></h2>
+    <div class="detalle-producto container row">
+        <div class="image col-12 col-md-6">
+            <img src="/images/products/<%=producto.img%>" alt="<%=producto.title%>">
+        </div>
+        <div class="all-details col-12 col-md-6">
+            <div class="detalles">
+                <h3><%=producto.title%> <%=producto.marca%> <% if (typeof user != "undefined" && user.admin) { %>
+                    <span><a href="/admin/editar/<%=producto.id%>"><i class="fas fa-edit"></i></a></span> <span><form action="/admin/delete/<%=producto.id%>?_method=DELETE"method="POST"><button type="submit"><i class="fas fa-trash"></i></button></form></span>
+                <% } %>  </h3>
+                <% const descriptions = producto.description.split("\r\n") %>
+                <% descriptions.forEach(e => { %>
+                    <p><%=e%></p>
+                <% }) %>
+            
+            </div>
+            <div class="comprar">
+                <h4>$<%=producto.price%></h4>
+                <form action="">
+                    <div class="cantidad">
+                    <span class="menos"><button><i class="fas fa-minus-circle"></i></button></span>
+                   
+                    <span class="total"><input type="number" value="0"></span>
+                    <span class="mas"><button><i class="fas fa-plus-circle"></i></button></span>
+                    <button type="submit"><i class="fas fa-shopping-cart carrito-desktop"></i></button>
+                    </div>
+
+                </form>
+                
+                
+            </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <%-include("partials/footer")%>
+</body>
+</html>
