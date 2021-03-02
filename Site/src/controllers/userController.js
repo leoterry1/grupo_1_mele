@@ -12,9 +12,8 @@ module.exports = {
         let errores = validationResult(req);
 
         if (!errores.isEmpty()) {
-            console.log(errores.mapped())
             return res.render('signup-login', {
-                erroresSignUp: errores.mapped(), estilo: "active"
+                erroresSignUp: errores.mapped(), estilo: "active", old: req.body
             })
         } else {
             const { name, email, password, lastName} = req.body;
@@ -29,7 +28,7 @@ module.exports = {
             });
 
             if (req.body == undefined || name == "" || email == "" || password == "") {
-                res.render("signup-login", {estilo: "active"})
+                res.render("signup-login", {estilo: "active", old: req.body})
             }
             else {
                 if (existe === undefined) {
@@ -47,7 +46,7 @@ module.exports = {
                     fs.writeFileSync("./src/data/users.json",JSON.stringify(usuarios, null, 2), 'utf-8');
                     res.redirect('/')
                 } else {
-                    res.render('signup-login',{ estilo: "active"})
+                    res.render('signup-login',{ estilo: "active", old: req.body})
                 }
             }
         }

@@ -379,11 +379,11 @@
      font-size: 15px;
      color: red;
 }
-.active{
+.active-show{
      display : flex;
      flex-direction: column;
 }
-.active .nombre-apellido{
+.active-show .nombre-apellido{
      display : flex;
 }
 .form .unactive{

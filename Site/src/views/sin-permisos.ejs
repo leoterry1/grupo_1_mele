@@ -2,12 +2,12 @@
 <html lang="en">
     <%-include("partials/head")%>
 <body>
-    <%-include("partials/header")%>
-    <%-include("./partials/carrito")%>
-    <script type="text/javascript">
-        document.querySelector(".vender-li").classList.add("active")
-    </script>
-    <h1>No tienes permiso para acceder a esta pagina</h1>
-    <div class="sad"><img src="/images/no-results.png" alt=""></div>
+    <div class="error">
+        <img src="/images/mele.png" alt="">
+    <h1>Acceso denegado</h1>
+    <p>Necesitas permisos de administrador para acceder a esta página</p>
+    <a href="/">Volver al inicio</a>
+    </div>
+    
 </body>
 </html>
