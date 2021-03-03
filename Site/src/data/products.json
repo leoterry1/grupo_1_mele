@@ -40,16 +40,6 @@
     "img": "file-product-1614611243412.jpg"
   },
   {
-    "id": 6,
-    "title": "VERTIGO -DELUXE LTD-",
-    "category": "albumes",
-    "marca": "PABLO ALBORAN",
-    "price": "3109",
-    "subCategory": "nuevo",
-    "description": "Detalles del disco\r\nTipo: Compact Disc\r\nIntérprete / Grupo: ALBORAN, PABLO\r\nTitulo / Descripción: VERTIGO -DELUXE LTD-\r\nNº CD's edición: 1\r\nGénero: POPULAR\r\nCódigo de barras: 0190295065812\r\nPaís: España\r\nCompañía: WARNER",
-    "img": "file-product-1614611652447.jpg"
-  },
-  {
     "id": 7,
     "title": "LIFE BEGINS -GIRLIE/L-",
     "category": "otros",
@@ -148,5 +138,15 @@
     "subCategory": "oferta",
     "description": "Modelo D-3C BKS\r\nForma de cuerpo Dreadnought\r\nAbeto Sitka macizo superior\r\nCaoba africana B&S\r\nMástil de caoba africana (1F 21 mm - 9F 23 mm)\r\nMétodo conjunto Cola de milano en el 14. Preocuparse\r\nPuente Palisandro\r\nDiapasón de palisandro\r\nTraer el refuerzo tradicional en X\r\n\r\nTuerca y sillín PPS negro\r\n\r\nAncho de la tuerca 44 mm\r\n\r\nEncuadernación ABS negro\r\n\r\nConcha de roseta\r\n\r\nSintonizadores Negro Diecast\r\n\r\nAcabado Brillo BKS\r\n\r\nTrastes 20F\r\n\r\nEscala 650mm\r\n\r\nCuerdas TYMA TS1253\r\n\r\nEcualizador Fishman PSY-BAA-AAA\r\n\r\nAccesorios funda/correa/paño/pickguard",
     "img": "file-product-1614615544007.jpg"
+  },
+  {
+    "id": 18,
+    "title": "askldjsalkjd",
+    "category": "coleccion",
+    "marca": "asdasda",
+    "price": "250",
+    "subCategory": "oferta",
+    "description": "adsdasd",
+    "img": "file-product-1614806638508.jpg"
   }
 ]
