@@ -6,6 +6,9 @@ module.exports = [
     check('name')
     .notEmpty().withMessage('El nombre de usuario es requerido'),
 
+    check('lastName')
+    .notEmpty().withMessage('El apellido de usuario es requerido'),
+
     check('email')
     .isEmail().withMessage('El email debe ser válido'),
 

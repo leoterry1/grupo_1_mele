@@ -7,9 +7,12 @@
     <script type="text/javascript">
         document.querySelector(".vender-li").classList.add("active")
     </script>
-    <h1> <%= user.name + " " + user.lastName %> </h1>
-    <img src="/images/users/<%=user.profile%>" alt="">
-    <br>
-    <a href='/user/logout'> Cerrar sessión </a>
+
+    <div class="profile">
+        <h1> <%= user.name + " " + user.lastName %> </h1>
+        <img class= "avatar" src="/images/users/<%=user.profile%>" alt="">
+        <a  href='/user/logout'> Cerrar sessión </a>
+    </div>
+  
 </body>
 </html>

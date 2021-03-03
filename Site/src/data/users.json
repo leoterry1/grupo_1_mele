@@ -16,5 +16,14 @@
     "password": "$2b$12$zeCW57kGhhj0esP5mc4z0eGzWLUYfbMDyKpH6RFY77fbG0NQXs17u",
     "profile": "profile-1614608662812.jpg",
     "admin": true
+  },
+  {
+    "id": 4,
+    "name": "Diego",
+    "lastName": "Perez",
+    "email": "perez@live.com",
+    "password": "$2b$12$qvr/.emSPDyV0fIhAxkF9ebt3NKM6JgNhJ7Gf3EiuNw16gkkF1X26",
+    "profile": "profile-1614732613876.jpg",
+    "admin": false
   }
 ]

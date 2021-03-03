@@ -132,7 +132,7 @@
      align-items: center;
      justify-content: space-between;
      align-content: center;
-}
+}error
  .desktop header .top .logo {
      width: 10%;
      padding: 0;
@@ -170,7 +170,7 @@
      background-size: 0% 2px;
      transition: background-size .2s;
 }
- .desktop .botones a h4:hover, .error a:hover {
+ .desktop .botones a h4:hover, .error a:hover{
      background-size: 100% 100%;
      color: #000;
      border: none;
@@ -379,6 +379,7 @@
      font-size: 15px;
      color: red;
 }
+
 .active-show{
      display : flex;
      flex-direction: column;
@@ -389,6 +390,22 @@
 .form .unactive{
      display: none;
 }
+/* PERFIL */
+.profile {
+     margin: auto;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+}
+
+.profile .avatar{
+     width: 500px;
+     text-align: center;
+     margin: auto;
+     border-radius: 50%;
+     border: 2px solid #744BFF;
+}
+
 /* FORMULARIO DE CARGA */
  .form-carga {
      text-align: center;
