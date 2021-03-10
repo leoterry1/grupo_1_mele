@@ -1,19 +1,19 @@
 [
   {
     "id": 2,
-    "title": " SMILE",
+    "title": "Smile",
     "category": "albumes",
-    "marca": "KATY PERRY ",
-    "price": "0",
+    "marca": "Katy Perry",
+    "price": "950",
     "subCategory": "nuevo",
     "description": "TRACKLIST:\r\n1. NEVER REALLY OVER\r\n2. CRY ABOUT IT LATER\r\n3. TEARY EYES\r\n4. DAISIES\r\n5. RESILIENT\r\n6. NOT THE END OF THE WORLD\r\n7. SMILE\r\n8. CHAMPAGNE PROBLEMS\r\n9. TUCKED\r\n10. HARLEYS IN HAWAII\r\n11. ONLY LOVE\r\n12. WHAT MAKES A WOMAN",
     "img": "file-product-1614610129255.jpg"
   },
   {
     "id": 3,
-    "title": "EN TUS PLANES + DVD",
+    "title": "En tus planes + DVD",
     "category": "albumes",
-    "marca": "DAVID BISBAL",
+    "marca": "David Bisbal",
     "price": "1450",
     "subCategory": "nuevo",
     "description": "Detalles del disco\r\nTipo: Compact Disc\r\nIntérprete / Grupo: BISBAL, DAVID\r\nTitulo / Descripción: EN TUS PLANES + DVD\r\nNº CD's edición: 2\r\nGénero: POPULAR\r\nCódigo de barras: 0602435441580\r\nPaís: España\r\nCompañía: UNIVERSAL\r\n\r\nInf. Extra\r\nCD + DVD\r\nOFERTA FIN STOCK",
@@ -21,9 +21,9 @@
   },
   {
     "id": 4,
-    "title": "GREGAER -EP-",
+    "title": "Gregaer -EP-",
     "category": "albumes",
-    "marca": "HIRSCH EFFEKT",
+    "marca": "Hirsch Effekt",
     "price": "2199",
     "subCategory": "nuevo",
     "description": "Detalles del disco\r\nTipo: Disco Vinilo LP\r\nIntérprete / Grupo: HIRSCH EFFEKT\r\nTitulo / Descripción: GREGAER -EP-\r\nNº CD's edición: 1\r\nGénero: HEAVY METAL\r\nCódigo de barras: 0886922441714\r\nPaís: European Union\r\nCompañía: SPV",
@@ -31,9 +31,9 @@
   },
   {
     "id": 5,
-    "title": "LIVE IN SAN FRANCISCO 1966 -HQ-",
+    "title": "Live in San Francisco 1966 -HQ-",
     "category": "albumes",
-    "marca": " JEFFERSON AIRPLANE ",
+    "marca": " Jefferson Airplane",
     "price": "2499",
     "subCategory": "nuevo",
     "description": "Detalles del disco\r\nTipo: Disco Vinilo LP\r\nIntérprete / Grupo: JEFFERSON AIRPLANE\r\nTitulo / Descripción: LIVE IN SAN FRANCISCO 1966 -HQ-\r\nNº CD's edición: 2\r\nGénero: POPULAR\r\nCódigo de barras: 8717662576249\r\nPaís: España\r\nCompañía: SOURCE 1 MEDIA",
@@ -41,9 +41,9 @@
   },
   {
     "id": 7,
-    "title": "LIFE BEGINS -GIRLIE/L-",
+    "title": "Life Begins -Girlie/l-",
     "category": "otros",
-    "marca": "WISHBONE ASH",
+    "marca": "Wishbone Ash",
     "price": "870",
     "subCategory": "oferta",
     "description": "Detalles: \r\nTipo: T-Shirt - Camiseta\r\nIntérprete / Grupo: WISHBONE ASH\r\nTitulo / Descripción: LIFE BEGINS -GIRLIE/L-\r\nNº CD's edición: 1\r\nGénero: ROCK\r\nCódigo de barras: 0803341323155\r\nPaís: European Union\r\nCompañía: PHD MERCHANDISE",
@@ -61,7 +61,7 @@
   },
   {
     "id": 9,
-    "title": "HOMEGROWN",
+    "title": "Homegrown",
     "category": "coleccion",
     "marca": "Young Neil",
     "price": "4756",
@@ -71,7 +71,7 @@
   },
   {
     "id": 10,
-    "title": "LIVE AT CANTERBURY HOUSE 1967",
+    "title": "Live At Canterbury House 1967",
     "category": "otros",
     "marca": "Mitchell Joni",
     "price": "2754",
@@ -91,9 +91,9 @@
   },
   {
     "id": 13,
-    "title": "INTERFAZ M-AUDIO AIR 192 4 PACK VOCAL STUDIO PRO",
+    "title": "Interfaz M-Audio air 192 4 pack ",
     "category": "electronica",
-    "marca": "",
+    "marca": "Vocal studio pro",
     "price": "9232",
     "subCategory": "otros",
     "description": "Requerimientos mínimos del sistema\r\n\r\nmacOS: compatible con la clase 10.8\r\nPC: Windows 7, controlador de Windows\r\nPuerto USB 2.0 o USB-C estándar\r\n\r\nMicrófono NOVA negro\r\n\r\nTIPO: Micrófono de condensador electret trasero\r\nELEMENTO: Cápsula de diafragma de aluminio puro de 18 mm\r\nPATRÓN POLAR: Cardioide\r\nRESPUESTA DE FRECUENCIA: 20 Hz - 20 kHz\r\nSENSIBILIDAD: -38 dB (0 dB = 1 V / Pa @ 1 kHz)\r\nIMPEDANCIA NOMINAL: 200Ω\r\nSPL MÁXIMO: 136 dB\r\nPOTENCIA FANTASMA REQUERIDA: +48 V\r\nRELACIÓN S / N: 77 dB\r\nCONSUMO DE CORRIENTE: 3 mA",
@@ -131,22 +131,12 @@
   },
   {
     "id": 17,
-    "title": "GUITARRA ELECTROACUSTICA ",
+    "title": "Guitarra Electroacústica",
     "category": "instrumentos",
-    "marca": "TYMA D3C BKS CON FISHMAN",
+    "marca": "TYMA D3C BKS con fishman",
     "price": "42676",
     "subCategory": "oferta",
     "description": "Modelo D-3C BKS\r\nForma de cuerpo Dreadnought\r\nAbeto Sitka macizo superior\r\nCaoba africana B&S\r\nMástil de caoba africana (1F 21 mm - 9F 23 mm)\r\nMétodo conjunto Cola de milano en el 14. Preocuparse\r\nPuente Palisandro\r\nDiapasón de palisandro\r\nTraer el refuerzo tradicional en X\r\n\r\nTuerca y sillín PPS negro\r\n\r\nAncho de la tuerca 44 mm\r\n\r\nEncuadernación ABS negro\r\n\r\nConcha de roseta\r\n\r\nSintonizadores Negro Diecast\r\n\r\nAcabado Brillo BKS\r\n\r\nTrastes 20F\r\n\r\nEscala 650mm\r\n\r\nCuerdas TYMA TS1253\r\n\r\nEcualizador Fishman PSY-BAA-AAA\r\n\r\nAccesorios funda/correa/paño/pickguard",
     "img": "file-product-1614615544007.jpg"
-  },
-  {
-    "id": 18,
-    "title": "askldjsalkjd",
-    "category": "coleccion",
-    "marca": "asdasda",
-    "price": "250",
-    "subCategory": "oferta",
-    "description": "adsdasd",
-    "img": "file-product-1614806638508.jpg"
   }
 ]

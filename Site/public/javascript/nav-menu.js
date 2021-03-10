@@ -21,13 +21,16 @@ menuIcon.addEventListener("click", () =>{
 
 /* Posición del nav */
 
-let navDesktop = document.querySelector(".nav-desktop");
+let navDesktop = document.querySelector(".fondo-nav");
 let actualScroll = 0
 
 window.addEventListener("scroll", () =>{
     if(window.scrollY < actualScroll && window.scrollY != 0){
         navDesktop.style.position = "fixed";
         navDesktop.style.top = "0px";
+        navDesktop.style.left = "0px"
+        navDesktop.style.right = "0px"
+        navDesktop.style.margin = "auto"
         navDesktop.style.marginTop = "0";
         actualScroll = window.scrollY
         

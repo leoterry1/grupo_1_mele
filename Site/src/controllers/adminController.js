@@ -36,7 +36,10 @@ module.exports = {
     },
     save: (req,res)=>{
         const {name ,category , subCategory, description, marca, price} = req.body;
-        let img = req.files[0].filename;
+        let producto = productos.find(producto=>{
+            return producto.id == req.params.id
+        });
+        let img = producto.img
         productos.forEach(producto => {
             if(producto.id === +req.params.id){
                 producto.id = +req.params.id;
