@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mele_base`.`category` (
   `id_category` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_category`))
 ENGINE = InnoDB;
 
@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mele_base`.`subcategory` (
   `id_subcategory` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_subcategory`))
 ENGINE = InnoDB;
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `mele_base`.`users_products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id_user` INT UNSIGNED NOT NULL,
   `id_product` INT NOT NULL,
-  `quantify` INT NOT NULL,
+  `quantity` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_carts_products_idx` (`id_product` ASC),
   INDEX `fk_carts_users_idx` (`id_user` ASC),
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `mele_base`.`library` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id_user` INT UNSIGNED NOT NULL,
   `id_product` INT NOT NULL,
-  `quantify` INT NOT NULL,
+  `quantity` INT NOT NULL,
   `date` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_library_users_idx` (`id_user` ASC),
