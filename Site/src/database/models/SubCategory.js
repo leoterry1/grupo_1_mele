@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "SubCategory" 
+    let alias = "SubCategories" 
     let cols = {
         id_subcategory : {
             type: dataTypes.INTEGER.UNSIGNED,

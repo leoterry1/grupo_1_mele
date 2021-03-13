@@ -1,3 +1,4 @@
+const db = require('../database/models')
 const fs = require("fs");
 let productos = JSON.parse(fs.readFileSync("./src/data/products.json", "utf-8"));
 let subida = (array)=> fs.writeFileSync("./src/data/products.json", (JSON.stringify(array,null, 2)))
@@ -6,7 +7,25 @@ module.exports = {
         res.render("form-carga", {title : "Nuevo producto"})
     },
     subir: (req,res)=>{
-        let lastID = 1;
+
+        let {name ,category , subCategory, description, marca, price} = req.body;
+        let img = req.files[0].filename;
+        db.Products.create({
+            name,
+            mark: marca,
+            price,
+            deatail: description,
+            img,
+            id_subcategory: +subCategory,
+            id_category: +category,
+        })
+        .then((response)=>{
+           /*  res.render("details", {title: producto.title + "| Mele", producto}) */
+           res.send(response)
+        })
+
+
+        /* let lastID = 1;
         productos.forEach(producto => {
             if (producto.id > lastID) {
                 lastID = producto.id
@@ -26,7 +45,7 @@ module.exports = {
         }
         productos.push(producto)
         subida(productos)
-        res.render("details", {title: producto.title + "| Mele", producto})
+        res.render("details", {title: producto.title + "| Mele", producto}) */
     },
     edit: (req,res) => {
         let producto = productos.find(producto=>{
