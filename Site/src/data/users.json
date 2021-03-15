@@ -25,5 +25,14 @@
     "password": "$2b$12$qvr/.emSPDyV0fIhAxkF9ebt3NKM6JgNhJ7Gf3EiuNw16gkkF1X26",
     "profile": "profile-1614732613876.jpg",
     "admin": false
+  },
+  {
+    "id": 5,
+    "name": "Ruben",
+    "lastName": "Galeano",
+    "email": "rubenlg199@gmail.com",
+    "password": "$2b$12$6lr5oVFx/S9IIT0KsQeQyu.s0vXSF1Nq6htsbKC4jcK/Kgd7vbzfK",
+    "profile": "profile-1615650203860.webp",
+    "admin": true
   }
 ]

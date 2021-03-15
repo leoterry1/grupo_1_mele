@@ -1,23 +1,35 @@
-const fs = require("fs");
-let productos = JSON.parse(fs.readFileSync("./src/data/products.json", "utf-8"));
+const db = require('../database/models')
+const {Op} = require("sequelize")
 module.exports = {
     index:(req, res) =>{
-        
-        
-        res.render('index', {title: "Inicio", productos})
+        db.Products.findAll()
+            .then((productos)=>{
+                
+                res.render('index', {title: "Inicio", productos})
+            })
+            .catch((error)=> res.send(error))
     },
     search: (req,res)=>{
         const buscar = req.query.search;
-
-        const resultado = productos.filter(producto=>{
+        db.Products.findAll({
+            where:{
+                name:{
+                    [Op.substring]: buscar
+                }
+            }
+        })
+        .then((productos)=>{
+            res.render('products',{
+                title:"Resultado de la búsqueda" + buscar,
+                productos,
+                buscar
+            })
+        })
+        .catch((error)=> res.send(error))
+       /*  const resultado = productos.filter(producto=>{
             return producto.title.toLowerCase().includes(buscar.toLowerCase()) || producto.marca.toLowerCase().includes(buscar.toLowerCase()) || producto.category.toLowerCase().includes(buscar.toLowerCase()) 
-        })
+        }) */
         
-        res.render('products',{
-            title:"Resultado de la búsqueda" + buscar,
-            productos: resultado,
-            buscar
-        })
     },
     sinPermisos: (req,res)=>{
         res.render("sin-permisos", {title: "Error"})

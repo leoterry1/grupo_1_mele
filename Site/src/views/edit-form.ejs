@@ -15,14 +15,14 @@
 
     <div class="form form-carga">
             <h1><%=title%></h1>
-        <form action="/admin/editar/producto/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/admin/editar/producto/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="titulo-producto">
                 <label for="name">Nombre del producto</label>
-                <input type="text" id="name" name="name" value="<%=producto.title%>"placeholder="Ej: Funko Pop">
+                <input type="text" id="name" name="name" value="<%=producto.name%>"placeholder="Ej: Funko Pop">
             </div>
             <div class="titulo-producto">
                 <label for="marca">Marca/Artista</label>
-                <input type="text" id="marca" name="marca"  value="<%=producto.marca%>" placeholder="Ej: Aerosmith">
+                <input type="text" id="marca" name="marca"  value="<%=producto.mark%>" placeholder="Ej: Aerosmith">
             </div>
             <div class="titulo-producto">
                 <label for="price">Precio</label>
@@ -30,27 +30,27 @@
             </div>
             <div class="select-category">
                 <label for="category">Categoría</label>
-                <select name="category" id="category"  value="<%=producto.category%>">
+                <select name="category" id="category"  value="<%=producto.id_category%>">
                     <option value="null">Seleccionar categoría</option>
-                    <option <%- producto.category == "albumes" ? "selected" : null%> value="albumes">Albumes</option>
-                    <option <%- producto.category == "instrumentos" ? "selected" : null%> value="instrumentos">Instrumentos</option>
-                    <option <%- producto.category == "coleccion" ? "selected" : null%> value="coleccion">Colección</option>
-                    <option <%- producto.category == "electronica" ? "selected" : null%> value="electronica">Electrónica</option>
-                    <option <%- producto.category == "otros" ? "selected" : null%> value="otros">Otros</option>
+                    <option <%- producto.id_category == "1" ? "selected" : null%> value="1">Albumes</option>
+                    <option <%- producto.id_category == "2" ? "selected" : null%> value="2">Instrumentos</option>
+                    <option <%- producto.id_category == "3" ? "selected" : null%> value="3">Colección</option>
+                    <option <%- producto.id_category == "4" ? "selected" : null%> value="4">Electrónica</option>
+                    <option <%- producto.id_category == "5" ? "selected" : null%> value="5">Otros</option>
                 </select>
             </div>
             <div class="select-category">
                 <label for="subCategory">Sub-categoría</label>
                 <select name="subCategory" id="sub-category">
                     <option value="null">Seleccionar sub-categoría</option>
-                    <option <%- producto.subCategory == "oferta" ? "selected" : null%> value="oferta">Ofertas</option>
-                    <option <%- producto.subCategory == "nuevo" ? "selected" : null%> value="nuevo">Nuevos</option>
-                    <option <%- producto.subCategory == "otros" ? "selected" : null%> value="otros">Otros</option>
+                    <option <%- producto.id_subcategory == "1" ? "selected" : null%> value="1">Ofertas</option>
+                    <option <%- producto.id_subcategory == "2" ? "selected" : null%> value="2">Nuevos</option>
+                    <option <%- producto.id_subcategory == "3" ? "selected" : null%> value="3">Otros</option>
                 </select>
             </div>
             <div class="titulo-producto">
                 <label for="description">Descripción</label>
-                <textarea name="description" cols="30" rows="10" ><%=producto.description%></textarea>
+                <textarea name="description" cols="30" rows="10" ><%=producto.detail%></textarea>
             </div>
             <button type="submit"> Guardar Cambios </button> <button type="reset">Resetar</button>
         </form>

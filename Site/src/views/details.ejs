@@ -12,17 +12,17 @@
     <div class="banner container">
         <img src="/images/banner.jpg" alt="">
     </div>
-    <h2 class="titulo-detalles container">Detalles del producto: <%=producto.title%></h2>
+    <h2 class="titulo-detalles container">Detalles del producto: <%=producto.name%></h2>
     <div class="detalle-producto container row">
         <div class="image col-12 col-md-6">
-            <img src="/images/products/<%=producto.img%>" alt="<%=producto.title%>">
+            <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
         </div>
         <div class="all-details col-12 col-md-6">
             <div class="detalles">
-                <h3><%=producto.title%> <%=producto.marca%> <% if (typeof user != "undefined" && user.admin) { %>
-                    <span><a href="/admin/editar/<%=producto.id%>"><i class="fas fa-edit"></i></a></span> <span><form action="/admin/delete/<%=producto.id%>?_method=DELETE"method="POST"><button type="submit"><i class="fas fa-trash"></i></button></form></span>
+                <h3><%=producto.name%> <%=producto.mark%> <% if (typeof user != "undefined" && user.admin) { %>
+                    <span><a href="/admin/editar/<%=producto.id_product%>"><i class="fas fa-edit"></i></a></span> <span><form action="/admin/delete/<%=producto.id_product%>?_method=DELETE"method="POST"><button type="submit"><i class="fas fa-trash"></i></button></form></span>
                 <% } %>  </h3>
-                <% const descriptions = producto.description.split("\r\n") %>
+                <% const descriptions = producto.detail.split("\r\n") %>
                 <% descriptions.forEach(e => { %>
                     <p><%=e%></p>
                 <% }) %>

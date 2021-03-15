@@ -30,11 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         profile: {
             type : dataTypes.STRING(45),
             defaultValue: null
-        },
-        id_subcategory: {
-            type : dataTypes.INTEGER(10).UNSIGNED,
-            defaultValue: null
-        }
+        }    
     }
     
 
@@ -60,5 +56,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false 
         })
     }
-    
+    return User;
 }

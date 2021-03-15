@@ -27,11 +27,11 @@
             <div class="productos-category row">
                 <% productos.forEach(producto => { %>
                     <div class="col-4 col-lg-2 producto">
-                        <a href="/productos/details/<%=producto.id%>">
+                        <a href="/productos/details/<%=producto.id_product%>">
                             <img src="/images/products/<%=producto.img%>" alt="">
                             <div class="detalles">
-                                <h5><%=producto.title%></h5>
-                                <h6><%=producto.marca%></h6>
+                                <h5><%=producto.name%></h5>
+                                <h6><%=producto.mark%></h6>
                                 <p>$<%=producto.price%></p>
                             </div>
                         </a>

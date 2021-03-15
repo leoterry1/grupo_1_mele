@@ -34,15 +34,15 @@ module.exports = (sequelize, dataTypes) => {
     const Library = sequelize.define(alias, cols, config)
     Library.associate = function(models){
 
-        Product.belongsTo(models.Users,{
+        Library.belongsTo(models.Users,{
             as : 'User',
             foreignKey : 'id_user'
         })
 
-        Product.belongsTo(models.Products,{
+        Library.belongsTo(models.Products,{
             as : 'Product',
             foreignKey : 'id_product',
         })
     }
-    
+    return Library;
 }

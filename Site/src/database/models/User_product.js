@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
     
 
     const config = {
-        tableName : "user_products",
+        tableName : "users_products",
         timestamps : false, 
         underscored: true
     }
@@ -40,5 +40,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey : 'id_product',
         })
     }
-    
+    return User_product
 }

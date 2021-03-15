@@ -51,7 +51,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey : 'id_category'
         })
 
-        Product.belongsTo(models.SubCategories,{
+        Product.belongsTo(models.Subcategories,{
             as : 'SubCategory',
             foreignKey : 'id_subcategory',
         })
@@ -70,5 +70,5 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false 
         })
     }
-    
+    return Product;
 }
