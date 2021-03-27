@@ -286,7 +286,7 @@
 }
 /*FORM LOGIN */
 
-.errores, .text-danger{
+.errores{
      color: red;
  
 }
@@ -399,9 +399,9 @@
      display: none;
 }
 
-.is-invalid, .is-invalid:hover, .is-invalid:focus{
+/* .is-invalid, .is-invalid:hover, .is-invalid:focus{
      border-bottom: 2px red solid;
-}
+} */
 
 /* PERFIL */
 .profile {
