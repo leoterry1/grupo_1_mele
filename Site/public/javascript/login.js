@@ -4,7 +4,6 @@ let login = document.querySelector(".login")
 let signup = document.querySelector(".signup")
 let nombre_apellido = document.querySelector(".nombre-apellido")
 
-
 registrarse.addEventListener("click", () => {
     login.style.display = "none"
     signup.style.display = "flex"

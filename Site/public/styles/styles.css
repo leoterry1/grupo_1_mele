@@ -286,8 +286,9 @@
 }
 /*FORM LOGIN */
 
-.errores{
+.errores, .text-danger{
      color: red;
+ 
 }
 
  .logo a {
@@ -397,6 +398,11 @@
 .form .unactive{
      display: none;
 }
+
+.is-invalid, .is-invalid:hover, .is-invalid:focus{
+     border-bottom: 2px red solid;
+}
+
 /* PERFIL */
 .profile {
      margin: auto;
