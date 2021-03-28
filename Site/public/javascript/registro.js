@@ -166,3 +166,59 @@ window.addEventListener('load', () => {
 
     
 })
+
+window.addEventListener('load', () => {
+
+    let form = qs('#form-login');
+    let inputEmail = form.elements[0];
+    let inputPassword = form.elements[1];
+
+    let errorEmailLogin = qs('#errorEmailLogin')
+    let errorPasswordLogin = qs('#errorPasswordLogin')
+    console.log(errorPasswordLogin)
+    /* Expresiones regulares */
+    let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  
+    /* REGISTER VALIDATIONS */
+    
+    /* Email */
+    inputEmail.addEventListener('blur', () => {
+        switch (true) {
+            case !inputEmail.value:
+                errorEmailLogin.innerHTML = 'El campo email es obligatorio';
+                inputEmail.classList.add('is-invalid');
+                break;
+            case !regExEmail.test(inputEmail.value):
+                errorEmailLogin.innerHTML = 'Debes ingresar un email válido';
+                inputEmail.classList.add('is-invalid');
+                break;
+            default:
+                errorEmailLogin.innerHTML = '';
+                inputEmail.classList.remove('is-invalid');
+                inputEmail.classList.add('is-valid');
+                break;
+        }
+    })
+
+    /* Password */
+    inputPassword.addEventListener('blur', () => {
+        switch (true) {
+            case !inputPassword.value:
+                errorPasswordLogin.innerHTML = "El campo contraseña es obligatorio";
+                inputPassword.classList.add('is-invalid');
+                break;
+            case !regExPass.test(inputPassword.value):
+                errorPasswordLogin.innerHTML = 'La contraseña debe tener: al menos 6 caracteres, una mayúscula, una minúscula y un número';
+                inputPassword.classList.add('is-invalid');
+                break;
+            default:
+                errorPasswordLogin.innerHTML = "";
+                inputPassword.classList.remove('is-invalid');
+                inputPassword.classList.add('is-valid');
+                break;
+        }
+    })
+
+    
+})

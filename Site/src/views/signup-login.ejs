@@ -61,14 +61,18 @@
             <button type="submit"> Registrarse </button>    
         </form>
 
-        <form class="<%= typeof estilo != "undefined" ? "unactive login" : "login"%>" action="/user/login" method="POST">
+        <form class="<%= typeof estilo != "undefined" ? "unactive login" : "login"%>" action="/user/login" method="POST" id="form-login">
            <input type="email" name="email" id="emailLogin" value="<%=typeof datos != "undefined" && datos.email ? datos.email : "" %>" placeholder="Correo Electrónico">
+           <span id="errorEmailLogin" class="text-danger"> </span>
            <% if (typeof errores != 'undefined' && errores.email) { %>
             <span class="errores"><%=errores.email.msg%></span>
+            
         <% } %>
             <input type="password" name="password" value="<%=typeof datos != "undefined" && datos.password ? datos.password : "" %>"id="passwordLogin" placeholder="Contraseña">
+            <span id="errorPasswordLogin" class="text-danger"> </span>
             <% if (typeof errores != 'undefined' && errores.password) { %>
                 <span class="errores"><%=errores.password.msg%></span>
+                
             <% } %>
             <div>
                 <input class="recordar" type="checkbox" name="recordar" id="recordar">

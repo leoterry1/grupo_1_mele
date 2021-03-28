@@ -39,17 +39,6 @@ module.exports = {
                 .then((user)=>{
                     res.redirect('/user')
                 })
-                /* let usuario = {
-                    id: lastID + 1,
-                    name,
-                    lastName,
-                    email,
-                    password: passHash,
-                    profile: typeof req.files[0] != "undefined" ? req.files[0].filename : 'perfil.jpg',
-                    admin: false
-                }
-                usuarios.push(usuario);
-                fs.writeFileSync("./src/data/users.json",JSON.stringify(usuarios, null, 2), 'utf-8'); */
                 
             } else {
                 console.log("hola")
@@ -70,7 +59,7 @@ module.exports = {
                 errores: errores.mapped()
             })
         }else{
-            /* let result = usuarios.find(usuario => usuario.email === email); */
+            
             db.Users.findOne({
                 where:{
                      email

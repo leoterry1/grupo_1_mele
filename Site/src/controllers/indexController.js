@@ -26,9 +26,6 @@ module.exports = {
             })
         })
         .catch((error)=> res.send(error))
-       /*  const resultado = productos.filter(producto=>{
-            return producto.title.toLowerCase().includes(buscar.toLowerCase()) || producto.marca.toLowerCase().includes(buscar.toLowerCase()) || producto.category.toLowerCase().includes(buscar.toLowerCase()) 
-        }) */
         
     },
     sinPermisos: (req,res)=>{
