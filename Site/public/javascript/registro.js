@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     /* Expresiones regulares */
     let regLetras = /^[a-zA-Z\sñáéíóúü]*$/;
     let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     let regExExt = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
     let oneMB = 1048576;
 
@@ -96,7 +96,7 @@ window.addEventListener('load', () => {
                 inputPassword.classList.add('is-invalid');
                 break;
             case !regExPass.test(inputPassword.value):
-                errorPassword.innerHTML = "La contraseña debe tener entre 6 y 12 caracteres";
+                errorPassword.innerHTML = 'La contraseña debe tener: al menos 6 caracteres, una mayúscula, una minúscula y un número';
                 inputPassword.classList.add('is-invalid');
                 break;
             default:

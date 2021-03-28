@@ -7,16 +7,16 @@ module.exports = {
         res.render("signup-login")
     },
 
-    signup: (req, res) => {
+    signup: (req, res, next) => {
         let errores = validationResult(req);
-
+        
         if (!errores.isEmpty()) {
             return res.render('signup-login', {
                 erroresSignUp: errores.mapped(), estilo: "active", old: req.body
             })
         } else {
             const { name, email, password, lastName} = req.body;
-
+           
             if (req.body == undefined || name == "" || email == "" || password == "") {
               return  res.render("signup-login", {estilo: "active", old: req.body})
             }
