@@ -1,9 +1,10 @@
 
-const qs = (e) => document.querySelector(e)
-window.addEventListener('load', () => {
+ /* REGISTER VALIDATIONS */
 
+const qs = (e) => document.querySelector(e);
+
+window.addEventListener('load', () => {
     let form = qs('#form-signup');
-    console.log(form)
     let inputName = form.elements[0];
     let inputlastName = form.elements[1];
     let inputEmail = form.elements[2];
@@ -19,9 +20,6 @@ window.addEventListener('load', () => {
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     let regExExt = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
     let oneMB = 1048576;
-
-
-    /* REGISTER VALIDATIONS */
 
     /* Name */
     inputName.addEventListener('blur', () => {
@@ -107,7 +105,7 @@ window.addEventListener('load', () => {
         }
     })
 
-    /* Password */
+    /* Password2 */
     inputPassword2.addEventListener('blur', () => {
         switch (true) {
             case !inputPassword2.value:
@@ -126,7 +124,7 @@ window.addEventListener('load', () => {
         }
     })
 
-    /* PROFILE*/
+    /* Profile */
     inputProfile.addEventListener('blur', function () {
         switch (true) {
             case !inputProfile.value:
@@ -139,6 +137,7 @@ window.addEventListener('load', () => {
                 errorProfile.innerHTML = "";
         }
     })
+
     inputProfile.addEventListener('change', (e) => {
         switch (true) {
             case !regExExt.exec(inputProfile.value):
@@ -155,17 +154,12 @@ window.addEventListener('load', () => {
                 inputProfile.classList.remove('is-invalid');
                 inputProfile.classList.add('is-valid');
                 errorProfile.innerHTML = "";
-                let reader = new FileReader();
-                reader.readAsDataURL(e.target.files[0])
-                reader.onload = () => {
-                    vistaPrevia.src = reader.result
-                }
                 break;
         }
     })
-
-    
 })
+
+/* LOGIN VALIDATIONS */
 
 window.addEventListener('load', () => {
 
@@ -176,12 +170,11 @@ window.addEventListener('load', () => {
     let errorEmailLogin = qs('#errorEmailLogin')
     let errorPasswordLogin = qs('#errorPasswordLogin')
     console.log(errorPasswordLogin)
+
     /* Expresiones regulares */
     let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-  
-    /* REGISTER VALIDATIONS */
-    
+        
     /* Email */
     inputEmail.addEventListener('blur', () => {
         switch (true) {
@@ -220,5 +213,5 @@ window.addEventListener('load', () => {
         }
     })
 
-    
+   
 })
