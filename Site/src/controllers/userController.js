@@ -8,15 +8,13 @@ module.exports = {
     },
 
     signup: (req, res) => {
-        let errores = validationResult(req);
-
+        let errores = validationResult(req);  
         if (!errores.isEmpty()) {
             return res.render('signup-login', {
                 erroresSignUp: errores.mapped(), estilo: "active", old: req.body
             })
         } else {
             const { name, email, password, lastName} = req.body;
-
             if (req.body == undefined || name == "" || email == "" || password == "") {
               return  res.render("signup-login", {estilo: "active", old: req.body})
             }
@@ -39,17 +37,9 @@ module.exports = {
                 .then((user)=>{
                     res.redirect('/user')
                 })
-                /* let usuario = {
-                    id: lastID + 1,
-                    name,
-                    lastName,
-                    email,
-                    password: passHash,
-                    profile: typeof req.files[0] != "undefined" ? req.files[0].filename : 'perfil.jpg',
-                    admin: false
-                }
-                usuarios.push(usuario);
-                fs.writeFileSync("./src/data/users.json",JSON.stringify(usuarios, null, 2), 'utf-8'); */
+                .catch((error)=>{
+                    res.send(error)
+                })
                 
             } else {
                 console.log("hola")
@@ -70,7 +60,7 @@ module.exports = {
                 errores: errores.mapped()
             })
         }else{
-            /* let result = usuarios.find(usuario => usuario.email === email); */
+            
             db.Users.findOne({
                 where:{
                      email
