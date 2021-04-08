@@ -1,5 +1,6 @@
 
  /* REGISTER VALIDATIONS */
+const qs = (e) => document.querySelector(e);
 
 window.addEventListener('load', () => {
     let form = qs('#form-signup');
