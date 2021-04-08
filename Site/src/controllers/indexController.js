@@ -1,5 +1,5 @@
 const db = require('../database/models')
-const {Op} = require("sequelize")
+const {Op, where} = require("sequelize")
 module.exports = {
     index:(req, res) =>{
         db.Products.findAll()
@@ -13,9 +13,7 @@ module.exports = {
         const buscar = req.query.search;
         db.Products.findAll({
             where:{
-                name:{
-                    [Op.substring]: buscar
-                }
+                name: buscar
             }
         })
         .then((productos)=>{

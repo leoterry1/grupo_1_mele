@@ -22,7 +22,7 @@
                         <% if (producto.id_subcategory== 2 ) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="">
+                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
                                     <div class="detalles">
                                         <h5>
                                             <%=producto.name%>
@@ -91,7 +91,7 @@
                         <% if (producto.id_subcategory== 1 ) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="">
+                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
                                     <div class="detalles">
                                         <h5>
                                             <%=producto.name%>
@@ -116,7 +116,7 @@
                         <% if (producto.id_subcategory== 3 ) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="">
+                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
                                     <div class="detalles">
                                         <h5>
                                             <%=producto.name%>

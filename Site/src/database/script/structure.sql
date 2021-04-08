@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `mele_base`.`products` (
   `name` VARCHAR(45) NOT NULL,
   `mark` VARCHAR(45) NOT NULL,
   `price` VARCHAR(45) NOT NULL,
-  `detail` VARCHAR(300) NOT NULL,
+  `detail` VARCHAR(500) NOT NULL,
   `img` VARCHAR(45) NOT NULL,
   `id_category` INT NULL,
   `id_subcategory` INT NULL,

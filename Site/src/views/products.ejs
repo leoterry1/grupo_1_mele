@@ -14,9 +14,9 @@
     </div> -->
     <% if (buscar && productos[0] != undefined) { %>
         <h2 class="titulo-detalles container">Resultados de la busqueda: <%=buscar%></h2>
-    <% } if (productos[0] == undefined) { %> 
+    <% } if (buscar && productos[0] == undefined) { %> 
         <h3 class="titulo-detalles container"> No hemos encontrando resultados para:   <%=buscar%></h3>
-        <div class="sad"><img src="/images/no-result2.png" alt=""></div>
+        <div class="sad"><img src="/images/no-results.png" alt=""></div>
         <% }  if(buscar == false) { %>
         <h2 class="titulo-detalles container">Todos los productos:</h2>
         <% } %>
@@ -28,7 +28,7 @@
                 <% productos.forEach(producto => { %>
                     <div class="col-4 col-lg-2 producto">
                         <a href="/productos/details/<%=producto.id_product%>">
-                            <img src="/images/products/<%=producto.img%>" alt="">
+                            <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
                             <div class="detalles">
                                 <h5><%=producto.name%></h5>
                                 <h6><%=producto.mark%></h6>

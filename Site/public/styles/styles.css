@@ -480,6 +480,7 @@
      0%, 33% {
          background-image: url("/images/banner-1.jpg");
          opacity: 1;
+         background-size: 100%;
     }
     /* 30%, 33%{
          opacity: 0.1;
@@ -488,6 +489,7 @@
      34%, 67% {
          background-image: url("/images/banner-2.jpg");
          opacity: 1;
+         background-size: 100%;
     }
     /* 64%, 67%{
          opacity: 0.1;
@@ -496,6 +498,7 @@
      68%, 100% {
          background-image: url("/images/banner-3.jpg");
          opacity: 1;
+         background-size: 100%;
     }
     /* 98%, 100%{
          opacity: 0.1;
