@@ -22,9 +22,6 @@ Nuestro contenido está orientado a todo tipo de público, de diferente edad, se
    - Estudiante de Programación Web.
    - Cinéfila.
    
- ### Ayala Lucas Martín:
-   - Estudiante de Programación Web.
-   
    ### Trello: 
    * [ El tablero de trabajo ](https://trello.com/b/Xsn1jOMu/grupo1mele) 
 
