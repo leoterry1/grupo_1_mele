@@ -1,0 +1,58 @@
+.all-category .categoria{
+    height: 100px;
+}
+.data{
+    display: none;
+}
+.show{
+    display: flex;
+}
+h5{
+    text-align: center;
+}
+.artistas ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.artistas ul li{
+    padding: 10px 20px;
+    background-color: #A387FE;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.artistas ul li.active, .artistas ul li:hover{
+    background-color: #744BFF;
+}
+.productos-category{
+    margin: auto;
+    justify-content: space-between;
+}
+.productos-category .producto{
+    position: relative;
+    padding: 0;
+    
+}
+.productos-category .producto img{
+    width: 100%;
+    border-radius: 5px;
+}
+.productos-category .detalles {
+    background-color: rgba(7, 7, 7, 0.493);
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+.productos-category .producto:hover .detalles{
+    display: block 
+}
