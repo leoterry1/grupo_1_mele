@@ -25,9 +25,11 @@
                 <a href="">
                     <li>Categorías</li>
                 </a>
-                <a href="/user/profile">
-                    <li>Perfil</li>
-                </a>
+                <% if (typeof user != "undefined") { %>
+                    <a class="Perfil-li" href="/user/profile">
+                        <li>Perfil</li>
+                    </a>
+                <% } %>
                 </a>
                 <a href="/productos">
                     <li>Productos</li>
@@ -72,9 +74,11 @@
             <a class="categorias-li" href="">
                 <li>Categorías</li>
             </a>
-            <a class="Perfil-li" href="/user/profile">
-                <li>Perfil</li>
-            </a>
+            <% if (typeof user != "undefined") { %>
+                <a class="Perfil-li" href="/user/profile">
+                    <li>Perfil</li>
+                </a>
+            <% } %>
             </a>
             <a class="productos-li"href="/productos">
                 <li>Productos</li>
