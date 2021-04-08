@@ -15,18 +15,21 @@
 
     <div class="form form-carga">
             <h1><%=title%></h1>
-        <form action="/admin/editar/producto/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form id="form-carga" action="/admin/editar/producto/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="titulo-producto">
                 <label for="name">Nombre del producto</label>
                 <input type="text" id="name" name="name" value="<%=producto.name%>"placeholder="Ej: Funko Pop">
+                <span id="errorName" class="text-danger"> </span>
             </div>
             <div class="titulo-producto">
                 <label for="marca">Marca/Artista</label>
                 <input type="text" id="marca" name="marca"  value="<%=producto.mark%>" placeholder="Ej: Aerosmith">
+                <span id="errorMarca" class="text-danger"> </span>
             </div>
             <div class="titulo-producto">
                 <label for="price">Precio</label>
                 <input type="number" id="price" name="price"  value="<%=producto.price%>">
+                <span id="errorPrice" class="text-danger"> </span>
             </div>
             <div class="select-category">
                 <label for="category">Categoría</label>
@@ -38,6 +41,7 @@
                     <option <%- producto.id_category == "4" ? "selected" : null%> value="4">Electrónica</option>
                     <option <%- producto.id_category == "5" ? "selected" : null%> value="5">Otros</option>
                 </select>
+                <span id="errorCategory" class="text-danger"> </span>
             </div>
             <div class="select-category">
                 <label for="subCategory">Sub-categoría</label>
@@ -47,15 +51,23 @@
                     <option <%- producto.id_subcategory == "2" ? "selected" : null%> value="2">Nuevos</option>
                     <option <%- producto.id_subcategory == "3" ? "selected" : null%> value="3">Otros</option>
                 </select>
+                <span id="errorSubCategory" class="text-danger"> </span>
             </div>
             <div class="titulo-producto">
                 <label for="description">Descripción</label>
                 <textarea name="description" cols="30" rows="10" ><%=producto.detail%></textarea>
+                <span id="errorDetails" class="text-danger"> </span>
+            </div>
+            <div class="cargar-imagen">
+                <label for="archivosubido">Imagen</label>
+                <input type="file" name="file-product">
+                <span id="errorImage" class="text-danger"> </span>
             </div>
             <button type="submit"> Guardar Cambios </button> <button type="reset">Resetar</button>
         </form>
     </div>
     <%-include("partials/footer")%>
+    <script src="/javascript/productValidations.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,6 @@
 
  /* REGISTER VALIDATIONS */
 
-const qs = (e) => document.querySelector(e);
-
 window.addEventListener('load', () => {
     let form = qs('#form-signup');
     let inputName = form.elements[0];
@@ -230,20 +228,12 @@ window.addEventListener('load', () => {
     let errorPasswordLogin = qs('#errorPasswordLogin')
     console.log(errorPasswordLogin)
 
-    /* Expresiones regulares */
-    let regExEmail = /^(([^<>()\[\]\,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
         
     /* Email */
     let inputEmailValidations = () =>{
         switch (true) {
             case !inputEmail.value:
                 errorEmailLogin.innerHTML = 'El campo email es obligatorio';
-                inputEmail.classList.add('is-invalid');
-                loginError.email = true;
-                break;
-            case !regExEmail.test(inputEmail.value):
-                errorEmailLogin.innerHTML = 'Debes ingresar un email válido';
                 inputEmail.classList.add('is-invalid');
                 loginError.email = true;
                 break;
@@ -263,12 +253,7 @@ window.addEventListener('load', () => {
     let inputPasswordValidations = () =>{
         switch (true) {
             case !inputPassword.value:
-                errorPasswordLogin.innerHTML = "El campo contraseña es obligatorio";
-                inputPassword.classList.add('is-invalid');
-                loginError.password = true;
-                break;
-            case !regExPass.test(inputPassword.value):
-                errorPasswordLogin.innerHTML = 'La contraseña debe tener: al menos 6 caracteres, una mayúscula, una minúscula y un número';
+                errorPasswordLogin.innerHTML = "Debes ingresar una contraseña";
                 inputPassword.classList.add('is-invalid');
                 loginError.password = true;
                 break;
