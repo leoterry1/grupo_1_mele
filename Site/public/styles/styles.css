@@ -164,7 +164,7 @@
      font-size: 20px;
      cursor: pointer;
 }
-.desktop .botones a h4 , .error a, .profile a{
+.desktop .botones a h4 , .error a {
      font-size: 15px;
      border: 2px solid #A387FE;
      border-radius: 25px;
@@ -175,10 +175,15 @@
      background-size: 0% 2px;
      transition: background-size .2s;
 }
- .desktop .botones a h4:hover, .error a:hover, .profile a:hover{
+ .desktop .botones a h4:hover, .error a:hover{
      background-size: 100% 100%;
      color: #000;
      border: none;
+}
+.desktop .botones p{
+     font-size: 13px;
+     text-align: center;
+     margin: auto;
 }
  .nav-desktop {
      width: 90%;
@@ -404,30 +409,6 @@ div.titulos {
      border-bottom: 2px red solid;
 } */
 
-/* PERFIL */
-.profile {
-     margin: auto;
-     text-align: center;
-     display: flex;
-     flex-direction: column;
-}
-
-.profile .avatar{
-     width: 500px;
-     text-align: center;
-     margin: auto;
-     border-radius: 50%;
-     border: 2px solid #744BFF;
-}
-.profile h1{
-     color: #fff;
-}
-.profile a{
-     text-align: center;
-     width: 150px;
-     margin: auto;
-     margin-top: 30px;
-}
 /* FORMULARIO DE CARGA */
  .form-carga {
      text-align: center;
@@ -692,6 +673,9 @@ div.titulos {
      display: flex;
      flex-direction: column;
      justify-content: space-between;
+}
+.detalle-producto .all-details h3{
+     margin-bottom: 30px;
 }
 .detalle-producto .all-details .detalles h3 span a i{
      color: #000;

@@ -1,6 +1,5 @@
-const fs = require('fs');
+const db = require('../database/models')
 const {check, body} = require('express-validator');
-const usuarios = JSON.parse(fs.readFileSync('./src/data/users.json', 'utf-8'));
 
 module.exports = [
     check('name')
@@ -13,7 +12,11 @@ module.exports = [
     .isEmail().withMessage('El email debe ser válido'),
 
      body('email').custom(value => {
-        let result = usuarios.find(usuario => usuario.email === value);
+        let result = db.Users.findOne({
+            where:{
+                 email: value
+            }
+        })
         if(result){
             return false
         }else{

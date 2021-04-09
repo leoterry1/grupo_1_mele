@@ -57,9 +57,14 @@
                 </div>
                 <div class="botones">
                     <i class="fas fa-shopping-cart carrito-desktop"></i>
-                    <a href="/user">
-                        <h4 class="usuario"><%= typeof user == "undefined" ? "Acceder" : user.name %></h4>
-                    </a>
+                    <% if (typeof user == "undefined") { %>
+                        <a href="/user">
+                            <h4 class="usuario"><%= "Acceder" %></h4>
+                        </a>
+                    <% } else { %>
+                        <p class="saludo"><%= "Bienvenido/a, " + user.name %></p>
+                    <% } %>  
+                     
                 </div>
 
 
@@ -75,7 +80,7 @@
                 <li>Categorías</li>
             </a>
             <% if (typeof user != "undefined") { %>
-                <a class="Perfil-li" href="/user/profile">
+                <a id="Perfil-li" href="/user/profile">
                     <li>Perfil</li>
                 </a>
             <% } %>

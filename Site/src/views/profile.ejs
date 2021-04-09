@@ -5,20 +5,28 @@
     <%-include("partials/header")%>
     <%-include("./partials/carrito")%>
     <script type="text/javascript">
-        document.querySelector(".vender-li").classList.add("active")
+        document.querySelector("#Perfil-li").classList.add("active")
     </script>
-
-    <div class="profile">
-       
-        <h1> <%= user.name + " " + user.lastName %> 
-            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
-       </h1>
+    <link rel="stylesheet" href="/styles/perfil.css">
+<div class="container-fluid row">
+    <div class="profile col-3">
 
         <img class= "avatar" src="/images/users/<%=user.profile%>" alt="">
+        <p> <%= user.name + " " + user.lastName %> 
+            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
+        </p>
+        <p> Password
+            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
+        </p>
 
         
         <a  href='/user/logout'> Cerrar sessión </a>
     </div>
+    <div class="carrito-profile col-9">
+        <h1>Carrito</h1>
+    </div>
+</div>
+   
     <%-include("./partials/footer")%>
 </body>
 </html>
