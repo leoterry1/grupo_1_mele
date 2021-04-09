@@ -9,8 +9,14 @@
     </script>
 
     <div class="profile">
-        <h1> <%= user.name + " " + user.lastName %> </h1>
+       
+        <h1> <%= user.name + " " + user.lastName %> 
+            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
+       </h1>
+
         <img class= "avatar" src="/images/users/<%=user.profile%>" alt="">
+
+        
         <a  href='/user/logout'> Cerrar sessión </a>
     </div>
     <%-include("./partials/footer")%>

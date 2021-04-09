@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router() 
+const {user, login, signup, profile, editProfile, logout } = require('../controllers/userController')
 
-const {user, login, signup, profile, logout } = require('../controllers/userController')
 
 /* Middlewares */
 const uploadImg = require('../middlewares/uploadImg');
@@ -14,7 +14,12 @@ const sessionCheck = require("../middlewares/seessionCkeck")
 router.get('/',sessionCheck, user);
 router.post('/signup',uploadImg.any(),signupValidator,signup); 
 router.post('/login',loginValidator,login);
+
 router.get('/profile',userCheck,profile);
+
+router.get("/profile/editar/:id", userCheck, editProfile);
+router.put("/profile/editar/:id", userCheck, uploadImg.any(), editProfile);
+
 router.get('/logout', logout);
 
 module.exports = router;

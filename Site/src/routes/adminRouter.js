@@ -1,7 +1,9 @@
 const express = require('express');
-const path = require("path")
 const router = express.Router() 
+
 const {create, subir, edit, save, borrar} = require("../controllers/adminController")
+
+const path = require("path")
 const multer = require("multer");
 const adminCheck = require("../middlewares/adminCkeck")
 
@@ -19,6 +21,7 @@ var upload = multer({ storage: storage })
 /* router.get('/', adminController); */
 router.get('/editar/:id',adminCheck, edit);
 router.put("/editar/producto/:id", adminCheck, upload.any(), save);
+
 router.delete('/delete/:id',adminCheck, borrar);  
 router.get('/create', adminCheck, create);
 router.post('/create/producto',adminCheck, upload.any(), subir);

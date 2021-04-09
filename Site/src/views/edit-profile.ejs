@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%-include("partials/head")%>
+
+<body>
+    <%-include("partials/header")%>
+    <%-include("./partials/carrito")%>
+  
+    <div class="form editar-profile">
+            <h1><%=title%></h1>
+        <form action="/user/profile/editar/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        
+            <div class="titulo-usuario">
+                <label for="name">Nombre del Usuario</label>
+                <input type="text" id="name" name="name" value="<%=user.name%>">
+            </div>
+           
+          
+    
+            <button type="submit"> Guardar Cambios </button> <button type="reset"> Cancelar </button>
+        </form>
+    </div>
+
+
+
+
+    <%-include("partials/footer")%>
+</body>
+</html>

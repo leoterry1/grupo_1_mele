@@ -137,12 +137,12 @@ window.addEventListener('load', () => {
             case !inputProfile.value:
                 errorProfile.innerHTML = "Este campo es obligatorio"
                 inputProfile.classList.add('is-invalid');
-                registerError.inputProfile = false;
+                registerError.inputProfile = true;
                 break
             default:
                 inputProfile.classList.remove('is-invalid');
                 inputProfile.classList.add('is-valid');
-                registerError.inputProfile = true;
+                registerError.inputProfile = false;
                 errorProfile.innerHTML = "";
         }
     }
@@ -152,19 +152,19 @@ window.addEventListener('load', () => {
                 errorProfile.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
                 inputProfile.classList.add('is-invalid')
                 vistaPrevia.src = ""
-                registerError.inputProfile2 = false;
+                registerError.inputProfile2 = true;
                 break;
             case inputProfile.files[0].size > oneMB * 2:
                 errorProfile.innerHTML = "El archivo debe pesar menos de 2Mb"
                 inputProfile.classList.add('is-invalid')
                 vistaPrevia.src = ""
-                registerError.inputProfile2 = false;
+                registerError.inputProfile2 = true;
                 break
             default:
                 inputProfile.classList.remove('is-invalid');
                 inputProfile.classList.add('is-valid');
                 errorProfile.innerHTML = "";
-                registerError.inputProfile2 = true;
+                registerError.inputProfile2 = false;
                 break;
         }
     }

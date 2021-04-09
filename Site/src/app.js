@@ -17,7 +17,7 @@ app.use(express.static((__dirname + '..', 'public')));
 app.use(cookieParser())
 
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({
@@ -33,9 +33,10 @@ app.use('/productos', productosRouter);
 app.use('/admin', adminRouter);
 app.use('/user', userRouter);
 
-app.use(function(req, res, next) {
-    res.status(404).render('error', {title: "Error"});
+app.use(function (req, res, next) {
+    res.status(404).render('error', { title: "Error" });
 });
 
-app.listen(port,()=> console.log('El servidor está corriendo en el puerto ' + port)) 
+
+app.listen(port, () => console.log('El servidor está corriendo en el puerto ' + port))
 
