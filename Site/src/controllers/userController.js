@@ -108,6 +108,12 @@ module.exports = {
         res.render('profile',{title: user.name + " " + user.lastName})
     },
 
+    editProfile: (req,res) => {
+        let user = res.locals.user
+        res.render('edit-profile', {title: "Editar Perfil"})
+    },
+
+
     logout : (req,res) => {
         res.clearCookie('userMele')
         req.session.destroy();
