@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <%-include("partials/head",{title: "Acceder"})%>
+    
 <body>
     <div class="logo"><a href="/"><img src="/images/mele.png" alt="mele"></a></div>
 
@@ -18,11 +19,11 @@
 
             <div class="nombre-apellido">
                 <div class="name">
-                    <input type="text" name="name" id="name"value="<%=typeof old != "undefined" && old.name ? old.name : "" %>" placeholder="Nombre">
+                    <input class="form-control" type="text" name="name" id="name"value="<%=typeof old != "undefined" && old.name ? old.name : "" %>" placeholder="Nombre">
                     <span id="errorName" class="text-danger"> </span>    
                 </div>
                 <div class="last-name">
-                    <input type="text" name="lastName" id="last-name" value="<%=typeof old != "undefined" && old.lastName ? old.lastName : "" %>" placeholder="Apellido">
+                    <input class="form-control" type="text" name="lastName" id="last-name" value="<%=typeof old != "undefined" && old.lastName ? old.lastName : "" %>" placeholder="Apellido">
                     <span id="errorlastName" class="text-danger"> </span>
                 </div>      
             </div>
@@ -34,21 +35,21 @@
                 <span class="errores"><%=erroresSignUp.lastName.msg%></span>
             <% } %>
 
-            <input type="email" value="<%=typeof old != "undefined" && old.email ? old.email : "" %>" name="email" id="email" placeholder="Correo Electrónico">
+            <input class="form-control" type="email" value="<%=typeof old != "undefined" && old.email ? old.email : "" %>" name="email" id="email" placeholder="Correo Electrónico">
             <span id="errorEmail" class="text-danger"> </span>
 
             <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.email) { %>
                 <span class="errores"><%=erroresSignUp.email.msg%></span>
             <% } %>
             
-            <input type="password" name="password" id="password" value="<%=typeof old != "undefined" && old.password ? old.password : "" %>" placeholder="Contraseña">
+            <input class="form-control" type="password" name="password" id="password" value="<%=typeof old != "undefined" && old.password ? old.password : "" %>" placeholder="Contraseña">
             <span id="errorPassword" class="text-danger"> </span>
 
             <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password) { %>
                 <span class="errores"><%=erroresSignUp.password.msg%></span>
             <% } %>
 
-            <input type="password" name="password2" id="password2" value="<%=typeof old != "undefined" && old.password2 ? old.password2 : "" %>" placeholder="Reingrese su contraseña">
+            <input class="form-control" type="password" name="password2" id="password2" value="<%=typeof old != "undefined" && old.password2 ? old.password2 : "" %>" placeholder="Reingrese su contraseña">
             <span id="errorPassword2" class="text-danger"> </span>
 
             <% if (typeof erroresSignUp != 'undefined' && erroresSignUp.password2) { %>
@@ -56,19 +57,19 @@
             <% } %>
 
             <label for="archivosubido">Foto de Perfil</label>
-            <input type="file" name="profile"> 
+            <input class="form-control" type="file" name="profile"> 
             <span id="errorProfile" class="text-danger"> </span>
             <button type="submit"> Registrarse </button>    
         </form>
 
         <form class="<%= typeof estilo != "undefined" ? "unactive login" : "login"%>" action="/user/login" method="POST" id="form-login">
-           <input type="email" name="email" id="emailLogin" value="<%=typeof datos != "undefined" && datos.email ? datos.email : "" %>" placeholder="Correo Electrónico">
+           <input class="form-control" type="email" name="email" id="emailLogin" value="<%=typeof datos != "undefined" && datos.email ? datos.email : "" %>" placeholder="Correo Electrónico">
            <span id="errorEmailLogin" class="text-danger"> </span>
            <% if (typeof errores != 'undefined' && errores.email) { %>
             <span class="errores"><%=errores.email.msg%></span>
             
         <% } %>
-            <input type="password" name="password" value="<%=typeof datos != "undefined" && datos.password ? datos.password : "" %>"id="passwordLogin" placeholder="Contraseña">
+            <input class="form-control" type="password" name="password" value="<%=typeof datos != "undefined" && datos.password ? datos.password : "" %>"id="passwordLogin" placeholder="Contraseña">
             <span id="errorPasswordLogin" class="text-danger"> </span>
             <% if (typeof errores != 'undefined' && errores.password) { %>
                 <span class="errores"><%=errores.password.msg%></span>

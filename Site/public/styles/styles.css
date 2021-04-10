@@ -160,11 +160,12 @@
      align-items: center;
      width: 15%;
 }
- .desktop .botones i {
+ .desktop .botones i,.add-to-cart{
      font-size: 20px;
      cursor: pointer;
 }
-.desktop .botones a h4 , .error a {
+
+.desktop .botones a h4 , .error a ,.add-to-cart{
      font-size: 15px;
      border: 2px solid #A387FE;
      border-radius: 25px;
@@ -175,10 +176,15 @@
      background-size: 0% 2px;
      transition: background-size .2s;
 }
- .desktop .botones a h4:hover, .error a:hover{
+ .desktop .botones a h4:hover, .error a:hover ,.add-to-cart:hover{
      background-size: 100% 100%;
      color: #000;
      border: none;
+}
+.add-to-cart{
+     background-color: #A387FE;
+     font-weight: 400;
+     font-size: 16px;
 }
 .desktop .botones p{
      font-size: 13px;
@@ -684,8 +690,11 @@ div.titulos {
      display: flex;
      align-items: center;
      text-align: center;
-     justify-content: space-around;
+     justify-content:center;
      width: 100%;
+}
+.add-to-cart:active{
+     font-size: 15px;
 }
  .detalle-producto .comprar h4 {
      font-size: 40px;

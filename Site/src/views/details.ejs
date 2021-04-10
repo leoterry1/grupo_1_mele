@@ -32,7 +32,12 @@
                 <h4>$<%=producto.price%></h4>
                 <form action="">
                     <div class="cantidad">
-                    <button type="submit"><i class="fas fa-shopping-cart carrito-desktop"></i></button>
+                        <% if (typeof user == "undefined") { %>
+                            <button type="menu" class="add-to-cart"><a class="login-msg"href="/user">Inicia sesión para poder comprar</a></button>
+                            
+                        <% } else { %>
+                            <button type="button" class="add-to-cart">Agregar al carrito</i></button>
+                        <% } %>                
                     </div>
 
                 </form>
