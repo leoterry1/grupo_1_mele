@@ -6,13 +6,13 @@ let showCarrito = false
 let mostrarCarritoMobile = () => {
     if (showCarrito == false) {
         /* carrito.style.display = "inline-block" */
-        carrito.style.right = "0"
+        carrito.style.display = "block"
         /* carrito.style.left = "70%" */
         showCarrito = true
     } else {
         /* carrito.style.display = "none" */
         /* carrito.style.right = "-150%" */
-        carrito.style.right = "-150%"
+        carrito.style.display = "none"
         showCarrito = false
     }
 }
@@ -33,10 +33,12 @@ let updateCart = () => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     let divCart = qs("#cart")
     let cant = qs("#cant");
+    let cant2 = qs("#cart-mobile");
     let detalles = qs("#detalles")
     let total = 0;
     if (cart == null){
         cant.innerHTML = 0;
+        cant2.innerHTML = 0;
         return detalles.innerHTML = `
      <div class="empty-cart">
          <p>No tienes ningún producto agregado al carrito.</p>
@@ -74,6 +76,7 @@ let updateCart = () => {
         </div> `
 }
     cant.innerHTML = cart.length;
+    cant2.innerHTML = cart.length;
     
 }
 let deleteCart = () => {
@@ -82,12 +85,14 @@ let deleteCart = () => {
     let detalles = qs("#detalles")
     let divCart = qs("#cart")
     let cant = qs("#cant");
+    let cant2 = qs("#cart-mobile");
     detalles.innerHTML = `
     <div class="empty-cart">
         <p>No tienes ningún producto agregado al carrito.</p>
     </div>`
     divCart.innerHTML = "";
     cant.innerHTML = cart.length;
+    cant2.innerHTML = cart.length;
 }
 let lessCart = (id)=>{
     let cart = JSON.parse(localStorage.getItem("cart"))

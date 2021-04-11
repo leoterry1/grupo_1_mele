@@ -3,7 +3,8 @@
         <div class="top">
             <i class="fas fa-bars"></i>
             <a href="/"><img src="/images/mele.png" alt="mele"></a>
-            <i class="fas fa-shopping-cart"></i>
+            <div class="cart-logo"><i class="fas fa-shopping-cart"></i><span id="cart-mobile"></span></div>
+            
         </div>
 
         <div class="buscador">
@@ -16,8 +17,13 @@
     </div>
         <nav class="col-12 hidden-menu">
             <a href="/user/perfil"><img src=<%- typeof user == "undefined" ?  "/images/perfil.jpg" : "/images/users/"+ user.profile%> alt="Usuario"></a>
-            <p class="user-name"><%= typeof user == "undefined" ? "" : user.name %></p>
-            <a href="/user"><h4>Acceder</h4></a>
+            <% if (typeof user == "undefined") { %>
+                <a href="/user">
+                    <h4 class="usuario"><%= "Acceder" %></h4>
+                </a>
+            <% } else { %>
+                <p class="saludo"><%= "Bienvenido/a, " + user.name %></p>
+            <% } %>  
             <ul>
                 <a href="/">
                     <li>Inicio</li>

@@ -72,3 +72,32 @@ input[type=number] { -moz-appearance:textfield; }
     background-color: #A387FE;
     color: black;
 }
+@media (max-width: 1000px){
+    .carrito{
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .carrito .total button{
+        margin: 10px;
+    }
+    .carrito .total button:active, .carrito .product button:active{
+        background-color: #A387FE;
+        color: black;
+    }
+    .cart-logo{
+        position: relative;
+    }
+    #cart-mobile{
+        background-color: #754bff;
+        border-radius: 50%;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600;
+        position: absolute;
+        top: 0px;
+        right: -10px;
+   }
+
+}

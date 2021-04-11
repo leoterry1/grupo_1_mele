@@ -28,3 +28,24 @@
 .pre-footer{
     margin-top: 0;
 }
+@media (max-width: 1000px){
+    body{
+        padding: 0;
+    }
+    .container-fluid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .container-fluid .profile{
+        width: 100%;
+        margin : 0;
+    }
+    .container-fluid .profile img{
+        margin: auto;
+
+    }
+
+}
