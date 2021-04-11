@@ -55,11 +55,9 @@ let updateCart = () => {
             <p>${product.name}</p>
         </div>
         <div class="quantity col-3">
-            <form action="">
-                <button id="menos">-</button>
+                <button onclick="lessCart(${product.id})" id="menos">-</button>
                 <input class="col-4" type="number" value = "${product.cant}"name="quantity" id="quantity">
-                <button id="mas">+</button>
-            </form>
+                <button onclick="plusCart(${product.id})" id="mas">+</button>
         </div>
         <div class="price col-3">
             <h5>$${product.price * product.cant}</h5>
@@ -91,5 +89,42 @@ let deleteCart = () => {
     divCart.innerHTML = "";
     cant.innerHTML = cart.length;
 }
-
+let lessCart = (id)=>{
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    let divCart = qs("#cart")
+    cart.forEach(product => {
+        if(product.id == id && product.cant > 1){
+            product.cant = product.cant -1
+            divCart.innerHTML = ""
+            localStorage.setItem("cart", JSON.stringify(cart))
+            updateCart();
+        }else if(product.id == id && product.cant == 1 && cart.length == 1){
+            divCart.innerHTML = ""
+            localStorage.clear()
+            updateCart();
+        }else if(product.id == id && product.cant == 1 && cart.length > 1){
+            divCart.innerHTML = ""
+            let newCart = []
+            cart.forEach(product => {
+                if(product.id != id){
+                    newCart.push(product)
+                }
+            });
+            localStorage.setItem("cart", JSON.stringify(newCart))
+            updateCart();
+        }
+    });
+}
+let plusCart = (id) =>{
+    let divCart = qs("#cart")
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    cart.forEach(product => {
+        if (product.id == id){
+            product.cant = product.cant + 1
+            divCart.innerHTML = ""
+            localStorage.setItem("cart", JSON.stringify(cart))
+            updateCart();
+        }
+    });
+}
 updateCart();

@@ -27,7 +27,7 @@ input[type=number] { -moz-appearance:textfield; }
 .carrito .product img{
     width: 100%;
 }
-.carrito .product form{
+.carrito .product .quantity{
     display: flex;
     height: 20px;
     align-content: center;
@@ -35,11 +35,11 @@ input[type=number] { -moz-appearance:textfield; }
     margin: auto;
     justify-content: space-between;
 }
-.carrito .product form input{
+.carrito .product input{
     text-align: center;
     border:none;
 }
-.carrito .product form input:focus{
+.carrito .product input:focus{
     border: none;
 }
 .carrito .product button{

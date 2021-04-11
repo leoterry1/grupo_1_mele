@@ -25,3 +25,4 @@ let vaciarCarrito = () =>{
     localStorage.clear();
     deleteCart();
 }
+
