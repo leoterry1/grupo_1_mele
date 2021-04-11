@@ -9,9 +9,7 @@
     <script type="text/javascript">
         document.querySelector(".productos-li").classList.add("active")
     </script>
-    <div class="banner container">
-        <img src="/images/banner.jpg" alt="">
-    </div>
+    
     <h2 class="titulo-detalles container">Detalles del producto: <%=producto.name%></h2>
     <div class="detalle-producto container row">
         <div class="image col-12 col-md-6">
@@ -36,7 +34,7 @@
                             <button type="menu" class="add-to-cart"><a class="login-msg"href="/user">Inicia sesión para poder comprar</a></button>
                             
                         <% } else { %>
-                            <button type="button" class="add-to-cart">Agregar al carrito</i></button>
+                            <button onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1})" id="add" type="button" class="add-to-cart">Agregar al carrito</i></button>
                         <% } %>                
                     </div>
 
@@ -50,5 +48,6 @@
         </div>
     </div>
     <%-include("partials/footer")%>
+     <script defer src="/javascript/cart.js"></script>
 </body>
 </html>

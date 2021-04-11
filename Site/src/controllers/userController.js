@@ -10,6 +10,7 @@ module.exports = {
     signup: (req, res) => {
         let errores = validationResult(req);  
         if (!errores.isEmpty()) {
+            console.log(errores)
             return res.render('signup-login', {
                 erroresSignUp: errores.mapped(), estilo: "active", old: req.body
             })

@@ -1,0 +1,74 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+.carrito {
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 450px;
+    padding: 30px;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    z-index: 100;
+    display: none;
+    box-shadow:5px 5px rgba(44, 44, 44, 0.233);
+}
+.carrito .product{
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid grey 1px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.carrito .product img{
+    width: 100%;
+}
+.carrito .product form{
+    display: flex;
+    height: 20px;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+.carrito .product form input{
+    text-align: center;
+    border:none;
+}
+.carrito .product form input:focus{
+    border: none;
+}
+.carrito .product button{
+    padding: 5px;
+    border-radius: 20%;
+    background-color: #744BFF;
+    font-weight: 500;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.carrito .total{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+.carrito .total button{
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #744BFF;
+    color: #fff;
+    font-weight: 500;
+}
+.carrito .total button:hover, .carrito .product button:hover{
+    background-color: #A387FE;
+    color: black;
+}

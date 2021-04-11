@@ -56,7 +56,7 @@
                     </form>
                 </div>
                 <div class="botones">
-                    <i class="fas fa-shopping-cart carrito-desktop"></i>
+                    <div class="cart-logo"><i class="fas fa-shopping-cart carrito-desktop"></i><span id="cant"></span></div>
                     <% if (typeof user == "undefined") { %>
                         <a href="/user">
                             <h4 class="usuario"><%= "Acceder" %></h4>

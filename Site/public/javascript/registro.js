@@ -1,5 +1,5 @@
 
- /* REGISTER VALIDATIONS */
+/* REGISTER VALIDATIONS */
 const qs = (e) => document.querySelector(e);
 
 window.addEventListener('load', () => {
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     let inputProfile = form.elements[5];
     let registerError = {};
 
-    (inputProfile.value)?inputProfile.value = "": null
+    (inputProfile.value) ? inputProfile.value = "" : null
 
     /* Expresiones regulares */
     let regLetras = /^[a-zA-Z\sñáéíóúü]*$/;
@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
     let oneMB = 1048576;
 
     /* Name */
-    let nameValidations = () =>{
+    let nameValidations = () => {
         switch (true) {
             case !inputName.value:
                 errorName.innerHTML = 'Debes ingresar un nombre';
@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
                 break;
         }
     }
-    let lastNameValidations = ()=>{
+    let lastNameValidations = () => {
         switch (true) {
             case !inputlastName.value:
                 errorlastName.innerHTML = 'Debes ingresar un apellido';
@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
                 break;
         }
     }
-    let emailValidations = () =>{
+    let emailValidations = () => {
         switch (true) {
             case !inputEmail.value:
                 errorEmail.innerHTML = 'El campo email es obligatorio';
@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
                 break;
         }
     }
-    let passwordValidations = ()=>{
+    let passwordValidations = () => {
         switch (true) {
             case !inputPassword.value:
                 errorPassword.innerHTML = "El campo contraseña es obligatorio";
@@ -112,7 +112,7 @@ window.addEventListener('load', () => {
                 break;
         }
     }
-    let password2Validations = () =>{
+    let password2Validations = () => {
         switch (true) {
             case !inputPassword2.value:
                 errorPassword2.innerHTML = "La verificación de contraseña es obligatoria";
@@ -132,7 +132,7 @@ window.addEventListener('load', () => {
                 break;
         }
     }
-    let inputProfileValidations = ()=>{
+    let inputProfileValidations = () => {
         switch (true) {
             case !inputProfile.value:
                 errorProfile.innerHTML = "Este campo es obligatorio"
@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
                 errorProfile.innerHTML = "";
         }
     }
-    let inputProfileValidations2 = () =>{
+    let inputProfileValidations2 = () => {
         switch (true) {
             case !regExExt.exec(inputProfile.value):
                 errorProfile.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
@@ -200,7 +200,7 @@ window.addEventListener('load', () => {
     inputProfile.addEventListener('change', (e) => {
         inputProfileValidations2();
     })
-    form.addEventListener("submit", (e)=>{
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
         nameValidations();
         lastNameValidations();
@@ -210,7 +210,7 @@ window.addEventListener('load', () => {
         inputProfileValidations();
         inputProfileValidations2();
 
-        if (!registerError.name && !registerError.lastName && !registerError.email && !registerError.password && !registerError.password2 && !registerError.inputProfile && !registerError.inputProfile2){
+        if (!registerError.name && !registerError.lastName && !registerError.email && !registerError.password && !registerError.password2 && !registerError.inputProfile && !registerError.inputProfile2) {
             form.submit();
         }
     })
@@ -225,18 +225,25 @@ window.addEventListener('load', () => {
     let inputPassword = form.elements[1];
     let loginError = {};
 
+    let regExEmail = /^(([^<>()\[\]\,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+
+
     let errorEmailLogin = qs('#errorEmailLogin')
     let errorPasswordLogin = qs('#errorPasswordLogin')
-    console.log(errorPasswordLogin)
 
-        
+
     /* Email */
-    let inputEmailValidations = () =>{
+    let inputEmailValidations = () => {
         switch (true) {
             case !inputEmail.value:
                 errorEmailLogin.innerHTML = 'El campo email es obligatorio';
                 inputEmail.classList.add('is-invalid');
                 loginError.email = true;
+                break;
+            case !regExEmail.test(inputEmail.value):
+                errorEmail.innerHTML = 'Debes ingresar un email válido';
+                inputEmail.classList.add('is-invalid');
+                registerError.email = true;
                 break;
             default:
                 errorEmailLogin.innerHTML = '';
@@ -251,7 +258,7 @@ window.addEventListener('load', () => {
     })
 
     /* Password */
-    let inputPasswordValidations = () =>{
+    let inputPasswordValidations = () => {
         switch (true) {
             case !inputPassword.value:
                 errorPasswordLogin.innerHTML = "Debes ingresar una contraseña";
@@ -270,15 +277,15 @@ window.addEventListener('load', () => {
         inputPasswordValidations();
     })
 
-    form.addEventListener("submit", (e)=>{
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
         inputEmailValidations();
         inputPasswordValidations();
 
-        if (!loginError.email && !loginError.password){
+        if (!loginError.email && !loginError.password) {
             form.submit();
         }
     })
 
-   
+
 })

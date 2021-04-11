@@ -229,72 +229,7 @@
      background-size: 100% 2px;
 }
 /* CARRITO */
- .carrito {
-     background-color: #fff;
-     border-radius: 5px;
-     max-width: 450px;
-     padding: 30px;
-     position: fixed;
-     top: -150%;
-     right: 60px;
-     font-size: 15px;
-     z-index: 100;
-     transition: top 0.5s;
-}
- .carrito .producto {
-     display: flex;
-     align-items: center;
-     align-content: center;
-     justify-content: space-between;
-     position: relative;
-}
- .carrito .producto img {
-     width: 20%;
-}
- .carrito .producto .cantidad {
-     margin: auto 20px;
-}
- .carrito .producto .botones {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     position: absolute;
-     left: 0;
-     opacity: 0;
-     right: 20px;
-     transition: opacity 0.5s;
-}
- .carrito .producto:hover .botones {
-     opacity: 1;
-}
- .carrito .producto .cantidad, .carrito .producto .mas, .carrito .producto .menos {
-     background-color: #A387FE;
-     border-radius: 50%;
-     padding: 5px 10px;
-     border: solid 1px #744BFF;
-}
- .carrito .producto .mas, .carrito .producto .menos {
-     margin: auto 5px;
-     cursor: pointer;
-}
- .carrito .total {
-     border-top: 1px solid rgb(189, 189, 189);
-     margin-top: 30px;
-     text-align: center;
-     padding-top: 30px;
-}
- .carrito .precio-total {
-     margin-bottom: 30px;
-     font-size: 15px;
-}
- .carrito .comprar {
-     font-size: 20px;
-     border-radius: 20px;
-     background-color: #A387FE;
-     display: inline;
-     padding: 5px 20px;
-     cursor: pointer;
-}
+ 
 /*FORM LOGIN */
 
 .errores{
@@ -892,4 +827,17 @@ div.titulos {
      header .hidden-menu {
          width: 50%;
     }
+}
+.cart-logo{
+     position: relative;
+}
+#cant{
+     background-color: #754bff;
+     border-radius: 50%;
+     padding: 0 5px;
+     font-size: 12px;
+     font-weight: 600;
+     position: absolute;
+     top: -10px;
+     right: -10px;
 }

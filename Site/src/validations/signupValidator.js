@@ -11,18 +11,19 @@ module.exports = [
     check('email')
     .isEmail().withMessage('El email debe ser válido'),
 
-     body('email').custom(value => {
-        let result = db.Users.findOne({
+    body('email')
+    .custom(function(value){
+        return db.Users.findOne({
             where:{
-                 email: value
+                email:value
             }
         })
-        if(result){
-            return false
-        }else{
-            return true
-        }
-    }).withMessage('El email ya está registrado'),
+        .then(user => {
+            if(user){
+                return Promise.reject('Este email ya está registrado')
+            }
+        })
+    }),
 
     check('password')
     .notEmpty().withMessage('La contraseña es requerida')
