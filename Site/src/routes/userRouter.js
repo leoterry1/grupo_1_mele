@@ -9,6 +9,7 @@ const userCheck = require('../middlewares/userCheck');
 
 const signupValidator = require('../validations/signupValidator');
 const loginValidator = require('../validations/loginValidator');
+const editUserValidator = require('../validations/editUserValidator');
 const sessionCheck = require("../middlewares/seessionCkeck")
 
 router.get('/',sessionCheck, user);
@@ -17,8 +18,9 @@ router.post('/login',loginValidator,login);
 
 router.get('/profile',userCheck,profile);
 
+/* Editar */
 router.get("/profile/editar/:id", userCheck, editProfile);
-router.put("/profile/editar/:id", userCheck, uploadImg.any(), editProfile);
+router.put("/profile/editar/:id", userCheck, uploadImg.any(), editUserValidator, editProfile);
 
 router.get('/logout', logout);
 
