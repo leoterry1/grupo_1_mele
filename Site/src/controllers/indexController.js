@@ -39,5 +39,14 @@ module.exports = {
     },
     sinPermisos: (req,res)=>{
         res.render("sin-permisos", {title: "Error"})
+    },
+    categories: (req, res) => {
+        db.Products.findAll()
+            .then((productos)=>{
+                
+                res.render("categories", {title: "Categorías", productos})
+            })
+            .catch((error)=> res.send(error))
+        
     }
 }
