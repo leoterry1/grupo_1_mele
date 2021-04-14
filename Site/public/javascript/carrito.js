@@ -3,6 +3,8 @@ let carrito = document.querySelector(".carrito")
 let btnCarritoDesktop = document.querySelector(".carrito-desktop")
 let showCarrito = false
 
+
+
 let mostrarCarritoMobile = () => {
     if (showCarrito == false) {
         /* carrito.style.display = "inline-block" */
