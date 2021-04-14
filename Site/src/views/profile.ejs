@@ -2,34 +2,101 @@
 <html lang="en">
     <%-include("partials/head")%>
 <body>
+    <!-- Editar perfil -->
+<div class="contenedor-edit">
+    <div class="edit-foto">
+        <form action="/user/profile/editar/foto?_mryhod=PUT" method="POST" enctype="multipart/form-data">
+            <h4>Cambiar foto de perfil</h4>
+            <input class="form-control" type="file" name="profile" id="profile" accept="image/*">
+            <div class="buttons">
+            <button type="submit"class="btn btn-primary">Subir</button>
+            <button type="button"class="cancelar btn btn-danger">Cancelar</button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="contenedor-password">
+        
+        <form action="" class="password">
+            <h4>Cambiar contraseña</h4>
+            <label for="passwordActual">Contraseña actual</label>
+            <input class="form-control" type="password" placeholder="Contraseña Actual" name="passwordActual">
+            <label for="password1">Nueva contraseña</label>
+            <input class="form-control" type="password" placeholder="Contraseña Nueva" name="password1">
+            <label for="password2">Repetir nueva contraseña</label>
+            <input class="form-control" type="password" placeholder="Repetir Contraseña" name="password2">
+            <div class="buttons">
+            <button type="submit"class="btn btn-primary">Subir</button>
+            <button type="button"class="cancelar-pwd btn btn-danger">Cancelar</button>
+        </div>
+        </form>
+        </div>
+
+
     <%-include("partials/header")%>
     <%-include("./partials/carrito")%>
     <script type="text/javascript">
         document.querySelector("#Perfil-li").classList.add("active")
     </script>
     <link rel="stylesheet" href="/styles/perfil.css">
+
 <div class="container-fluid row">
     <div class="profile col-3">
+        <div class="img">
+            <img class="avatar" src="/images/users/<%=user.profile%>" alt="">
+            <div id="editar-foto">
+                <i class="fas fa-camera"></i>
+            </div>
+            
+        </div>
+        <div class="datos">
+            <div class="nombre"><span class="hide-nombre">Nombre:  <%= user.name %>  </span><span class="hide-nombre"><i id="edit-name"class="fas fa-edit"></i></span>
+            <form action="" class="form-nombre form-control">
+                <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>"> 
+                <div class="buttons">
+                    <button type="submit"><i class="far fa-check-circle"></i></button>
+                    <button type="button"><i class="far fa-times-circle cancel-name"></i></button>
+                </div>
+            </form>
+            </div>
 
-        <img class= "avatar" src="/images/users/<%=user.profile%>" alt="">
-        <p> <%= user.name + " " + user.lastName %> 
-            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
-        </p>
-        <p> Email
-            <span><a href="/user/profile/editar/<%=user.email%>"><i class="fas fa-edit"></i></a></span>
-        </p>
-        <p> Password
-            <span><a href="/user/profile/editar/<%=user.id%>"><i class="fas fa-edit"></i></a></span>
-        </p>
+
+            <div class="apellido"><span class="hide-surname">Apellido:  <%= user.surname %> </span><span class="hide-surname"><i id="edit-surname"class="fas fa-edit"></i> </span></div>
+            <form action="" class="form-surname form-control">
+                <input class="form-control" type="text" name="surname" id="surname" value="<%=user.surname%>"> 
+                <div class="buttons">
+                    <button type="submit"><i class="far fa-check-circle"></i></button>
+                    <button type="button"><i class="far fa-times-circle cancel-surname"></i></button>
+                </div>
+            </form>
+
+
+ <div class="email"><span class="hide-email">Email:<%=user.email%></span><span class="hide-email"> <i id="edit-email"class="fas fa-edit"></i></span></div>
+ <form action="" class="form-email form-control">
+    <input class="form-control" type="text" name="email" id="email" value="<%=user.email%>"> 
+    <div class="buttons">
+        <button type="submit"><i class="far fa-check-circle"></i></button>
+        <button type="button"><i class="far fa-times-circle cancel-email"></i></button>
+    </div>
+</form>
+            <div class="password"><span>Password </span><span> <i id="edit-password"class="fas fa-edit"></i></span></div>
+        </div>
+       
 
         
-        <a onclick="deleteCart()" href='/user/logout'> Cerrar sessión </a>
+        <a onclick="deleteCart()" class="btn btn-danger" href='/user/logout'> Cerrar sessión </a>
     </div>
     <div class="carrito-profile col-9">
         <h1>Carrito</h1>
     </div>
 </div>
+
+
+
+    <script src="/javascript/profile.js"></script>
    
     <%-include("./partials/footer")%>
 </body>
 </html>
+

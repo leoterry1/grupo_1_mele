@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router() 
-const {user, login, signup, profile, editProfile, logout } = require('../controllers/userController')
+const {user, login, signup, profile, editFoto, logout , submitProfile} = require('../controllers/userController')
 
 
 /* Middlewares */
@@ -19,8 +19,7 @@ router.post('/login',loginValidator,login);
 router.get('/profile',userCheck,profile);
 
 /* Editar */
-router.get("/profile/editar/:id", userCheck, editProfile);
-router.put("/profile/editar/:id", userCheck, uploadImg.any(), editUserValidator, editProfile);
+router.post("/profile/editar/foto", uploadImg.any(), editFoto)
 
 router.get('/logout', logout);
 

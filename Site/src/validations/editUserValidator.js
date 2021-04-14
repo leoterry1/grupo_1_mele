@@ -2,39 +2,27 @@ const { check, body } = require('express-validator');
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('Se requiere su nombre'),
+    .notEmpty().withMessage('El nombre de usuario es requerido'),
+
+    check('lastName')
+    .notEmpty().withMessage('El apellido de usuario es requerido'),
 
     check('email')
-        .notEmpty().withMessage('Se requiere un email'),
-    check('email')
-        .isEmail().withMessage('El email no es válido'),
+    .isEmail().withMessage('El email debe ser válido'),
 
-    /* pass1 */
-    body('pass1').custom((value, { req }) => {
-        if (req.body.password.length === 0 && value.length === 0) {
-            return true
-        } else {
-            if (req.body.password.length > 0 && value.length > 0) {
-                return true
-            }
-            return false
-        }
-    }).withMessage('Completo los campos de contraseña'),
+    check('pass1')
+    .notEmpty().withMessage('La contraseña es requerida')
+    .isLength({
+        min: 6,
+        max: 12
+    }).withMessage('La contraseña debe tener un minimo de 6 y un máximo de 12 caracteres'),
 
-    body('pass1').custom((value, { req }) => {
-        if ((value.length >= 6 && value.length <= 32) || (req.body.password.length === 0 && value.length === 0)) {
-            return true
-        } else {
+    body('pass2').custom((value, {req}) => {
+        if (value !== req.body.pass1){
             return false
-        }
-    }).withMessage('La contraseña debe tener entre 6 y 36 caracteres'),
-
-    body('pass2').custom((value, { req }) => {
-        if (value !== req.body.pass1) {
-            return false
-        } else {
+        }else{
             return true
         }
-    }).withMessage('Las contraseñas no coinciden!!')
+    }).withMessage('Las contraseñas no coinciden')
 
 ]

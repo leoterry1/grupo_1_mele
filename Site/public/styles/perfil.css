@@ -5,14 +5,40 @@
     margin-bottom: 0;
     padding-bottom: 100px;
     background-color: #141414;
+    position: relative;
 }
+.img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile .img #editar-foto{
+    position: absolute;
+    font-size: 50px;
+    color: honeydew;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 40%;
+    background-color: rgba(0, 0, 0, 0.562);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.profile .img #editar-foto:hover{
+    opacity: 1;
+}
+
 .profile img{
     text-align: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+    width: 100%;
     border: 1px solid #A387FE;
-    margin-top: 15px;
     margin-bottom: 15px;
 }
 .profile p{
@@ -48,4 +74,100 @@
 
     }
 
+}
+.edit-foto form .buttons, form.password .buttons{
+    text-align: center;
+    margin: auto;
+}
+.avatar{
+    cursor: pointer;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    color:honeydew;
+    align-content: center;
+}
+.datos span{
+    margin: 10px;
+    text-align: left;
+}
+.datos div{
+    display: flex;
+    justify-content: space-between;
+}
+.datos i{
+    cursor: pointer;
+    color: #A387FE;
+}
+
+/* EDIT NAME */
+form button .fa-check-circle{
+    color: green;
+}
+form button .fa-times-circle{
+    color: red;
+}
+.form-nombre, .form-email, .form-surname{
+    background: none;
+    border: none;
+    padding: none;
+    display: none;
+    margin: 0;
+}
+.form-nombre input, .form-email input, .form-surname input{
+    background-color: none;
+    padding: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #fff;
+    border: none;
+    border-bottom: solid 1px #A387FE;
+    border-radius: 0;
+}
+.form-nombre input:focus, .form-email input:focus, .form-surname input:focus{
+    background: none;
+    color: #fff;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.form-nombre .buttons button, .form-email .buttons button, .form-surname .buttons button{
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    margin: 0 5px;
+}
+/*PASSWORD*/
+.contenedor-password, .contenedor-edit{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.178);
+    z-index: 9999999;
+    display: none;
+}
+form.password, .edit-foto{
+    position: absolute;
+    max-width: 500px;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 25px;
+}
+form.password h4, .contenedor-edit h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.edit-foto{
+    height: 250px;
 }

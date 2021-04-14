@@ -1,0 +1,64 @@
+submitProfile: (req, res) => {
+        //let errores = validationResult(req)
+        const { name, lastName, email, passwordActual, pass1, pass2 } = req.body;
+        /* if (!errores.isEmpty()) {
+            return res.render('edit-profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{ */
+
+        db.Users.findOne({
+            where: {
+                id_user: req.session.usuario.id
+            }
+        })
+            .then((user) => {
+                if (user) {
+                    if (bcrypt.compareSync(passwordActual, user.password)) {
+                        let nuevaPass = bcrypt.hashSync(pass1, 12)
+                        db.Users.update({
+                            name,
+                            surname: lastName,
+                            email,
+                            password: nuevaPass,
+                            profile: req.files[0] ? req.files[0].filename : undefined
+                        },
+                            {
+                                where: {
+                                    id_user: req.session.usuario.id
+                                }
+                            }).then(user => {
+                                db.Users.findByPk(req.session.usuario.id)
+                                    .then((user) => {
+                                        req.session.usuario = {
+                                            id: user.id_user,
+                                            name: user.name,
+                                            profile: user.profile,
+                                            lastName: user.surname,
+                                            admin: user.admin
+            
+                                        } 
+                                        return res.render('profile', {title: user.name + " " + user.surname, user})
+                                    })
+                                    .catch((error) => res.send(error))
+                            })
+                    }
+                }
+                res.render('edit-profile', {
+                    errores:
+                    {
+                        credenciales: {
+                            msg: 'Credenciales inválidas'
+                        }
+                    },
+                    datos: req.body,
+                    title: "Editar perfil"
+
+                })
+            })
+            .catch((error) => {
+                res.send(error)
+            })
+
+    }

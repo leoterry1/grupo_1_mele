@@ -5,7 +5,7 @@ module.exports = {
         db.Products.findAll()
             .then((productos)=>{
                 
-                res.render('index', {title: "Inicio", productos})
+                res.render('index', {title: "Inicio", productos })
             })
             .catch((error)=> res.send(error))
     },
