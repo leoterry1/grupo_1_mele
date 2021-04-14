@@ -5,8 +5,10 @@
     <!-- Editar perfil -->
 <div class="contenedor-edit">
     <div class="edit-foto">
-        <form action="/user/profile/editar/foto?_mryhod=PUT" method="POST" enctype="multipart/form-data">
-            <h4>Cambiar foto de perfil</h4>
+        <form action="/user/profile/editar/foto?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="titulo">
+            <h4>CAMBIAR FOTO</h4>
+            </div>
             <input class="form-control" type="file" name="profile" id="profile" accept="image/*">
             <div class="buttons">
             <button type="submit"class="btn btn-primary">Subir</button>
@@ -18,16 +20,24 @@
 
     <div class="contenedor-password">
         
-        <form action="" class="password">
-            <h4>Cambiar contraseña</h4>
-            <label for="passwordActual">Contraseña actual</label>
-            <input class="form-control" type="password" placeholder="Contraseña Actual" name="passwordActual">
-            <label for="password1">Nueva contraseña</label>
-            <input class="form-control" type="password" placeholder="Contraseña Nueva" name="password1">
-            <label for="password2">Repetir nueva contraseña</label>
-            <input class="form-control" type="password" placeholder="Repetir Contraseña" name="password2">
+        <form action="/user/profile/editar/password?_method=PUT" class="password" method="POST">
+            <div class="titulo">
+            <h4>CAMBIAR CONTRASEÑA</h4>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="passwordActual" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña actual</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="password1" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña nueva</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="password2" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Repetir contraseña</label>
+            </div>
             <div class="buttons">
-            <button type="submit"class="btn btn-primary">Subir</button>
+            <button type="submit"class="btn btn-primary">Guardar</button>
             <button type="button"class="cancelar-pwd btn btn-danger">Cancelar</button>
         </div>
         </form>
@@ -52,7 +62,7 @@
         </div>
         <div class="datos">
             <div class="nombre"><span class="hide-nombre">Nombre:  <%= user.name %>  </span><span class="hide-nombre"><i id="edit-name"class="fas fa-edit"></i></span>
-            <form action="" class="form-nombre form-control">
+            <form action="/user/profile/editar/nombre?_method=PUT" class="form-nombre form-control" method="POST">
                 <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>"> 
                 <div class="buttons">
                     <button type="submit"><i class="far fa-check-circle"></i></button>
@@ -63,7 +73,7 @@
 
 
             <div class="apellido"><span class="hide-surname">Apellido:  <%= user.surname %> </span><span class="hide-surname"><i id="edit-surname"class="fas fa-edit"></i> </span></div>
-            <form action="" class="form-surname form-control">
+            <form action="/user/profile/editar/apellido?_method=PUT" class="form-surname form-control" method="POST">
                 <input class="form-control" type="text" name="surname" id="surname" value="<%=user.surname%>"> 
                 <div class="buttons">
                     <button type="submit"><i class="far fa-check-circle"></i></button>
@@ -72,8 +82,8 @@
             </form>
 
 
- <div class="email"><span class="hide-email">Email:<%=user.email%></span><span class="hide-email"> <i id="edit-email"class="fas fa-edit"></i></span></div>
- <form action="" class="form-email form-control">
+ <div class="email"><span class="hide-email">Email</span><span class="hide-email"> <i id="edit-email"class="fas fa-edit"></i></span></div>
+ <form action="/user/profile/editar/email?_method=PUT" class="form-email form-control" method="POST">
     <input class="form-control" type="text" name="email" id="email" value="<%=user.email%>"> 
     <div class="buttons">
         <button type="submit"><i class="far fa-check-circle"></i></button>

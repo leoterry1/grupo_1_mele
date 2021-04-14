@@ -123,8 +123,6 @@ module.exports = {
         res.redirect('/')
     },
     editFoto: (req, res) => {
-        console.log(req.session.usuario)
-        console.log(req.files[0].filename)
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -139,13 +137,126 @@ module.exports = {
                     }
                 })
                 .then((user) => {
-                    req.session.usuario.profile = user.profile
+                    req.session.usuario = user.profile
+                    console.log(req.session.usuario)
                     return res.redirect("/user/profile")
 
                 })
                 .catch((error) => {
                     res.send(error)
                 })
+        }).catch(error => {
+            res.send(error)
+        })
+    },
+    editName: (req, res) => {
+        let name = req.body.name
+        db.Users.findOne({
+            where: {
+                id_user: req.session.usuario.id
+            }
+        }).then(user => {
+            db.Users.update({
+                name: name
+            },
+                {
+                    where: {
+                        id_user: req.session.usuario.id
+                    }
+                })
+                .then((user) => {
+                    req.session.usuario.name = user.name
+                    return res.redirect("/user/profile")
+                })
+                .catch((error) => {
+                    res.send(error)
+                })
+        }).catch(error => {
+            res.send(error)
+        })
+    },
+    editLastName: (req, res) => {
+        let lastName = req.body.surname
+        db.Users.findOne({
+            where: {
+                id_user: req.session.usuario.id
+            }
+        }).then(user => {
+            db.Users.update({
+                surname : lastName
+            },
+                {
+                    where: {
+                        id_user: req.session.usuario.id
+                    }
+                })
+                .then((user) => {
+                    req.session.usuario.lastName = user.surname
+                    return res.redirect("/user/profile")
+
+                })
+                .catch((error) => {
+                    res.send(error)
+                })
+        }).catch(error => {
+            res.send(error)
+        })
+    },
+    editEmail: (req, res) => {
+        let email = req.body.email
+        db.Users.findOne({
+            where: {
+                id_user: req.session.usuario.id
+            }
+        }).then(user => {
+            db.Users.update({
+                email
+            },
+                {
+                    where: {
+                        id_user: req.session.usuario.id
+                    }
+                })
+                .then((user) => {
+                    req.session.usuario.email = user.email
+                    return res.redirect("/user/profile")
+
+                })
+                .catch((error) => {
+                    res.send(error)
+                })
+        }).catch(error => {
+            res.send(error)
+        })
+    },
+    editPassword: (req, res)=>{
+        let passwordActual = req.body.passwordActual
+        let passwordNew = req.body.password1
+        const passHash = bcrypt.hashSync(passwordNew, 12);
+        db.Users.findOne({
+            where: {
+                id_user: req.session.usuario.id
+            }
+        }).then(user => {
+            if(bcrypt.compareSync(passwordActual, user.password)){
+                db.Users.update({
+                    password : passHash
+                },
+                    {
+                        where: {
+                            id_user: req.session.usuario.id
+                        }
+                    })
+                    .then((user) => {
+                        return res.redirect("/user/profile")
+    
+                    })
+                    .catch((error) => {
+                        res.send(error)
+                    })
+            }else{
+                res.redirect("/")
+            }    
         }).catch(error => {
             res.send(error)
         })

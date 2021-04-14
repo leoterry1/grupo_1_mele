@@ -164,10 +164,24 @@ form.password, .edit-foto{
     padding: 30px;
     border-radius: 25px;
 }
+form.password .titulo, .edit-foto .titulo{
+    border-bottom: 2px solid #A387FE;
+    width: 100%;
+}
 form.password h4, .contenedor-edit h4{
     text-align: center;
-    margin-bottom: 20px;
 }
 .edit-foto{
     height: 250px;
+}
+.btn{
+    border-radius: 25px;
+}
+.btn-danger{
+    background-color: #4711eb;
+    border: none;
+}
+.btn-primary{
+    background-color: #997aff;
+    border: none;
 }
