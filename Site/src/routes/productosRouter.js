@@ -3,8 +3,8 @@ const router = express.Router()
 
 const {details, all, filter} = require('../controllers/productosController')
 
-router.get('/', all);
+router.get('/:page', all);
 router.get('/details/:id', details);
-router.get('/categories/filter', filter);
+router.get('/categories/filter/:page', filter);
 
 module.exports = router;

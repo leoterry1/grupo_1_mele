@@ -8,7 +8,7 @@
         </div>
 
         <div class="buscador">
-            <form action="/search" method="GET" class="search-form" id="search-mobile">
+            <form action="/search/1" method="GET" class="search-form" id="search-mobile">
                 <input type="text" name="search" placeholder="Buscar productos, marcas y más"
                     class="search-form_input">
                 <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
@@ -37,7 +37,7 @@
                     </a>
                 <% } %>
                 </a>
-                <a href="/productos">
+                <a href="/productos/1">
                     <li>Productos</li>
                 </a>
                 <% if (typeof user != "undefined" && user.admin) { %>
@@ -55,7 +55,7 @@
                     <a href="/"><img src="/images/mele.png" alt="mele"></a>
                 </div>
                 <div class="buscador-desktop">
-                    <form action="/search" method="GET" class="search-form" id="search-desktop">
+                    <form action="/search/1" method="GET" class="search-form" id="search-desktop">
                         <input type="text" name="search" placeholder="Buscar productos, marcas y más"
                             class="search-form_input">
                         <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
@@ -91,7 +91,7 @@
                 </a>
             <% } %>
             </a>
-            <a class="productos-li"href="/productos">
+            <a class="productos-li"href="/productos/1">
                 <li>Productos</li>
             </a>
             <% if (typeof user != "undefined" && user.admin) { %>

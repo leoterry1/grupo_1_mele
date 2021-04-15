@@ -850,3 +850,14 @@ div.titulos {
      top: -10px;
      right: -10px;
 }
+.pagination{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     align-content: center;
+     margin-top: 20px;
+     position: relative;
+}
+.pagination nav{
+     align-self: flex-end;
+}

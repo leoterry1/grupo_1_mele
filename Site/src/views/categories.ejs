@@ -8,12 +8,12 @@
     <%-include("partials/header")%>
     <%-include("./partials/carrito")%>
     <script type="text/javascript">
-        document.querySelector(".categorias-li").classList.add("active")
+        document.querySelector(".productos-li").classList.add("active")
     </script>
     <div class="container categories-container row">
     <div class="filtro col-lg-4">
         <h5>Filtros</h5>
-        <form action="/productos/categories/filter" class="filtro form-control" method="GET">
+        <form action="/productos/categories/filter/1" class="filtro form-control" method="GET">
             <label for="categorie">Busca por categorías</label>
             <select class="form-control" name="category" id="category">
                 <option value="null">Seleccionar categoría</option>
@@ -45,7 +45,7 @@
     <div class="productos-categories col-lg-8">
             <div class="productos-category row">
                 <% if (typeof productos != "undefined" && typeof productos[0] != "undefined") { %>
-                    <h5>Resultados del filtro:</h5>
+                    <h5><%= mensaje  %> </h5>
                 <% productos.forEach(producto => { %>
                     <div class="col-12 producto">
                             <table class="table">
@@ -63,13 +63,65 @@
                 <% }) %>
                 <% } else if (typeof productos != "undefined" && typeof productos[0] == "undefined"){%>
                     <div class="not-found">
-                        <h3> No se han encontrado resultados con tu filtro</h3>
+                        <h3> <%- error %> </h3>
                         <div class="sad"><img src="/images/no-results.png" alt=""></div>
                     </div>}
                     <% } %>         
         </div>
+        <% if (typeof filter_url != "undefined" && typeof productos != "undefined" && productos.length > 1) { %>
+            <div class="pagination container">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item <%= num_page == 1 ? "disabled" : " "%> ">
+                        <a class="page-link" href="/productos/categories/filter/<%= num_page - 1%><%= filter_url%>" aria-disabled="false">Anterior</a>
+                      </li>
+                      <% for( let aux = 1; aux <= num_pages; aux++ ) { %>
+                        <li class="page-item"><a class="page-link" href="/productos/categories/filter/<%=aux%><%= filter_url %>"><%= aux%></a></li>
+                      <% } %> 
+                      <li class="page-item <%= num_page == num_pages ? "disabled" : " "%> ">
+                        <a class="page-link" href="/productos/categories/filter/<%= num_page + 1%><%= filter_url %>" aria-disabled="false">Siguiente</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+        <% } %>
+        <% if (typeof search_url != "undefined"&& categories && productos.length > 1) { %>
+            <div class="pagination container">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item <%= num_page == 1 ? "disabled" : " "%> ">
+                        <a class="page-link" href="/search/<%= num_page - 1%><%= search_url %>" aria-disabled="false">Anterior</a>
+                      </li>
+                      <% for( let aux = 1; aux <= num_pages; aux++ ) { %>
+                        <li class="page-item"><a class="page-link" href="/search/<%=aux%><%= search_url %>"><%= aux%></a></li>
+                      <% } %> 
+                      <li class="page-item <%= num_page == num_pages ? "disabled" : " "%> ">
+                        <a class="page-link" href="/search/<%= num_page + 1%><%= search_url %>" aria-disabled="false">Siguiente</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+        <% } %>
+        <% if (typeof search_url == "undefined" && typeof filter_url == "undefined" && typeof productos != "undefined" && productos.length > 1) { %>
+        <div class="pagination container">
+            <nav aria-label="...">
+                <ul class="pagination">
+                  <li class="page-item <%= num_page == 1 ? "disabled" : " "%> ">
+                    <a class="page-link" href="/productos/<%= num_page - 1%>" tabindex="-1" aria-disabled="false">Anterior</a>
+                  </li>
+                  <% for( let aux = 1; aux <= num_pages; aux++ ) { %>
+                    <li class="page-item"><a class="page-link" href="/productos/<%=aux%> "><%= aux%></a></li>
+                  <% } %> 
+                  <li class="page-item <%= num_page == num_pages ? "disabled" : " "%> ">
+                    <a class="page-link" href="/productos/<%= num_page + 1%>" tabindex="-1" aria-disabled="false">Siguiente</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <% } %>
     </div>
 </div>
+
 
 <%-include("partials/footer")%>
 <script src="/javascript/categories.js"></script>

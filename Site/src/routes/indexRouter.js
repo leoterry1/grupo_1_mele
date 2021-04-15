@@ -4,7 +4,7 @@ const router = express.Router()
 const {index, search, sinPermisos, categories} = require('../controllers/indexController')
 
 router.get('/', index);
-router.get('/search', search)
+router.get('/search/:page', search)
 router.get("/sin-permisos", sinPermisos)
 router.get("/categories", categories)
 
