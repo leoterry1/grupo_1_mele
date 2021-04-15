@@ -1,4 +1,6 @@
 const db = require('../database/models')
+const { Op } = require("sequelize")
+
 module.exports = {
     details : (req,res)=>{
 
@@ -19,5 +21,34 @@ module.exports = {
         .catch((error)=>{
             res.send(error)
         })
+    },
+    filter: (req, res)=>{
+        db.Products.findAll({
+            where:{
+                [Op.and]: [
+                    {
+                        id_category: req.query.category != "null" ?  req.query.category : {[Op.gt]: 0}
+                    },
+                    {
+                        id_subcategory: req.query.subCategory != "null" ? req.query.subCategory : {[Op.gt]: 0}
+                    },
+                    {
+                        price: {[Op.between]:[
+                            req.query.minprice ? parseInt(req.query.minprice) : 0,
+                            req.query.maxprice ? parseInt(req.query.maxprice) : 999999
+                        ]}
+                    }
+                ]
+            }
+        })
+        .then((productos)=>{
+            if (productos){
+                res.render('categories',{
+                    title:"Resultados del filtro",
+                    productos
+                })
+            }
+        })
+        .catch((error)=> res.send(error))
     }
 }

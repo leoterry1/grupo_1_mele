@@ -1,5 +1,6 @@
 const db = require('../database/models')
 const { Op } = require("sequelize")
+
 module.exports = {
     index:(req, res) =>{
         db.Products.findAll()
@@ -41,12 +42,7 @@ module.exports = {
         res.render("sin-permisos", {title: "Error"})
     },
     categories: (req, res) => {
-        db.Products.findAll()
-            .then((productos)=>{
-                
-                res.render("categories", {title: "Categorías", productos})
-            })
-            .catch((error)=> res.send(error))
-        
+        res.locals.user = req.session.usuario
+        res.render("categories", {title: "Categorías"})  
     }
 }

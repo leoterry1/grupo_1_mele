@@ -1,5 +1,5 @@
 module.exports = (req,res,next) => {
-    let user = res.locals.user
+    let user = req.session.usuario
     if(typeof user != "undefined" && user.admin){
         next() 
     }else{

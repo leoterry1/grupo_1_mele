@@ -1,58 +1,77 @@
-.all-category .categoria{
-    height: 100px;
+.categories-container{
+    margin: auto;
+    margin-top: 30px;
 }
-.data{
-    display: none;
+.productos-categories{
+    margin: 0;
+    margin-top: 0;
 }
-.show{
-    display: flex;
-}
-h5{
-    text-align: center;
-}
-.artistas ul{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-.artistas ul li{
-    padding: 10px 20px;
-    background-color: #A387FE;
+.producto img{
+    max-height: 150px;
+    max-width: 150px;
     border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
 }
-.artistas ul li.active, .artistas ul li:hover{
-    background-color: #744BFF;
+.producto .details{
+    text-align: left;
 }
-.productos-category{
-    margin: auto;
+.table tr{
+    border: none;
+    color: honeydew;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-bottom: 1px solid rgba(240, 255, 240, 0.411);
+    margin: 0;
+}
+.table tr td{
+    border: none;
+}
+.details{
+    padding: 0
+} 
+.table tr:hover{
+    background-color: rgba(255, 255, 255, 0.685);
+    color: #000;
+}
+.table tr td button{
+    background: none;
+    color: honeydew;
+    border: none;
+    padding: 0;
+}
+.table tr td button i{
+    font-size: 30px;
+}
+.table tr td button i:hover{
+    color: #744BFF;
+}
+.categories-container h5{
+    color:honeydew;
+}
+.categories-container form{
+    background-color: #252525;
+    border: none;
+    color: honeydew;
+}
+.categories-container form .label-price{
+    margin-bottom: 0;
+}
+.categories-container form .min, .categories-container form .max{
+    display: flex;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
-.productos-category .producto{
-    position: relative;
-    padding: 0;
-    
+.categories-container form .min label, .categories-container form .max label{
+    margin: 0;
 }
-.productos-category .producto img{
-    width: 100%;
-    border-radius: 5px;
+.categories-container form .min input, .categories-container form .max input{
+    margin: 5px auto;
 }
-.productos-category .detalles {
-    background-color: rgba(7, 7, 7, 0.493);
-    color: #fff;
+.categories-container form button{
     text-align: center;
-    border-radius: 0 0 5px 5px;
-    display: none;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 0;
-    width: 100%;
+    margin: 30px auto;
 }
-.productos-category .producto:hover .detalles{
-    display: block 
+.categories-container form label{
+    margin-top: 30px;
 }

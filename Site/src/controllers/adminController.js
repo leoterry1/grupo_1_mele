@@ -1,10 +1,12 @@
 const db = require('../database/models')
+
 module.exports = {
     create: (req,res)=>{
+        res.locals.user = req.session.usuario
         res.render("form-carga", {title : "Nuevo producto"})
     },
     subir: (req,res)=>{
-
+        
         let {name ,category , subCategory, description, marca, price} = req.body;
         let img = req.files[0] ? req.files[0].filename : "defaultImg.png";
         db.Products.create({

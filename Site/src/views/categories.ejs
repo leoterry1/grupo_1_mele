@@ -7,144 +7,68 @@
 <body>
     <%-include("partials/header")%>
     <%-include("./partials/carrito")%>
-<div class="categoria all-category container">
-    <div class="productos-category row">
-
-        <div class="col-4 col-lg-2 categoria artistas"id="btnArtistas">
-                <h5>Artistas</h5>
+    <script type="text/javascript">
+        document.querySelector(".categorias-li").classList.add("active")
+    </script>
+    <div class="container categories-container row">
+    <div class="filtro col-lg-4">
+        <h5>Filtros</h5>
+        <form action="/productos/categories/filter" class="filtro form-control" method="GET">
+            <label for="categorie">Busca por categorías</label>
+            <select class="form-control" name="category" id="category">
+                <option value="null">Seleccionar categoría</option>
+                <option value="1">Albumes</option>
+                <option value="2">Instrumentos</option>
+                <option value="3">Colección</option>
+                <option value="4">Electrónica</option>
+                <option value="5">Otros</option>
+            </select>
+            <label for="sub-categorie">Busca por sub-categoría</label>
+            <select class="form-control" name="subCategory" id="sub-category">
+                <option value="null">Seleccionar categoría</option>
+                <option value="1">Ofertas</option>
+                <option value="2">Nuevos</option>
+                <option value="3">Otros</option>
+            </select>
+            <span class="label-price">Busca por precio</span>
+            <div class="min">
+                <label for="minprice">$</label>
+                <input class="form-control" type="number" id="minprice" name="minprice" placeholder="mínimo">
         </div>
-        <div class="col-4 col-lg-2 categoria albumes">
-            <a href="/productos/categoria/artistas">
-
-                <h5>Albumes</h5>
-
-            </a>
+        <div class="max">
+            <label for="maxprice">$</label>
+            <input class="form-control" type="number" id="minprice" name="maxprice" placeholder="máximo">
         </div>
-        <div class="col-4 col-lg-2 categoria coleccionables">
-            <a href="/productos/categoria/artistas">
-
-                <h5>Coleccionables</h5>
-
-            </a>
-        </div>
-        <div class="col-4 col-lg-2 categoria instrumentos">
-            <a href="/productos/categoria/artistas">
-
-                <h5>Instrumentos</h5>
-
-            </a>
-        </div>
-        <div class="col-4 col-lg-2 categoria electronica">
-            <a href="/productos/categoria/artistas">
-
-                <h5>Electrónica</h5>
-
-            </a>
+            <button type="submit" class="btn btn-primary">Aplicar</button>
+        </form>
+    </div>
+    <div class="productos-categories col-lg-8">
+            <div class="productos-category row">
+                <% if (typeof productos != "undefined" && typeof productos[0] != "undefined") { %>
+                    <h5>Resultados del filtro:</h5>
+                <% productos.forEach(producto => { %>
+                    <div class="col-12 producto">
+                            <table class="table">
+                            <tbody>
+                                <tr>
+                                  <td><a href="/productos/details/<%=producto.id_product%>"><img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>"></a></th>
+                                  <td><%=producto.name%></td>
+                                  <td><%=producto.mark%></td>
+                                  <td class="details"><%=producto.detail.slice(0, 100) + "..."%></td>
+                                  <td>$<%=producto.price%></td>
+                                  <td><button onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1 })" id="add" type="button" class="add-to-cart"><i class="fas fa-shopping-cart"></i></button></td>
+                                </tr>
+                            </table>
+                    </div>
+                <% }) %>
+                <% } else if (typeof productos != "undefined" && typeof productos[0] == "undefined"){%>
+                    <div class="not-found">
+                        <h3> No se han encontrado resultados con tu filtro</h3>
+                        <div class="sad"><img src="/images/no-results.png" alt=""></div>
+                    </div>}
+                    <% } %>         
         </div>
     </div>
-</div>
-
-<!-- artistas -->
-<div class="data container"id="artistas">
-    <ul>
-        <% productos.forEach(producto => { %> 
-         <% if (producto.id_category == 1) { %>
-          <li>#<%= producto.mark.replace(/ /g, "") %></li>
-         <% } %>
-        <% }) %>
-    </ul>
-</div>
-<!-- albumes -->
-<div class="data productos-category container row" id="albumes">
-    <% productos.forEach(producto=> { %>
-        <% if (producto.id_category== 1 ) { %>
-            <div class="col-4 col-lg-2 producto">
-                <a href="/productos/details/<%=producto.id_product%>">
-                    <img src="/images/products/<%=producto.img%>" alt="">
-                    <div class="detalles">
-                        <h5>
-                            <%=producto.name%>
-                        </h5>
-                        <h6>
-                            <%=producto.mark%>
-                        </h6>
-                        <p>$<%=producto.price%>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <% } %>
-                <% }) %>
-
-</div>
-<!-- coleccionables -->
-<div class="data productos-category container row"id="coleccion">
-    <% productos.forEach(producto=> { %>
-        <% if (producto.id_category== 3 ) { %>
-            <div class="col-4 col-lg-2 producto">
-                <a href="/productos/details/<%=producto.id_product%>">
-                    <img src="/images/products/<%=producto.img%>" alt="">
-                    <div class="detalles">
-                        <h5>
-                            <%=producto.name%>
-                        </h5>
-                        <h6>
-                            <%=producto.mark%>
-                        </h6>
-                        <p>$<%=producto.price%>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <% } %>
-                <% }) %>
-
-</div>
-<!-- instrumentos -->
-<div class="data productos-category container row"id="instumentos">
-    <% productos.forEach(producto=> { %>
-        <% if (producto.id_category== 2 ) { %>
-            <div class="col-4 col-lg-2 producto">
-                <a href="/productos/details/<%=producto.id_product%>">
-                    <img src="/images/products/<%=producto.img%>" alt="">
-                    <div class="detalles">
-                        <h5>
-                            <%=producto.name%>
-                        </h5>
-                        <h6>
-                            <%=producto.mark%>
-                        </h6>
-                        <p>$<%=producto.price%>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <% } %>
-                <% }) %>
-
-</div>
-<!-- electronica -->
-<div class="data productos-category container row"id="electronica">
-    <% productos.forEach(producto=> { %>
-        <% if (producto.id_subcategory== 4 ) { %>
-            <div class="col-4 col-lg-2 producto">
-                <a href="/productos/details/<%=producto.id_product%>">
-                    <img src="/images/products/<%=producto.img%>" alt="">
-                    <div class="detalles">
-                        <h5>
-                            <%=producto.name%>
-                        </h5>
-                        <h6>
-                            <%=producto.mark%>
-                        </h6>
-                        <p>$<%=producto.price%>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <% } %>
-                <% }) %>
-
 </div>
 
 <%-include("partials/footer")%>

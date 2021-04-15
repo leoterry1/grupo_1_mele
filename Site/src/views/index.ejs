@@ -35,8 +35,9 @@
             <div class="categoria container">
                 <h2>Nuevos</h2>
                 <div class="productos-category row">
+                    <% let limit = 0 %>
                     <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 2 ) { %>
+                        <% if (producto.id_subcategory== 2 && limit != 12 ) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
                                     <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
@@ -52,6 +53,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <% limit += 1 %>
                             <% } %>
                                 <% }) %>
 
@@ -104,8 +106,9 @@
             <div class="categoria container">
                 <h2>Ofertas</h2>
                 <div class="productos-category row">
+                    <% let limit1 = 0 %>
                     <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 1 ) { %>
+                        <% if (producto.id_subcategory== 1  && limit1 != 12 ) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
                                     <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
@@ -121,6 +124,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <% limit1 += 1 %>
                             <% } %>
                                 <% }) %>
 
@@ -129,8 +133,9 @@
             <div class="categoria container">
                 <h2>Más...</h2>
                 <div class="productos-category row">
+                    <% let limit2 = 0 %>
                     <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 3 ) { %>
+                        <% if (producto.id_subcategory== 3  && limit2 != 12) { %>
                             <div class="col-4 col-lg-2 producto">
                                 <a href="/productos/details/<%=producto.id_product%>">
                                     <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
@@ -146,6 +151,7 @@
                                     </div>
                                 </a>
                             </div>
+                            <% limit2 += 1 %>
                             <% } %>
                                 <% }) %>
 
