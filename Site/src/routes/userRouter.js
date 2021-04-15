@@ -19,11 +19,11 @@ router.post('/login',loginValidator,login);
 router.get('/profile',userCheck,profile);
 
 /* Editar */
-router.put("/profile/editar/foto", uploadImg.any(), editFoto)
-router.put("/profile/editar/nombre", editName)
-router.put("/profile/editar/apellido", editLastName)
-router.put("/profile/editar/email", editEmail)
-router.put("/profile/editar/password", editPassword)
+router.put("/profile/editar/foto", userCheck, uploadImg.any(), editFoto)
+router.put("/profile/editar/nombre",userCheck, editName)
+router.put("/profile/editar/apellido",userCheck, editLastName)
+router.put("/profile/editar/email", userCheck,editEmail)
+router.put("/profile/editar/password",userCheck, editPassword)
 
 router.get('/logout', logout);
 

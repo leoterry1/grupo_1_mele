@@ -79,6 +79,7 @@ let updateCart = () => {
 }
     cant.innerHTML = cart.length;
     cant2.innerHTML = cart.length;
+    UpdateProfile();
     
 }
 let deleteCart = () => {
@@ -95,6 +96,7 @@ let deleteCart = () => {
     divCart.innerHTML = "";
     cant.innerHTML = cart.length;
     cant2.innerHTML = cart.length;
+    UpdateProfile();
 }
 let lessCart = (id)=>{
     let cart = JSON.parse(localStorage.getItem("cart"))
@@ -105,10 +107,12 @@ let lessCart = (id)=>{
             divCart.innerHTML = ""
             localStorage.setItem("cart", JSON.stringify(cart))
             updateCart();
+
         }else if(product.id == id && product.cant == 1 && cart.length == 1){
             divCart.innerHTML = ""
             localStorage.clear()
             updateCart();
+            UpdateProfile();
         }else if(product.id == id && product.cant == 1 && cart.length > 1){
             divCart.innerHTML = ""
             let newCart = []
