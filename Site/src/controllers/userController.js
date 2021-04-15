@@ -122,7 +122,17 @@ module.exports = {
         req.session.destroy();
         res.redirect('/')
     },
+
     editFoto: (req, res) => {
+        let errores = validationResult(req)
+        const { profile} = req.body;
+        if (!errores.isEmpty()) {
+            return res.render('edit-profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{
+
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -148,9 +158,20 @@ module.exports = {
         }).catch(error => {
             res.send(error)
         })
+
+    }
     },
+
     editName: (req, res) => {
-        let name = req.body.name
+        let errores = validationResult(req)
+        const name = req.body.name;
+        if (!errores.isEmpty()) {
+            return res.render('profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{
+
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -174,9 +195,19 @@ module.exports = {
         }).catch(error => {
             res.send(error)
         })
+    }
     },
+    
     editLastName: (req, res) => {
-        let lastName = req.body.surname
+        let errores = validationResult(req)
+        const lastName  = req.body.surname;
+        if (!errores.isEmpty()) {
+            return res.render('profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{
+
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -201,9 +232,19 @@ module.exports = {
         }).catch(error => {
             res.send(error)
         })
+        }  
     },
+
     editEmail: (req, res) => {
-        let email = req.body.email
+        let errores = validationResult(req)
+        const email = req.body.email;
+        if (!errores.isEmpty()) {
+            return res.render('profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{
+
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -228,11 +269,22 @@ module.exports = {
         }).catch(error => {
             res.send(error)
         })
+    }  
     },
+
     editPassword: (req, res)=>{
+        let errores = validationResult(req)
         let passwordActual = req.body.passwordActual
         let passwordNew = req.body.password1
         const passHash = bcrypt.hashSync(passwordNew, 12);
+        
+        if (!errores.isEmpty()) {
+            return res.render('profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{
+
         db.Users.findOne({
             where: {
                 id_user: req.session.usuario.id
@@ -261,5 +313,6 @@ module.exports = {
             res.send(error)
         })
     }
+}
 
 }

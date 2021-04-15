@@ -11,11 +11,11 @@ const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require("./middlewares/localsCheck")
 const cookieParser = require("cookie-parser");
 const { cookie } = require('express-validator');
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static((__dirname + '..', 'public')));
 app.use(cookieParser())
-
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

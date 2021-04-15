@@ -28,14 +28,25 @@
                 <input type="password" class="form-control" name="passwordActual" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Contraseña actual</label>
             </div>
+            <% if (typeof errores != 'undefined' && errores.passwordActual) { %>
+                <span class="errores"><%=errores.passwordActual.msg%></span>
+            <% } %>
+
             <div class="form-floating">
                 <input type="password" class="form-control" name="password1" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Contraseña nueva</label>
             </div>
+            <% if (typeof errores != 'undefined' && errores.password1) { %>
+                <span class="errores"><%=errores.password1.msg%></span>
+            <% } %>
             <div class="form-floating">
                 <input type="password" class="form-control" name="password2" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Repetir contraseña</label>
             </div>
+            <% if (typeof errores != 'undefined' && errores.password2) { %>
+                <span class="errores"><%=errores.password2.msg%></span>
+            <% } %>
+
             <div class="buttons">
             <button type="submit"class="btn btn-primary">Guardar</button>
             <button type="button"class="cancelar-pwd btn btn-danger">Cancelar</button>
@@ -71,8 +82,12 @@
             </form>
             </div>
 
+            <% if (typeof errores != 'undefined' && errores.name) { %>
+                <span class="errores"><%=errores.name.msg%></span>
+            <% } %>
 
             <div class="apellido"><span class="hide-surname">Apellido:  <%= user.surname %> </span><span class="hide-surname"><i id="edit-surname"class="fas fa-edit"></i> </span></div>
+        
             <form action="/user/profile/editar/apellido?_method=PUT" class="form-surname form-control" method="POST">
                 <input class="form-control" type="text" name="surname" id="surname" value="<%=user.surname%>"> 
                 <div class="buttons">
@@ -80,6 +95,10 @@
                     <button type="button"><i class="far fa-times-circle cancel-surname"></i></button>
                 </div>
             </form>
+            <% if (typeof errores != 'undefined' && errores.surname) { %>
+                <span class="errores"><%=errores.surname.msg%></span>
+            <% } %>
+            
 
 
  <div class="email"><span class="hide-email">Email</span><span class="hide-email"> <i id="edit-email"class="fas fa-edit"></i></span></div>
@@ -90,6 +109,9 @@
         <button type="button"><i class="far fa-times-circle cancel-email"></i></button>
     </div>
 </form>
+<% if (typeof errores != 'undefined' && errores.email) { %>
+    <span class="errores"><%=errores.email.msg%></span>
+<% } %>
             <div class="password"><span>Password </span><span> <i id="edit-password"class="fas fa-edit"></i></span></div>
         </div>
        
@@ -105,6 +127,7 @@
 
 
     <script src="/javascript/profile.js"></script>
+    <script src="/javascript/profileValidator.js"></script>
    
     <%-include("./partials/footer")%>
 </body>
