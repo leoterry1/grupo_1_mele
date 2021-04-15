@@ -2,6 +2,9 @@
 <html lang="en">
     <%-include("partials/head")%>
 <body>
+    <!-- <div class="alert" role="alert">
+        <strong></strong>
+    </div> -->
     <!-- Editar perfil -->
 <div class="contenedor-edit">
     <div class="edit-foto">
@@ -62,7 +65,7 @@
     </script>
     <link rel="stylesheet" href="/styles/perfil.css">
 
-<div class="container-fluid row">
+<div class="container-fluid row mobile-profile">
     <div class="profile col-3">
         <div class="img">
             <img class="avatar" src="/images/users/<%=user.profile%>" alt="">
@@ -119,15 +122,26 @@
         
         <a onclick="deleteCart()" class="btn btn-danger" href='/user/logout'> Cerrar sessión </a>
     </div>
-    <div class="carrito-profile col-9">
-        <h1>Carrito</h1>
+    <div id="carrito-profile" class="carrito-profile col-9">
+        <table class="table">
+            <thead class="thead light">
+
+            </thead>
+            <tbody class="table-body">
+            </tbody>
+        </table>
+        <div id="total-profile">
+
+        </div>
+        <hr>
     </div>
 </div>
 
 
 
     <script src="/javascript/profile.js"></script>
-    <script src="/javascript/profileValidator.js"></script>
+    <script src="/javascript/carrito-profile.js"></script>
+    <script src="/javascript/carrito.js"></script>
    
     <%-include("./partials/footer")%>
 </body>

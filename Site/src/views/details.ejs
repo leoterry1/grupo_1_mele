@@ -34,7 +34,7 @@
                             <button type="menu" class="add-to-cart"><a class="login-msg"href="/user">Inicia sesión para poder comprar</a></button>
                             
                         <% } else { %>
-                            <button onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1})" id="add" type="button" class="add-to-cart">Agregar al carrito</i></button>
+                            <button onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1 })" id="add" type="button" class="add-to-cart">Agregar al carrito</i></button>
                         <% } %>                
                     </div>
 

@@ -124,156 +124,120 @@ module.exports = {
     },
 
     editFoto: (req, res) => {
-        let errores = validationResult(req)
-        const { profile} = req.body;
-        if (!errores.isEmpty()) {
-            return res.render('edit-profile', {
-                errores: errores.mapped(),
-                title: "Editar perfil"
-            })
-        }else{
-
-        db.Users.findOne({
-            where: {
-                id_user: req.session.usuario.id
-            }
-        }).then(user => {
-            db.Users.update({
-                profile: req.files[0] ? req.files[0].filename : undefined
-            },
-                {
+        db.Users.update({
+            profile: req.files[0] ? req.files[0].filename : undefined
+        },
+            {
+                where: {
+                    id_user: req.session.usuario.id
+                }
+            }).then(user => {
+                db.Users.findOne({
                     where: {
                         id_user: req.session.usuario.id
                     }
                 })
-                .then((user) => {
-                    req.session.usuario = user.profile
-                    console.log(req.session.usuario)
-                    return res.redirect("/user/profile")
+                    .then((user) => {
+                        req.session.usuario.profile = user.profile
+                        console.log(req.session.usuario)
+                        return res.redirect("/user/profile")
 
-                })
-                .catch((error) => {
-                    res.send(error)
-                })
-        }).catch(error => {
-            res.send(error)
-        })
-
-    }
+                    })
+                    .catch((error) => {
+                        res.send(error)
+                    })
+            }).catch(error => {
+                res.send(error)
+            })
     },
 
     editName: (req, res) => {
-        let errores = validationResult(req)
-        const name = req.body.name;
-        if (!errores.isEmpty()) {
-            return res.render('profile', {
-                errores: errores.mapped(),
-                title: "Editar perfil"
+        let name = req.body.name
+        db.Users.update({
+            name: name
+        },
+            {
+                where: {
+                    id_user: req.session.usuario.id
+                }
             })
-        }else{
-
-        db.Users.findOne({
-            where: {
-                id_user: req.session.usuario.id
-            }
-        }).then(user => {
-            db.Users.update({
-                name: name
-            },
-                {
+            .then(user => {
+                db.Users.findOne({
                     where: {
                         id_user: req.session.usuario.id
                     }
                 })
-                .then((user) => {
-                    req.session.usuario.name = user.name
-                    return res.redirect("/user/profile")
-                })
-                .catch((error) => {
-                    res.send(error)
-                })
-        }).catch(error => {
-            res.send(error)
-        })
-    }
+                    .then((user) => {
+                        req.session.usuario.name = user.name
+                        console.log(req.session.usuario)
+                        return res.redirect("/user/profile")
+                    })
+                    .catch((error) => {
+                        res.send(error)
+                    })
+            }).catch(error => {
+                res.send(error)
+            })
     },
     
     editLastName: (req, res) => {
-        let errores = validationResult(req)
-        const lastName  = req.body.surname;
-        if (!errores.isEmpty()) {
-            return res.render('profile', {
-                errores: errores.mapped(),
-                title: "Editar perfil"
+        let lastName = req.body.surname
+        db.Users.update({
+            surname: lastName
+        },
+            {
+                where: {
+                    id_user: req.session.usuario.id
+                }
             })
-        }else{
-
-        db.Users.findOne({
-            where: {
-                id_user: req.session.usuario.id
-            }
-        }).then(user => {
-            db.Users.update({
-                surname : lastName
-            },
-                {
+            .then(user => {
+                db.Users.findOne({
                     where: {
                         id_user: req.session.usuario.id
                     }
                 })
-                .then((user) => {
-                    req.session.usuario.lastName = user.surname
-                    return res.redirect("/user/profile")
+                    .then((user) => {
+                        req.session.usuario.lastName = user.surname
+                        return res.redirect("/user/profile")
 
-                })
-                .catch((error) => {
-                    res.send(error)
-                })
-        }).catch(error => {
-            res.send(error)
-        })
-        }  
+                    })
+                    .catch((error) => {
+                        res.send(error)
+                    })
+            }).catch(error => {
+                res.send(error)
+            })
     },
 
     editEmail: (req, res) => {
-        let errores = validationResult(req)
-        const email = req.body.email;
-        if (!errores.isEmpty()) {
-            return res.render('profile', {
-                errores: errores.mapped(),
-                title: "Editar perfil"
+        let email = req.body.email
+        db.Users.update({
+            email
+        },
+            {
+                where: {
+                    id_user: req.session.usuario.id
+                }
             })
-        }else{
-
-        db.Users.findOne({
-            where: {
-                id_user: req.session.usuario.id
-            }
-        }).then(user => {
-            db.Users.update({
-                email
-            },
-                {
+            .then(user => {
+                db.Users.findOne({
                     where: {
                         id_user: req.session.usuario.id
                     }
                 })
-                .then((user) => {
-                    req.session.usuario.email = user.email
-                    return res.redirect("/user/profile")
+                    .then((user) => {
+                        req.session.usuario.email = user.email
+                        return res.redirect("/user/profile")
 
-                })
-                .catch((error) => {
-                    res.send(error)
-                })
-        }).catch(error => {
-            res.send(error)
-        })
-    }  
+                    })
+                    .catch((error) => {
+                        res.send(error)
+                    })
+            }).catch(error => {
+                res.send(error)
+            })
     },
-
-    editPassword: (req, res)=>{
-        let errores = validationResult(req)
+    editPassword: (req, res) => {
         let passwordActual = req.body.passwordActual
         let passwordNew = req.body.password1
         const passHash = bcrypt.hashSync(passwordNew, 12);
@@ -290,9 +254,9 @@ module.exports = {
                 id_user: req.session.usuario.id
             }
         }).then(user => {
-            if(bcrypt.compareSync(passwordActual, user.password)){
+            if (bcrypt.compareSync(passwordActual, user.password)) {
                 db.Users.update({
-                    password : passHash
+                    password: passHash
                 },
                     {
                         where: {
@@ -301,14 +265,14 @@ module.exports = {
                     })
                     .then((user) => {
                         return res.redirect("/user/profile")
-    
+
                     })
                     .catch((error) => {
                         res.send(error)
                     })
-            }else{
+            } else {
                 res.redirect("/")
-            }    
+            }
         }).catch(error => {
             res.send(error)
         })

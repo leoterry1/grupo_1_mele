@@ -25,8 +25,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+
 app.use(cookieCheck);
-app.use(localsCheck)
+app.use(localsCheck);
 
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);
