@@ -96,7 +96,7 @@ module.exports = {
             }
         })
         .then(result =>{
-            return res.redirect("/productos")
+            return res.redirect("/productos/1")
         })
         .catch((error)=>{
             res.send(error)

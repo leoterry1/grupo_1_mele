@@ -61,7 +61,8 @@ module.exports = {
                 num_page,
                 num_pages,
                 mensaje: "Mostrando " + productos.length + " de " + cantidad + " resultados de tu búsqueda: " + req.query.search,
-                error: "No se han encontrado resultados para tu búsqueda: " + req.query.search
+                error: "No se han encontrado resultados para tu búsqueda: " + req.query.search,
+                categories : true
             })
         })
         .catch((error)=> res.send(error))

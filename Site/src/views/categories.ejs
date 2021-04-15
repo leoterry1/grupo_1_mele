@@ -68,7 +68,7 @@
                     </div>}
                     <% } %>         
         </div>
-        <% if (typeof filter_url != "undefined" && typeof productos != "undefined" && productos.length > 1) { %>
+        <% if (typeof filter_url != "undefined" && typeof productos != "undefined" && productos.length >= 1) { %>
             <div class="pagination container">
                 <nav aria-label="...">
                     <ul class="pagination">
@@ -85,7 +85,7 @@
                   </nav>
                 </div>
         <% } %>
-        <% if (typeof search_url != "undefined"&& categories && productos.length > 1) { %>
+        <% if (typeof search_url != "undefined"&& categories && productos.length >= 1) { %>
             <div class="pagination container">
                 <nav aria-label="...">
                     <ul class="pagination">
@@ -102,7 +102,7 @@
                   </nav>
                 </div>
         <% } %>
-        <% if (typeof search_url == "undefined" && typeof filter_url == "undefined" && typeof productos != "undefined" && productos.length > 1) { %>
+        <% if (typeof search_url == "undefined" && typeof filter_url == "undefined" && typeof productos != "undefined" && productos.length >= 1) { %>
         <div class="pagination container">
             <nav aria-label="...">
                 <ul class="pagination">
