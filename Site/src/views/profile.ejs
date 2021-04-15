@@ -13,6 +13,8 @@
             <h4>CAMBIAR FOTO</h4>
             </div>
             <input class="form-control" type="file" name="profile" id="profile" accept="image/*">
+            <span id="errorProfile" class="text-danger"> </span>
+
             <div class="buttons">
             <button type="submit"class="btn btn-primary">Subir</button>
             <button type="button"class="cancelar btn btn-danger">Cancelar</button>
@@ -28,23 +30,26 @@
             <h4>CAMBIAR CONTRASEÑA</h4>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" name="passwordActual" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" name="passwordActual" id="passwordActual" placeholder="Password">
                 <label for="floatingPassword">Contraseña actual</label>
+                <span id="errorPassActual" class="text-danger"> </span>
             </div>
             <% if (typeof errores != 'undefined' && errores.passwordActual) { %>
                 <span class="errores"><%=errores.passwordActual.msg%></span>
             <% } %>
 
             <div class="form-floating">
-                <input type="password" class="form-control" name="password1" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" name="password1" id="pass1" placeholder="Password">
                 <label for="floatingPassword">Contraseña nueva</label>
+                <span id="errorPass1" class="text-danger"> </span>
             </div>
             <% if (typeof errores != 'undefined' && errores.password1) { %>
                 <span class="errores"><%=errores.password1.msg%></span>
             <% } %>
             <div class="form-floating">
-                <input type="password" class="form-control" name="password2" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" name="password2" id="pass2" placeholder="Password">
                 <label for="floatingPassword">Repetir contraseña</label>
+                <span id="errorPass2" class="text-danger"> </span>
             </div>
             <% if (typeof errores != 'undefined' && errores.password2) { %>
                 <span class="errores"><%=errores.password2.msg%></span>
@@ -72,12 +77,14 @@
             <div id="editar-foto">
                 <i class="fas fa-camera"></i>
             </div>
-            
+
+
         </div>
         <div class="datos">
             <div class="nombre"><span class="hide-nombre">Nombre:  <%= user.name %>  </span><span class="hide-nombre"><i id="edit-name"class="fas fa-edit"></i></span>
             <form action="/user/profile/editar/nombre?_method=PUT" class="form-nombre form-control" method="POST">
-                <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>"> 
+                <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>">
+                <span id="errorName" class="text-danger"> </span>  
                 <div class="buttons">
                     <button type="submit"><i class="far fa-check-circle"></i></button>
                     <button type="button"><i class="far fa-times-circle cancel-name"></i></button>
@@ -93,6 +100,7 @@
         
             <form action="/user/profile/editar/apellido?_method=PUT" class="form-surname form-control" method="POST">
                 <input class="form-control" type="text" name="surname" id="surname" value="<%=user.surname%>"> 
+                <span id="errorlastName" class="text-danger"> </span>
                 <div class="buttons">
                     <button type="submit"><i class="far fa-check-circle"></i></button>
                     <button type="button"><i class="far fa-times-circle cancel-surname"></i></button>
@@ -107,6 +115,7 @@
  <div class="email"><span class="hide-email">Email</span><span class="hide-email"> <i id="edit-email"class="fas fa-edit"></i></span></div>
  <form action="/user/profile/editar/email?_method=PUT" class="form-email form-control" method="POST">
     <input class="form-control" type="text" name="email" id="email" value="<%=user.email%>"> 
+    <span id="errorEmail" class="text-danger"> </span>
     <div class="buttons">
         <button type="submit"><i class="far fa-check-circle"></i></button>
         <button type="button"><i class="far fa-times-circle cancel-email"></i></button>
@@ -140,8 +149,14 @@
 
 
     <script src="/javascript/profile.js"></script>
+    <script src="/javascript/profileValidator.js"></script>
+    <!-- <script src="/validations/profileValidator.js"></script> -->
+
     <script src="/javascript/carrito-profile.js"></script>
     <script src="/javascript/carrito.js"></script>
+
+    
+
    
     <%-include("./partials/footer")%>
 </body>

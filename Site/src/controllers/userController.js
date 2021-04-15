@@ -152,7 +152,16 @@ module.exports = {
     },
 
     editName: (req, res) => {
-        let name = req.body.name
+        const name = req.body.name;
+       /*  let errores = validationResult(req)
+        const name = req.body.name;
+        if (!errores.isEmpty()) {
+            return res.render('profile', {
+                errores: errores.mapped(),
+                title: "Editar perfil"
+            })
+        }else{ */
+       
         db.Users.update({
             name: name
         },
@@ -178,10 +187,13 @@ module.exports = {
             }).catch(error => {
                 res.send(error)
             })
+        /* } */
+        
     },
     
     editLastName: (req, res) => {
-        let lastName = req.body.surname
+        const lastName  = req.body.surname;
+       
         db.Users.update({
             surname: lastName
         },
@@ -207,10 +219,13 @@ module.exports = {
             }).catch(error => {
                 res.send(error)
             })
+        
     },
 
     editEmail: (req, res) => {
-        let email = req.body.email
+        const email = req.body.email;
+        
+       
         db.Users.update({
             email
         },
@@ -236,12 +251,15 @@ module.exports = {
             }).catch(error => {
                 res.send(error)
             })
+        
     },
+
     editPassword: (req, res) => {
+       
         let passwordActual = req.body.passwordActual
         let passwordNew = req.body.password1
         const passHash = bcrypt.hashSync(passwordNew, 12);
-        
+
         if (!errores.isEmpty()) {
             return res.render('profile', {
                 errores: errores.mapped(),
