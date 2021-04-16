@@ -29,7 +29,7 @@ cancel.addEventListener("click", ()=>{
 
 //EMAIL
 
-let editEmail = document.querySelector("#edit-email")
+/* let editEmail = document.querySelector("#edit-email")
 let hideEmail = document.querySelector(".hide-email")
 let formEmail = document.querySelector(".form-email")
 let cancelEmail = document.querySelector(".cancel-email")
@@ -43,7 +43,7 @@ cancelEmail.addEventListener("click", ()=>{
     formEmail.style.display = "none"
     hideEmail.style.display = "block"
     editEmail.style.display = "block"
-})
+}) */
 
 let editSurname = document.querySelector("#edit-surname")
 let hideSurname = document.querySelector(".hide-surname")
@@ -61,7 +61,7 @@ cancelSurname.addEventListener("click", ()=>{
     editSurname.style.display = "block"
 })
 
-let password = document.querySelector("#edit-password")
+/* let password = document.querySelector("#edit-password")
 let editPassword = document.querySelector(".contenedor-password")
 let cancelarPassword = document.querySelector(".cancelar-pwd")
 password.addEventListener("click", ()=>{
@@ -70,6 +70,6 @@ password.addEventListener("click", ()=>{
 
 cancelarPassword.addEventListener("click", () =>{
     editPassword.style.display = "none"
-})
+}) */
 
 
