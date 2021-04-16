@@ -4,50 +4,54 @@
             <i class="fas fa-bars"></i>
             <a href="/"><img src="/images/mele.png" alt="mele"></a>
             <div class="cart-logo"><i class="fas fa-shopping-cart"></i><span id="cart-mobile"></span></div>
-            
+
         </div>
 
         <div class="buscador">
             <form action="/search/1" method="GET" class="search-form" id="search-mobile">
-                <input type="text" name="search" placeholder="Buscar productos, marcas y más"
-                    class="search-form_input">
+                <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
                 <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
-        <nav class="col-12 hidden-menu">
-            <a href="/user/perfil"><img src=<%- typeof user == "undefined" ?  "/images/perfil.jpg" : "/images/users/"+ user.profile%> alt="Usuario"></a>
-            <% if (typeof user == "undefined") { %>
-                <a href="/user">
-                    <h4 class="usuario"><%= "Acceder" %></h4>
-                </a>
+    <nav class="col-12 hidden-menu">
+        <a href="/user/profile"><img src=<%- typeof user=="undefined" ? "/images/perfil.jpg" : "/images/users/" +
+                user.profile%> alt="Usuario"></a>
+        <% if (typeof user=="undefined" ) { %>
+            <a href="/user">
+                <h4 class="usuario">
+                    <%= "Acceder" %>
+                </h4>
+            </a>
             <% } else { %>
-                <p class="saludo"><%= "Bienvenido/a, " + user.name %></p>
-            <% } %>  
-            <ul>
-                <a href="/">
-                    <li>Inicio</li>
-                </a>
-                <a href="">
-                    <li>Categorías</li>
-                </a>
-                <% if (typeof user != "undefined") { %>
-                    <a class="Perfil-li" href="/user/profile">
-                        <li>Perfil</li>
-                    </a>
+                <p class="saludo">
+                    <%= "Bienvenido/a, " + user.name %>
+                </p>
                 <% } %>
-                </a>
-                <a href="/productos/1">
-                    <li>Productos</li>
-                </a>
-                <% if (typeof user != "undefined" && user.admin) { %>
-                    <a href="/admin/create">
-                        <li>Vender</li>
-                    </a>
-                <% } %>
-                
-            </ul>
-        </nav>
+                    <ul>
+                        <a href="/">
+                            <li>Inicio</li>
+                        </a>
+                        <a href="">
+                            <li>Categorías</li>
+                        </a>
+                        <% if (typeof user !="undefined" ) { %>
+                            <a class="Perfil-li" href="/user/profile">
+                                <li>Perfil</li>
+                            </a>
+                            <% } %>
+                                </a>
+                                <a href="/productos/1">
+                                    <li>Productos</li>
+                                </a>
+                                <% if (typeof user !="undefined" && user.admin) { %>
+                                    <a href="/admin/create">
+                                        <li>Vender</li>
+                                    </a>
+                                    <% } %>
+
+                    </ul>
+    </nav>
     <div class="desktop">
         <header class="container-fluid">
             <div class="top">
@@ -62,47 +66,52 @@
                     </form>
                 </div>
                 <div class="botones">
-                    <div class="cart-logo"><i class="fas fa-shopping-cart carrito-desktop"></i><span id="cant"></span></div>
-                    <% if (typeof user == "undefined") { %>
+                    <div class="cart-logo"><i class="fas fa-shopping-cart carrito-desktop"></i><span id="cant"></span>
+                    </div>
+                    <% if (typeof user=="undefined" ) { %>
                         <a href="/user">
-                            <h4 class="usuario"><%= "Acceder" %></h4>
+                            <h4 class="usuario">
+                                <%= "Acceder" %>
+                            </h4>
                         </a>
-                    <% } else { %>
-                        <p class="saludo"><%= "Bienvenido/a, " + user.name %></p>
-                    <% } %>  
-                     
+                        <% } else { %>
+                            <p class="saludo">
+                                <%= "Bienvenido/a, " + user.name %>
+                            </p>
+                            <% } %>
+
                 </div>
 
 
             </div>
     </div>
     <div class="fondo-nav container-fluid">
-    <nav class="container nav-desktop">
-        <ul>
-            <a class="inicio-li"href="/">
-                <li>Inicio</li>
-            </a>
-            <a class="categorias-li" href="/categories">
-                <li>Categorías</li>
-            </a>
-            <% if (typeof user != "undefined") { %>
-                <a id="Perfil-li" href="/user/profile">
-                    <li>Perfil</li>
+        <nav class="container nav-desktop">
+            <ul>
+                <a class="inicio-li" href="/">
+                    <li>Inicio</li>
                 </a>
-            <% } %>
-            </a>
-            <a class="productos-li"href="/productos/1">
-                <li>Productos</li>
-            </a>
-            <% if (typeof user != "undefined" && user.admin) { %>
-                <a class="vender-li" href="/admin/create">
-                    <li>Vender</li>
+                <a class="categorias-li" href="/categories">
+                    <li>Categorías</li>
                 </a>
-            <% } %>
-            
-        </ul>
-    </nav>
-</div>
+                <% if (typeof user !="undefined" ) { %>
+                    <a id="Perfil-li" href="/user/profile">
+                        <li>Perfil</li>
+                    </a>
+                    <% } %>
+                        </a>
+                        <a class="productos-li" href="/productos/1">
+                            <li>Productos</li>
+                        </a>
+                        <% if (typeof user !="undefined" && user.admin) { %>
+                            <a class="vender-li" href="/admin/create">
+                                <li>Vender</li>
+                            </a>
+                            <% } %>
+
+            </ul>
+        </nav>
+    </div>
 
 </header>
 </div>

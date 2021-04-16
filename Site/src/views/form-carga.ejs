@@ -3,67 +3,69 @@
 
 <%-include("partials/head")%>
 
-<body>
-    <%-include("partials/header")%>
-    <%-include("./partials/carrito")%>
-    <script type="text/javascript">
-        document.querySelector(".vender-li").classList.add("active")
-    </script>
-    <div class="form form-carga">
-            <h1><%=title%></h1>
-        <form id="form-carga" action="/admin/create/producto" method="POST" enctype="multipart/form-data">
-            <div class="titulo-producto">
-                <label for="name">Nombre del producto</label>
-                <input class="form-control" type="text" id="name" name="name" placeholder="Ej: Funko Pop">
-                <span id="errorName" class="text-danger"> </span>
-            </div>
-            <div class="titulo-producto">
-                <label for="marca">Marca/Artista</label>
-                <input class="form-control" type="text" id="marca" name="marca" placeholder="Ej: Aerosmith">
-                <span id="errorMarca" class="text-danger"> </span>
-            </div>
-            <div class="titulo-producto">
-                <label for="price">Precio</label>
-                <input class="form-control" type="number" id="price" name="price" value="0">
-                <span id="errorPrice" class="text-danger"> </span>
-            </div>
-            <div class="select-category">
-                <label for="category">Categoría</label>
-                <select class="form-control" name="category" id="category">
-                    <option value="null">Seleccionar categoría</option>
-                    <option value="1">Albumes</option>
-                    <option value="2">Instrumentos</option>
-                    <option value="3">Colección</option>
-                    <option value="4">Electrónica</option>
-                    <option value="5">Otros</option>
-                </select>
-                <span id="errorCategory" class="text-danger"> </span>
-            </div>
-            <div class="select-category">
-                <label for="subCategory">Sub-categoría</label>
-                <select class="form-control" name="subCategory" id="sub-category">
-                    <option value="null">Seleccionar categoría</option>
-                    <option value="1">Ofertas</option>
-                    <option value="2">Nuevos</option>
-                    <option value="3">Otros</option>
-                </select>
-                <span id="errorSubCategory" class="text-danger"> </span>
-            </div>
-            <div class="titulo-producto">
-                <label for="description">Descripción</label>
-                <textarea class="form-control"name="description" cols="30" rows="10"></textarea>
-                <span id="errorDetails" class="text-danger"> </span>
-            </div>
-            <div class="cargar-imagen">
-                <label for="archivosubido">Imagen</label>
-                <input class="form-control" type="file" name="file-product">
-                <span id="errorImage" class="text-danger"> </span>
-            </div>
-            <button type="submit"> Cargar producto </button>
-        </form>
-    </div>
-    <%-include("partials/footer")%>
-    <script src="/javascript/productValidations.js"></script>
-</body>
+    <body>
+        <%-include("partials /header")%>
+            <%-include(". /partials/carrito")%>
+                <script type="text/javascript">
+                    document.querySelector(".vender-li").classList.add("active")
+                </script>
+                <div class="form form-carga">
+                    <h1>
+                        <%=title%>
+                    </h1>
+                    <form id="form-carga" action="/admin/create/producto" method="POST" enctype="multipart/form-data">
+                        <div class="titulo-producto">
+                            <label for="name">Nombre del producto</label>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Ej: Funko Pop">
+                            <span id="errorName" class="text-danger"> </span>
+                        </div>
+                        <div class="titulo-producto">
+                            <label for="marca">Marca/Artista</label>
+                            <input class="form-control" type="text" id="marca" name="marca" placeholder="Ej: Aerosmith">
+                            <span id="errorMarca" class="text-danger"> </span>
+                        </div>
+                        <div class="titulo-producto">
+                            <label for="price">Precio</label>
+                            <input class="form-control" type="number" id="price" name="price" value="0">
+                            <span id="errorPrice" class="text-danger"> </span>
+                        </div>
+                        <div class="select-category">
+                            <label for="category">Categoría</label>
+                            <select class="form-control" name="category" id="category">
+                                <option value="null">Seleccionar categoría</option>
+                                <option value="1">Albumes</option>
+                                <option value="2">Instrumentos</option>
+                                <option value="3">Colección</option>
+                                <option value="4">Electrónica</option>
+                                <option value="5">Otros</option>
+                            </select>
+                            <span id="errorCategory" class="text-danger"> </span>
+                        </div>
+                        <div class="select-category">
+                            <label for="subCategory">Sub-categoría</label>
+                            <select class="form-control" name="subCategory" id="sub-category">
+                                <option value="null">Seleccionar categoría</option>
+                                <option value="1">Ofertas</option>
+                                <option value="2">Nuevos</option>
+                                <option value="3">Otros</option>
+                            </select>
+                            <span id="errorSubCategory" class="text-danger"> </span>
+                        </div>
+                        <div class="titulo-producto">
+                            <label for="description">Descripción</label>
+                            <textarea class="form-control" name="description" cols="30" rows="10"></textarea>
+                            <span id="errorDetails" class="text-danger"> </span>
+                        </div>
+                        <div class="cargar-imagen">
+                            <label for="archivosubido">Imagen</label>
+                            <input class="form-control" type="file" name="file-product">
+                            <span id="errorImage" class="text-danger"> </span>
+                        </div>
+                        <button type="submit"> Cargar producto </button>
+                    </form>
+                </div>
+                <%-include("partials/footer")%>
+                    <script src="/javascript/productValidations.js"></script>
+    </body>
 
 </html>

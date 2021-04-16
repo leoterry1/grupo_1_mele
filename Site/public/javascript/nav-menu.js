@@ -7,12 +7,11 @@ let show = false
 menuIcon.addEventListener("click", () =>{
     if (show == false){
         menu.style.left = "0";
-        
+        document.getElementsByTagName("html")[0].style.overflow = "hidden";
         show = true
     } else if (show){
-        
         menu.style.left = "-150%"
-        
+        document.getElementsByTagName("html")[0].style.overflow = "auto";
         show = false
     }
    

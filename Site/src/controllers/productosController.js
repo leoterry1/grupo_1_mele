@@ -14,18 +14,20 @@ module.exports = {
     },
     all: (req, res) => {
         let num_page = parseInt(req.params.page)
-        let skip_page = (num_page - 1) * 20
+        let skip_page = (num_page - 1) * 10
 
         db.Products
             .count()
             .then(function (count) {
-                num_pages = parseInt((count / 20) + 1);
+                num_pages = parseInt((count / 10) + 1);
             });
 
-        db.Products.findAll({ offset: skip_page, limit: 20 })
+        db.Products.findAll({ offset: skip_page, limit: 10 })
             .then((productos) => {
-                res.render("categories", { productos, title: "Productos", buscar: false , num_page,
-                num_pages, mensaje: "Todos los productos", error: "No encontramos productos con tu filtro", categories: false})
+                res.render("categories", {
+                    productos, title: "Productos", buscar: false, num_page,
+                    num_pages, mensaje: "Todos los productos", error: "No encontramos productos con tu filtro", categories: false
+                })
             })
             .catch((error) => {
                 res.send(error)
@@ -54,13 +56,14 @@ module.exports = {
                 ]
             }
         })
-        .then((productos) => {
-            if (productos) {
-                cantidad = productos.length
-                num_pages = parseInt(productos.length / 10) + 1;
-            }
-        })
-        db.Products.findAll({offset: skip_page, limit: 10,
+            .then((productos) => {
+                if (productos) {
+                    cantidad = productos.length
+                    num_pages = parseInt(productos.length / 10) + 1;
+                }
+            })
+        db.Products.findAll({
+            offset: skip_page, limit: 10,
             where: {
                 [Op.and]: [
                     {

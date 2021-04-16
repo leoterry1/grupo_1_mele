@@ -3,51 +3,69 @@
 
 <%-include("partials/head")%>
 
-<body>
-    <%-include("partials/header")%>
-    <%-include("./partials/carrito")%>
-    <script type="text/javascript">
-        document.querySelector(".productos-li").classList.add("active")
-    </script>
-    
-    <h2 class="titulo-detalles container">Detalles del producto: <%=producto.name%></h2>
-    <div class="detalle-producto container row">
-        <div class="image col-12 col-md-6">
-            <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
-        </div>
-        <div class="all-details col-12 col-md-6">
-            <div class="detalles">
-                <h3><%=producto.name%> <%=producto.mark%> <% if (typeof user != "undefined" && user.admin) { %>
-                    <span><a href="/admin/editar/<%=producto.id_product%>"><i class="fas fa-edit"></i></a></span> <span><form action="/admin/delete/<%=producto.id_product%>?_method=DELETE"method="POST"><button type="submit"><i class="fas fa-trash"></i></button></form></span>
-                <% } %>  </h3>
-                <% const descriptions = producto.detail.split("\r\n") %>
-                <% descriptions.forEach(e => { %>
-                    <p><%=e%></p>
-                <% }) %>
-            
-            </div>
-            <div class="comprar">
-                <h4>$<%=producto.price%></h4>
-                <form action="">
-                    <div class="cantidad">
-                        <% if (typeof user == "undefined") { %>
-                            <button type="menu" class="add-to-cart"><a class="login-msg"href="/user">Inicia sesión para poder comprar</a></button>
-                            
-                        <% } else { %>
-                            <button onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1 })" id="add" type="button" class="add-to-cart">Agregar al carrito</i></button>
-                        <% } %>                
+    <body>
+        <%-include("partials/header")%>
+            <%-include("./partials/carrito")%>
+                <script type="text/javascript">
+                    document.querySelector(".productos-li").classList.add("active")
+                </script>
+
+                <h2 class="titulo-detalles container">Detalles del producto: <%=producto.name%>
+                </h2>
+                <div class="detalle-producto container row">
+                    <div class="image col-12 col-md-6">
+                        <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
+                    </div>
+                    <div class="all-details col-12 col-md-6">
+                        <div class="detalles">
+                            <h3>
+                                <%=producto.name%>
+                                    <%=producto.mark%>
+                                        <% if (typeof user !="undefined" && user.admin) { %>
+                                            <span><a href="/admin/editar/<%=producto.id_product%>"><i
+                                                        class="fas fa-edit"></i></a></span> <span>
+                                                <form action="/admin/delete/<%=producto.id_product%>?_method=DELETE"
+                                                    method="POST"><button type="submit"><i
+                                                            class="fas fa-trash"></i></button></form>
+                                            </span>
+                                            <% } %>
+                            </h3>
+                            <% const descriptions=producto.detail.split("\r\n") %>
+                                <% descriptions.forEach(e=> { %>
+                                    <p>
+                                        <%=e%>
+                                    </p>
+                                    <% }) %>
+
+                        </div>
+                        <div class="comprar">
+                            <h4>$<%=producto.price%>
+                            </h4>
+                            <form action="">
+                                <div class="cantidad">
+                                    <% if (typeof user=="undefined" ) { %>
+                                        <button type="menu" class="add-to-cart"><a class="login-msg" href="/user">Inicia
+                                                sesión para poder comprar</a></button>
+
+                                        <% } else { %>
+                                            <button
+                                                onclick="addToCart({ id: '<%- producto.id_product %>', name: '<%- producto.name %>', price: '<%- parseInt(producto.price) %>', img: '<%- producto.img %>', cant: 1 })"
+                                                id="add" type="button" class="add-to-cart">Agregar al
+                                                carrito</i></button>
+                                            <% } %>
+                                </div>
+
+                            </form>
+
+
+                        </div>
+
                     </div>
 
-                </form>
-                
-                
-            </div>
-                
-            </div>
-            
-        </div>
-    </div>
-    <%-include("partials/footer")%>
-     <script defer src="/javascript/cart.js"></script>
-</body>
+                </div>
+                </div>
+                <%-include("partials/footer")%>
+                    <script defer src="/javascript/cart.js"></script>
+    </body>
+
 </html>

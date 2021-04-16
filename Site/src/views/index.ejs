@@ -19,43 +19,43 @@
 
             <div id="carouselExampleSlidesOnly" class="container carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/images/banner-1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/banner-2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/banner-3.jpg" class="d-block w-100" alt="...">
-                  </div>
+                    <div class="carousel-item active">
+                        <img src="/images/banner-1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/banner-2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/banner-3.jpg" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-              </div>
+            </div>
 
-              <!-- Main -->
+            <!-- Main -->
             <div class="categoria container">
                 <h2>Nuevos</h2>
                 <div class="productos-category row">
-                    <% let limit = 0 %>
-                    <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 2 && limit != 12 ) { %>
-                            <div class="col-4 col-lg-2 producto">
-                                <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
-                                    <div class="detalles">
-                                        <h5>
-                                            <%=producto.name%>
-                                        </h5>
-                                        <h6>
-                                            <%=producto.mark%>
-                                        </h6>
-                                        <p>$<%=producto.price%>
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <% limit += 1 %>
-                            <% } %>
-                                <% }) %>
+                    <% let limit=0 %>
+                        <% productos.forEach(producto=> { %>
+                            <% if (producto.id_subcategory==2 && limit !=12 ) { %>
+                                <div class="col-4 col-lg-2 producto">
+                                    <a href="/productos/details/<%=producto.id_product%>">
+                                        <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
+                                        <div class="detalles">
+                                            <h5>
+                                                <%=producto.name%>
+                                            </h5>
+                                            <h6>
+                                                <%=producto.mark%>
+                                            </h6>
+                                            <p>$<%=producto.price%>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% limit +=1 %>
+                                    <% } %>
+                                        <% }) %>
 
                 </div>
 
@@ -106,60 +106,62 @@
             <div class="categoria container">
                 <h2>Ofertas</h2>
                 <div class="productos-category row">
-                    <% let limit1 = 0 %>
-                    <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 1  && limit1 != 12 ) { %>
-                            <div class="col-4 col-lg-2 producto">
-                                <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
-                                    <div class="detalles">
-                                        <h5>
-                                            <%=producto.name%>
-                                        </h5>
-                                        <h6>
-                                            <%=producto.mark%>
-                                        </h6>
-                                        <p>$<%=producto.price%>
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <% limit1 += 1 %>
-                            <% } %>
-                                <% }) %>
+                    <% let limit1=0 %>
+                        <% productos.forEach(producto=> { %>
+                            <% if (producto.id_subcategory==1 && limit1 !=12 ) { %>
+                                <div class="col-4 col-lg-2 producto">
+                                    <a href="/productos/details/<%=producto.id_product%>">
+                                        <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
+                                        <div class="detalles">
+                                            <h5>
+                                                <%=producto.name%>
+                                            </h5>
+                                            <h6>
+                                                <%=producto.mark%>
+                                            </h6>
+                                            <p>$<%=producto.price%>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% limit1 +=1 %>
+                                    <% } %>
+                                        <% }) %>
 
                 </div>
             </div>
             <div class="categoria container">
                 <h2>Más...</h2>
                 <div class="productos-category row">
-                    <% let limit2 = 0 %>
-                    <% productos.forEach(producto=> { %>
-                        <% if (producto.id_subcategory== 3  && limit2 != 12) { %>
-                            <div class="col-4 col-lg-2 producto">
-                                <a href="/productos/details/<%=producto.id_product%>">
-                                    <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
-                                    <div class="detalles">
-                                        <h5>
-                                            <%=producto.name%>
-                                        </h5>
-                                        <h6>
-                                            <%=producto.mark%>
-                                        </h6>
-                                        <p>$<%=producto.price%>
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <% limit2 += 1 %>
-                            <% } %>
-                                <% }) %>
+                    <% let limit2=0 %>
+                        <% productos.forEach(producto=> { %>
+                            <% if (producto.id_subcategory==3 && limit2 !=12) { %>
+                                <div class="col-4 col-lg-2 producto">
+                                    <a href="/productos/details/<%=producto.id_product%>">
+                                        <img src="/images/products/<%=producto.img%>" alt="<%=producto.name%>">
+                                        <div class="detalles">
+                                            <h5>
+                                                <%=producto.name%>
+                                            </h5>
+                                            <h6>
+                                                <%=producto.mark%>
+                                            </h6>
+                                            <p>$<%=producto.price%>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% limit2 +=1 %>
+                                    <% } %>
+                                        <% }) %>
 
                 </div>
             </div>
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+                crossorigin="anonymous"></script>
             <%-include("./partials/footer")%>
 </body>
 

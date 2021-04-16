@@ -75,3 +75,48 @@
 .categories-container form label{
     margin-top: 30px;
 }
+.filtro i{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .container{
+        margin: 0;
+        padding: 0;
+    }
+    table img{
+        width: 100px;
+        height: 100px;
+    }
+    table .details, table .mark{
+        display: none;
+    }
+    table tr{
+        justify-content: space-between;
+    }
+    .pagination{
+        margin: 0;
+    }
+    .pagination nav{
+        margin: auto;
+    }
+    .filtro-form{
+        transition: 0.2s;
+        transform: scaleY(0);
+        position: absolute;
+    }
+    .filtro i{
+        display: block;
+        font-size: 40px;
+        margin-top: 0;
+        cursor: pointer;
+    }
+    .filtro .fa-angle-up{
+        display: none;
+    }
+    .filtro h5{
+        text-align: center;
+        background-color: #000;
+        border-radius: 0 0 25px 25px;
+    }
+}
