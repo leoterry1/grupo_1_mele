@@ -8,22 +8,22 @@ let showCarrito = false
 let mostrarCarritoMobile = () => {
     if (showCarrito == false) {
         /* carrito.style.display = "inline-block" */
-        carrito.style.display = "block"
+        carrito.style.transform = "scaleY(1)"
         /* carrito.style.left = "70%" */
         showCarrito = true
     } else {
         /* carrito.style.display = "none" */
         /* carrito.style.right = "-150%" */
-        carrito.style.display = "none"
+        carrito.style.transform = "scaleY(0)"
         showCarrito = false
     }
 }
 let mostrarCarritoDesktop = () => {
     if (showCarrito == false) {
-        carrito.style.display = "block"
+        carrito.style.transform = "scaleY(1)"
         showCarrito = true
     } else {
-        carrito.style.display = "none"
+        carrito.style.transform = "scaleY(0)"
         showCarrito = false
     }
 }
@@ -71,7 +71,6 @@ let updateCart = () => {
     detalles.innerHTML = `
     <div class="total">
             <div class="buttons">
-                <button class="confirm">Confirmar compra</button>
                 <button onclick="deleteCart()">Vaciar Carrito</button>
             </div>
             <h5>$${total}</h5>

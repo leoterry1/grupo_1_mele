@@ -13,8 +13,22 @@ input[type=number] { -moz-appearance:textfield; }
     top: 50px;
     right: 60px;
     z-index: 100;
-    display: none;
+    transform: scaleY(0);
+    transition: all 0.2s;
     box-shadow:5px 5px rgba(44, 44, 44, 0.233);
+    max-height: 600px;
+    overflow: scroll;
+}
+.carrito::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.carrito::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+.carrito::-webkit-scrollbar-thumb {
+    background-color: #a486fc8a;
+    border-radius: 20px;
+    border: none
 }
 .carrito .product{
     align-content: center;
@@ -78,6 +92,8 @@ input[type=number] { -moz-appearance:textfield; }
         bottom: 0;
         right: 0;
         left: 0;
+        height: 100vh;
+        overflow: scroll;
     }
     .carrito .total button{
         margin: 10px;
